@@ -1,0 +1,35 @@
+<!-- 📝 Desafio: Criando a Interface do MyFinance
+Vamos transformar seu script estático em algo interativo.
+
+Crie um novo arquivo chamado cadastro.php.
+Crie um formulário HTML simples com:
+
+Um campo input para a Descrição (ex: "Almoço").
+Um campo input do tipo número para o Valor.
+Um botão de Enviar.
+
+No topo desse mesmo arquivo cadastro.php, adicione um código PHP que verifica se o formulário foi enviado e dê um echo nos valores recebidos.
+
+Dica de ouro: No formulário, use <form method="POST">. No PHP, verifique se os dados chegaram usando: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Desafio GET e POST</title>
+</head>
+<body>
+   
+    <form action="desafio02.php" method="post">
+        <label for="descricao">Descrição</label>
+        <input type="text" name="descricao" id="descricao">
+
+        <label for="valor">Valor</label>
+        <input type="number" name="valor" id="valor">
+
+        <button type="submit">Enviar</button>
+
+    </form>
+</body>
+</html>
