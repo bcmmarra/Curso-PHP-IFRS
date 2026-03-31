@@ -12,7 +12,6 @@ Operador                    ---|--- Descrição                       ---|--- Ex
 ?:                          ---|--- Operador Ternário               ---|--- $resultado = ($a > $b) ? 'maior' : 'menor';
 !                           ---|--- Negação lógica (NOT)            ---|--- !$a > 0
 
-
 Parênteses têm a maior precedência, seguidos pela exponenciação, depois multiplicação/divisão/módulo, adição/subtração, comparação e por último os operadores lógicos.
 Em casos de operadores com a mesma precedência, a avaliação é feita da esquerda para a direita, exceto para a exponenciação que é avaliada da direita para a esquerda.
 -->
@@ -48,3 +47,10 @@ echo "Resultado de 10 - 5 - 2 = " . $resultado; // Resultado é 3, não 7
 echo "<br><br>";
 ?>
 
+<!-- 
+Boas Práticas:
+- Use parênteses para tornar a ordem de avaliação clara, mesmo quando a precedência é conhecida.
+- Evite expressões complexas sem parênteses, pois podem ser difíceis de entender e propensas a erros.
+- Lembre-se de que a associatividade pode afetar o resultado, especialmente com operadores de atribuição e exponenciação.
+- Teste expressões complexas para garantir que estão sendo avaliadas como esperado.
+-->
