@@ -14,10 +14,7 @@ Colunas (campos).
 Tipo de dado de cada coluna.
 Restrições (constraints), como NOT NULL, PRIMARY KEY, AUTO_INCREMENT, entre outras.
 
-
 3.2.2 Tipos de dados mais comuns no MySQL
-
-
 a) Tipos numéricos
 INT: números inteiros (ex.: idades, códigos).
 FLOAT/DOUBLE: números decimais de ponto flutuante (ex.: notas escolares).
