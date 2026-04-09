@@ -63,7 +63,6 @@ Segundo Nixon (2021), esse mecanismo garante que o backend mantenha uma estrutur
 Dessa forma, o arquivo index.php desempenha três funções principais:
 
 Inicializar o ambiente do servidor: Carrega configurações básicas, define cabeçalhos HTTP e configura o tipo de resposta (geralmente JSON em APIs).
-
 Carregar o roteamento: Inclui o arquivo responsável por identificar o caminho (rota) e o método HTTP da requisição.
 Gerenciar o fluxo de execução: Encaminha a requisição para o controlador e retorna uma resposta ao cliente.
 
@@ -588,6 +587,7 @@ Accept: application/json
 
 ### 5. Teste de Rota Inexistente (Deve retornar 404)
 GET {{baseUrl}}/rota-que-nao-existe
+
 Por que usar este método de teste?
 Documentação Viva: O arquivo já serve como uma documentação de como a API deve ser consumida.
 

@@ -1,0 +1,44 @@
+// Testes das rotas
+
+### Variáveis Globais (Facilitam a manutenção)
+@baseUrl = http://localhost:8000
+
+### 1. Listar todos os usuários
+GET {{baseUrl}}/users
+Accept: application/json
+
+###
+
+### 2. Criar um novo usuário
+# Nota: Deixe uma linha em branco entre o cabeçalho e o corpo (body)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "nome": "Bruno Cássio",
+    "email": "bruno@casa.com"
+}
+
+###
+
+### 3. Atualizar um usuário existente
+# Substitua o número 1 pelo ID que deseja alterar
+PUT {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+    "nome": "Bruno Cássio Marra",
+    "email": "bruno.marra@descomplica.com"
+}
+
+###
+
+### 4. Excluir um usuário
+# Substitua o número 1 pelo ID que deseja remover
+DELETE {{baseUrl}}/users/1
+Accept: application/json
+
+###
+
+### 5. Teste de Rota Inexistente (Deve retornar 404)
+GET {{baseUrl}}/rota-que-nao-existe
