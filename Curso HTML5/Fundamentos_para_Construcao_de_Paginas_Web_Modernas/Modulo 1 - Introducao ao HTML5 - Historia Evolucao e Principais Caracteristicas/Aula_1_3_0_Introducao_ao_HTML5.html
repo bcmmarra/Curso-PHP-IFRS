@@ -1,0 +1,61 @@
+1.3 Introdução ao HTML5
+Criada pelo britânico Tim Berners-Lee, o acrônimo HTML significa "HyperText Markup Language", traduzindo ao português "Linguagem de Marcação de Hipertexto".  O HTML é o componente básico da web, ele permite inserir o conteúdo e estabelecer a estrutura básica de um website (Alves, 2021). Portanto, ele serve para dar significado e organizar as informações de uma página na web. Sem isso, o navegador não saberia exibir textos como elementos ou carregar imagens e outros conteúdos.
+
+O HTML consiste, então, em uma série de elementos que você utiliza para delimitar ou agrupar diferentes partes do conteúdo, influenciando como elas aparecem ou se comportam. Cada elemento é delimitado por tags, que são usadas para aplicar diferentes estilos e funcionalidades ao conteúdo (Teruel, 2014).  
+
+Por exemplo, veja a seguinte linha de conteúdo: 
+
+"Este é um curso de HTML!"
+
+Se quisermos que essa linha seja tratada como um parágrafo em um documento HTML, podemos usar a tag de parágrafo <p>, tal como demonstrado no quadro abaixo:
+
+<p>Este é um curso de HTML!</p>
+
+Vamos explorar esse parágrafo mais profundamente. Logo, observe na figura abaixo as principais partes de um elemento HTML:
+
+No texto <p>Este é um curso de HTML!</p>, informamos que
+<p> = Abertura da tag
+Este é um curso de HTML! = Conteúdo
+</p> = Fechamento da tag
+
+Neste contexto, as principais partes de um elemento são:
+
+Tag de abertura: consiste no nome do elemento (por exemplo, p para parágrafo) delimitado por colchetes angulares (<>) de abertura e fechamento. Indica o início do elemento e onde seu efeito começa - neste caso, onde é o começo do parágrafo.
+Tag de fechamento: similar à tag de abertura, mas inclui uma barra (/) antes do nome do elemento.Indica o fim do elemento - neste caso, onde é o fim do parágrafo.
+Conteúdo: esse é o conteúdo do elemento, que nesse caso é apenas texto.
+Elemento: a tag de abertura, a de fechamento, e o conteúdo formam o elemento.
+
+Algumas tags HTML podem ser abertas ou autocontidas. Isso significa que elas não precisam ser fechadas com </ >. Essas tags são normalmente usadas para metadados ou quebras de linha, conforme consta no quadro abaixo:
+
+<br/>
+
+As tags HTML não têm diferença entre maiúsculas e minúsculas, ou seja, tanto faz escrever <HTML>, <html>, <Html>, <HTml> , <HTMl>, etc.
+
+Os elementos HTML também podem ter atributos. Os atributos fornecem informações adicionais sobre um elemento HTML que não aparecem diretamente no conteúdo visível. Eles são utilizados para definir propriedades ou comportamentos específicos dos elementos. Observe abaixo um exemplo de atributo em um elemento HTML:
+
+<p class="info">Este é um curso de HTML!</p>
+
+Neste exemplo,”class” é o nome do atributo e “info” é o valor do atributo. O atributo class permite atribuir uma ou mais classes ao elemento, que podem ser usadas posteriormente para aplicar estilos CSS, manipulações JavaScript e outras funcionalidades.
+
+A maioria das tags tem seus próprios atributos. Contudo, existem alguns atributos genéricos que podem ser utilizados na maioria das tags HTML, tais como:
+class="…" – Atribui uma classe ao elemento (uma classe pode ser utilizada para um ou mais elementos);
+id="…" – Atribui um id ao elemento (um id deve ser único, ou seja atribuído a um único elemento);
+style="…" – Permite incluir elementos CSS (estilos) dentro da tag;
+lang="…" – Define o idioma principal do elemento;
+title="…" – Define o título do elemento;
+alt="…" – Define um texto alternativo e, por isso, é muito utilizado em imagens;
+align="…" – Permite definir o padrão de alinhamento desse elemento, como por exemplo: right, center, left e justify;
+width="…" – Define uma largura para o elemento;
+height="…" – Define uma altura para o elemento.
+
+Segundo a MDN Web Docs (2024), atributos como alt e title são fundamentais para acessibilidade e usabilidade. 
+
+Em HTML, é possível colocar elementos dentro de outros elementos, uma prática conhecida como aninhamento. Essa técnica permite uma maior flexibilidade e riqueza na formatação do conteúdo. Em nosso exemplo anterior, se quisermos enfatizar a palavra "HTML" da nossa frase, podemos envolver a palavra "HTML" com o elemento <strong>, que indica ênfase forte. Observe, no quadro abaixo, este exemplo de aninhamento de elementos HTML.
+
+<p>Este é um curso de <strong>HTML</strong>!</p>
+
+Você precisa, no entanto, certificar-se de que seus elementos estejam adequadamente alinhados. No exemplo acima, abrimos primeiro o elemento <p> , depois o elemento <strong>. Portanto, temos que fechar primeiro o elemento <strong> , depois o elemento <p>.
+
+Os hipertextos, por sua vez, são conjuntos de elementos conectados. Esses podem ser palavras, imagens, vídeos, documentos, etc. Quando conectados, formam uma rede de informações que permite a comunicação de dados, organizando conhecimentos e guardando informações. Neste contexto, um texto pode conter um link para um vídeo relacionado ou uma imagem pode ser um link para outro documento.
+
+Ao visitar uma página na web, você pode perceber que existem diferentes distribuições e tamanhos para títulos, parágrafos, imagens, vídeos e qualquer outro elemento. Essa estrutura é estabelecida através do HTML. Podemos, portanto, associar o HTML como sendo o " esqueleto" da sua página (W3C Schools, 2024).
