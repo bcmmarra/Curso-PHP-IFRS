@@ -1,0 +1,45 @@
+1.3.4 Estrutura dos arquivos para projetos web locais
+Quando você está desenvolvendo um site localmente em seu computador, é importante organizar todos os arquivos do projeto de forma consistente e acessível. Abaixo, veremos algumas diretrizes para manter a estrutura de arquivos organizada.
+
+Localização da pasta do projeto: Um site é composto por diversos tipos de arquivos, incluindo conteúdo em texto, código, folhas de estilo, e mídias como imagens e vídeos. Para criar um site de maneira eficiente, é essencial organizar esses arquivos em uma estrutura bem definida em seu computador local. Você pode escolher qualquer lugar conveniente em seu computador para armazenar seus projetos de sites, como o Desktop, sua pasta Home ou a raiz do seu disco rígido.
+
+Criação da pasta principal: Escolha um local e crie uma pasta principal para todos os seus projetos de sites. Um nome sugestivo pode ser projetos-web ou algo semelhante.
+
+Organização de projetos individuais: Dentro da pasta projetos-web, crie uma subpasta específica para cada projeto de site. Por exemplo, para seu primeiro site, você pode criar uma pasta chamada meu-projeto-html ou um nome mais criativo que reflita o propósito do site.
+
+Estrutura interna do projeto: Dentro de cada pasta de projeto, organize os arquivos de maneira que reflita a estrutura do site que será publicado em um servidor. Isso pode incluir subpastas para imagens, css, js, entre outras.
+
+Vamos explorar agora, a estrutura essencial que seu site de teste deve ter. Nos projetos de sites, geralmente precisamos de um arquivo HTML principal e pastas específicas para imagens, estilos e scripts. Vamos criar essa estrutura passo a passo, considerando o uso do editor de texto Visual Studio Code:
+
+Utilizando seu software gerenciador de arquivos (tal como o Windows Explorer), escolha um local acessível em seu computador (por exemplo, Desktop ou pasta Home).
+
+Crie uma nova pasta com um nome descritivo, como projetos-web. Esta será a pasta onde vamos adicionar todos os projetos que vamos utilizar no decorrer do curso.
+
+Agora, abra o editor de texto Visual Studio Code. Em seguida, vamos abrir a pasta geral dos nossos projetos no Visual Studio Code. Assim, clique em File (Arquivo) na barra de menu e selecione Open Folder... (Abrir Pasta...). Navegue até a pasta projetos-web e clique em Select Folder (Selecionar Pasta). Pronto, abaixo vamos criar as pastas para cada projeto que formos testar neste curso.
+
+Neste primeiro exemplo, vamos criar uma nova subpasta chamada de meu-projeto-html. No Explorer (Explorador) do  Visual Studio Code, clique com o botão direito na pasta projetos-web e selecione New Folder (Nova Pasta). Digite meu-projeto-html e pressione Enter. 
+
+Agora, com a pasta do projeto meu-projeto-html criado, vamos adicionar um arquivo para testar um código HTML. No Explorer (Explorador) do Visual Studio Code, clique com o botão direito na pasta meu-projeto-html e selecione New File (Novo Arquivo). Agora, digite index.html e pressione Enter.
+
+OBS: Recomendamos que você nomeie suas pastas e arquivos usando apenas letras minúsculas e sem espaços. O motivo é que muitos servidores web são case-sensitive, ou seja, diferenciam maiúsculas de minúsculas. Esses servidores web também podem ter dificuldade em lidar com espaços nos nomes dos arquivos. Assim, substitua espaços por traços para garantir a compatibilidade com todos os sistemas. Neste contexto, sugerimos que você nomeie seus arquivos como sendo " meu-arquivo.html" em vez de "Meu Arquivo.html" e nomeie suas pastas como sendo " site-teste/imagens " em vez de "site-teste/Imagens do Site".
+
+Com o desenvolvimento de seus estudos, você perceberá a necessidade de separar seu código HTML dos códigos CSS, JavaScript e das imagens. Assim, você já pode começar a pensar nesta organização de arquivo. Segue abaixo uma sugestão de estrutura mais complexa de projeto:
+
+Dentro da pasta meu-projeto-html, crie uma nova pasta chamada imagens. Esta pasta armazena todas as imagens que serão usadas no site.
+
+Em seguida, dentro da pasta meu-projeto-html, crie uma nova pasta chamada estilos. Esta pasta contém os arquivos CSS que definem a aparência e o estilo do seu site, como cores de texto e de fundo.
+
+Após, dentro da pasta meu-projeto-html, crie uma nova pasta chamada scripts. Esta pasta armazena todos os arquivos JavaScript, que adicionam funcionalidades interativas ao seu site, como botões que carregam dados quando clicados.
+
+Veja na figura abaixo um exemplo desta estrutura mais completa do nosso projeto web no Visual Studio Code:
+
+projetos-web/
+├── meu-projeto-html/
+│   ├── estilos/
+│   ├── imagens/
+│   ├── scripts/
+│   └── index.html
+
+Estrutura final de diretórios do projeto "meu-projeto-html"
+
+Neste momento, é importante que você crie esta estrutura de diretórios e arquivos em seu computador. Precisaremos desta configuração para que você possa fazer os testes com os códigos que iremos aprender no decorrer do curso.

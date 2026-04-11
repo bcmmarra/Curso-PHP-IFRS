@@ -1,0 +1,30 @@
+1.3.3 Nomenclatura de arquivos HTML
+A nomenclatura de arquivos HTML é uma prática crucial para garantir a organização, a manutenção e a acessibilidade dos projetos web. Seguir convenções de nomenclatura claras e consistentes melhora a legibilidade do código, facilita a colaboração e evita erros comuns.
+
+Vejamos abaixo alguns princípios gerais para a nomenclatura de arquivos HTML:
+
+Utilize sempre letras minúsculas para evitar problemas de sensibilidade a maiúsculas/minúsculas em servidores web. 
+Exemplo correto: index.html
+Exemplo incorreto: Index.HTML
+
+Não use espaços nos nomes dos arquivos. Espaços podem ser problemáticos para servidores e URLs.
+Exemplo correto: meu-arquivo.html
+Exemplo incorreto: meu arquivo.html
+
+Use traços (-) para separar palavras em vez de espaços ou sublinhados.
+Exemplo correto: sobre-nos.html
+Exemplo incorreto: sobre_nos.html
+
+Use nomes que descrevam claramente o conteúdo ou a função do arquivo.
+Exemplo correto: contato.html
+Exemplo incorreto: pagina1.html
+
+Mantenha um padrão consistente para a nomeação de arquivos em todo o projeto.
+Exemplo consistente: servicos.html, produtos.html
+Exemplo inconsistente: services.html, produtos.HTML
+
+Evite o uso de caracteres especiais como !, @, #, $, etc., que podem causar problemas em URLs e servidores.
+Exemplo correto: politica-privacidade.html
+Exemplo incorreto: política@privacidade.html
+
+Seguir essas diretrizes de nomenclatura de arquivos HTML contribui para um desenvolvimento web mais organizado, eficiente e compatível com os padrões da indústria.

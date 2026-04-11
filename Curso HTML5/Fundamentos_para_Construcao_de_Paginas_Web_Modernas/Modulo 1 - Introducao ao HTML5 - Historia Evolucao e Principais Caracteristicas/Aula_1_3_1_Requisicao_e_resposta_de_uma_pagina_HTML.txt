@@ -7,16 +7,6 @@ Passo 1: Com um computador conectado à internet, é necessário ter, entre seus
 Passo 2: O navegador é direcionado a um servidor da web; então ele solicita uma página - faz uma requisição usando o protocolo HTTP.
 Passo 3: O servidor da internet, responde à solicitação do browser (navegador) e envia a página de volta a ele.
 Passo 4: A página HTML, então, é visualizada no navegador do computador conectado à internet.
-A figura abaixo mostra um fluxograma sobre o processo de requisição e resposta de uma página HTML. 
-
-Fluxograma da requisição e resposta de uma página HTML
-
-Figura 1 - Fluxograma da requisição e resposta de uma página HTML
-
-Fonte: Banco de Imagens Google, 2024
-
-Descrição da imagem: Ilustração demonstrando um Cliente PC fazendo uma requisição HTTP a um servidor Web, que processa a solicitação e envia uma resposta HTTP de volta ao cliente, exibindo a página web no navegador.
-
 
 
 Geralmente, um site é composto por diversas páginas HTML, como por exemplo: um website que contenha três páginas (uma homepage, uma página de contato e uma página de produtos) receberá ao menos três documentos .html distintos, sendo uma para cada página do website.
