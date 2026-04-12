@@ -1,0 +1,217 @@
+<!-- 
+3.2 Trabalhando com links em documentos HTML
+Os "links", ou hiperlinks, são elementos interativos em uma página da web que permitem aos usuários navegar entre diferentes recursos da web, como outras páginas da web, arquivos, documentos, imagens, vídeos, endereços de e-mail e muito mais. Eles são fundamentais para a experiência de navegação na web, pois conectam diferentes partes da internet, permitindo que os usuários explorem e acessem informações relevantes (Neto; Santos; Aguiar, 2013). Os links são criados usando a tag <a> em HTML (abreviação de âncora), que veremos a seguir neste curso. 
+
+A tag <a> (abreviação de "anchor", que significa âncora) é usada em HTML para criar links entre diferentes recursos da web, como outras páginas da web, imagens, arquivos de áudio, vídeos, endereços de e-mail etc.
+
+No quadro abaixo está a estrutura básica da tag <a>:
+
+<a href="URL_do_destino">Texto do Link</a>
+Onde:
+
+href: O atributo obrigatório que especifica o destino do link. Pode ser uma URL, um endereço de e-mail ou um identificador dentro do documento.
+
+Texto do Link: O texto ou conteúdo que será exibido como o link. Quando o usuário clica nesse texto, ele é direcionado para o destino especificado no atributo href.
+
+Para realizarmos os testes sobre o uso da tag <a>, sugerimos que você utilize o arquivo index.html do nosso projeto de testes. Neste contexto, altere esse arquivo para que contenha o seguinte código no corpo do documento (na tag <body>), conforme quadro abaixo:
+-->
+<a href="https://ifrs.edu.br/">Visite o site do IFRS</a>
+
+<!--
+Este link direcionará os usuários para o site https://ifrs.edu.br/ quando clicado e exibirá o texto "Visite o site Exemplo" como o link. 
+
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem? https://lh7-us.googleusercontent.com/a89dYJba1SlCuSVEfK5m4ZC1LPLdFY3dT3GG6IdF2gmoLDIHnm-TIpf_euUX8bqY1MBOoM28qwycl_uvkz4m8rpTd_tacdtBW7-i_x-ZEciDAXOyj1viIuxq_zvud4YUnLW5Jj1O2HLXCr8Pg_D60Q
+
+Demonstra o resultado do uso da tag <a> no navegador.
+
+Figura 1 - Demonstra o resultado do uso da tag <a> no navegador.
+Elaborado pelo autor (2025)
+
+Descrição da imagem: No navegador, a tag <a> cria um link que pode ser clicado para navegar para outra página ou seção. Neste caso, quando você clica no texto "Visite o site do IFRS"  dentro da tag <a>, você é redirecionado para o destino especificado pelo atributo href da tag <a>.
+
+Ao criar links em HTML, é essencial entender a diferença entre caminhos relativos e absolutos para garantir a navegação adequada entre páginas e recursos. Ambos os tipos de caminho têm seus usos específicos e vantagens, dependendo do contexto do projeto.
+
+Caminhos Relativos
+Um caminho relativo define a localização do destino do link em relação ao documento HTML atual. É especialmente útil para sites com uma estrutura de diretórios bem definida e para desenvolvimento local. Observe abaixo alguns exemplos de caminhos relativos para links:
+
+Mesmo diretório: o arquivo de destino está no mesmo diretório que o HTML atual, conforme quadro abaixo.
+
+<a href="pagina.html">Ir para Página</a>
+
+Subdiretório: o arquivo de destino está em um subdiretório do diretório do HTML atual, conforme quadro abaixo.
+
+<a href="subdiretorio/pagina.html">Ir para Página no Subdiretório</a>
+
+Diretório superior: o arquivo de destino está em um diretório acima do diretório do HTML atual, conforme quadro abaixo.
+
+<a href="../subdiretorio/pagina.html">Ir para Página em Múltiplos Níveis</a>
+
+OBS: Observe que cada .. sobe um nível na hierarquia de diretórios.
+
+Múltiplos níveis: combina subdiretórios e diretórios superiores, conforme quadro abaixo.
+
+<a href="../subdiretorio/pagina.html">Ir para Página em Múltiplos Níveis</a>
+
+Caminhos Absolutos
+Um caminho absoluto define a localização completa do destino do link, incluindo o protocolo (http ou https), o domínio e o caminho completo do diretório. É ideal para links para recursos externos ou compartilhados. Veja abaixo alguns exemplos de caminho absoluto para links:
+
+URL completa: inclui o protocolo, domínio e o caminho completo, conforme quadro abaixo.
+
+<a href="https://www.exemplo.com/pagina.html">Ir para Página Externa</a>
+
+Caminho completo no servidor: indica o caminho completo desde a raiz do servidor, conforme quadro abaixo.
+
+<a href="/subdiretorio/pagina.html">Ir para Página no Caminho Completo</a>
+
+Entender a diferença entre caminhos relativos e absolutos para links em HTML é essencial para criar uma navegação eficaz e manter a integridade do site. Caminhos relativos são ideais para links internos e desenvolvimento local, enquanto caminhos absolutos são melhores para links externos e recursos compartilhados. A escolha correta garante uma experiência de usuário fluida e uma manutenção simplificada do site.
+
+Atributo href
+O atributo href na tag <a> é usado para especificar o destino do link. Ele define para onde o usuário será redirecionado quando o link for clicado. O valor do atributo href pode ser uma URL, um endereço de e-mail ou um identificador dentro do próprio documento HTML.
+
+Abaixo estão alguns exemplos de como usar o atributo href:
+
+Para criar um link para uma página da web externa, conforme quadro abaixo.
+
+<a href="https://www.exemplo.com">Visite o site Exemplo</a>
+
+Neste exemplo, o link "Visite o site Exemplo" leva os usuários para o site https://www.exemplo.com.
+
+Para criar um link para uma página dentro do mesmo site, conforme quadro abaixo.
+
+<a href="pagina_interna.html">Página Interna</a>
+
+Neste caso, suponha que pagina_interna.html seja uma página dentro do mesmo diretório do arquivo HTML atual (index.html). Quando o link "Página Interna" é clicado, os usuários são redirecionados para a página pagina_interna.html.
+
+Para criar um link interno (também conhecido como âncora) em uma mesma página. Neste exemplo, altere a página index.html com a estrutura definida no quadro abaixo:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Link Interno</title>
+</head>
+<body>
+    <h1>Exemplo de Link Interno</h1>
+    <p>Este é um exemplo de link interno em HTML. Clique no link abaixo para rolar até a seção correspondente.</p>
+    <!-- Link interno (âncora) -->
+    <a href="#secao2">Ir para a Seção 2</a>
+    <p>Lorem ipsum dolor sit amet. Sit nulla ducimus ut voluptatem dolor a beatae deserunt vel perferendis exercitationem. Aut doloribus consequuntur et obcaecati voluptas sit molestiae obcaecati ad dicta fugit.</p>
+    <p>Est quos quibusdam quo excepturi dolores et corporis autem aut sunt sunt et accusamus nemo qui accusantium minus. Sit dolorem galisum non quia eligendi rem veniam omnis cum dolores omnis vel voluptatem facilis et autem reprehenderit ea quibusdam autem. Et numquam nihil eum tenetur facere aut blanditiis voluptatem id maiores deleniti ut quidem perferendis sit tempora amet et excepturi odio.</p>
+    <p>Est omnis esse eos eveniet omnis qui fugiat porro sit eveniet velit est deleniti quod qui iste eaque qui enim iste? Ab itaque architecto sed temporibus molestias At harum inventore. Et galisum perferendis id recusandae voluptatem est maiores quibusdam aut debitis odio id Quis quisquam. Vel aspernatur expedita vel quos nesciunt ea ratione recusandae eum mollitia unde eos iste voluptas?</p>
+    <h2 id="secao2">Seção 2</h2>
+    <p>Esta é a Seção 2 do documento.</p>
+</body>
+</html>
+
+<!--
+Neste exemplo:
+
+O texto "Ir para a Seção 2" é um link interno que leva o usuário para a seção correspondente do documento.
+O href do link interno é #secao2, que corresponde ao identificador id="secao2" na tag <h2>.
+Quando o link é clicado, o navegador rola automaticamente até a seção que possui o identificador secao2.
+Isso é útil para criar navegação dentro de uma única página da web, permitindo que os usuários acessem facilmente diferentes partes do conteúdo. Certifique-se de que o valor do atributo href corresponda ao identificador correto dentro do documento HTML.
+
+Para criar um link para um endereço de e-mail, conforme quadro abaixo.
+
+<a href="mailto:email@example.com">Enviar e-mail</a>
+Neste exemplo, ao clicar no link "Enviar e-mail", o cliente de e-mail padrão do usuário será aberto com o endereço de e-mail email@example.com preenchido no campo "Para". Veja esse exemplo em execução na figura abaixo:
+
+Exemplo de uso de um link para um endereço de e-mail, que abre o software padrão de e-mail do computador para compor uma nova
+
+Link da imagem: https://lh7-us.googleusercontent.com/Nhvd3Zdon_k5NDRX38ygGZKRQ10wWh3P1eWdFgKkTKSu8RK24eXjdpg7pdXSFfKNnsONBOhjxkbWKZ2FqUoRmzUbySOZ3KEeJRavcNxn_qOU5TV90Ltdfq7gZSZJHvhccnzaLzPf0dX-QiZBPyoaNg
+
+Figura 2 - Exemplo de uso de um link para um endereço de e-mail, que abre o software padrão de e-mail do computador para compor uma nova mensagem.
+Elaborado pelo autor (2025)
+
+Descrição da imagem: Um link para um endereço de e-mail, quando clicado, abre o programa de e-mail padrão do computador e inicia uma nova mensagem com o endereço de e-mail do remetente já preenchido.
+
+Esses são apenas alguns exemplos do uso do atributo href na tag <a>. Ele é fundamental para criar links navegáveis em páginas da web.
+
+Atributo target
+Além do atributo href, a tag <a> também pode ter outros atributos, tais como o target: Este atributo define onde abrir o destino do link. Os valores comuns são estes a seguir:
+
+_self: link é aberto no mesmo quadro ou janela em que o link foi clicado (este é o comportamento padrão se o atributo target não for especificado). Veja um exemplo de uso no quadro abaixo.
+
+<a href="https://www.example.com" target="_self">Abrir na mesma janela</a>
+
+_blank: O link é aberto em uma nova janela ou aba do navegador. Veja um exemplo de uso no quadro abaixo.
+
+<a href="https://www.example.com" target="_blank">Abrir em nova janela/aba</a>
+
+_parent: O link é aberto no quadro (frame) pai do quadro em que o link foi clicado, se houver um. Veja um exemplo de uso no quadro abaixo.
+
+<a href="https://www.example.com" target="_parent">Abrir no quadro pai</a>
+
+_top: O link é aberto no topo da janela atual, ignorando qualquer quadro aninhado. Veja um exemplo de uso no quadro abaixo.
+
+<a href="https://www.example.com" target="_top">Abrir no topo da janela</a>
+<nome_da_janela>: Você também pode especificar o nome de uma janela ou quadro HTML específico onde o link será aberto. Se a janela especificada não existir, uma nova janela será aberta. Veja no quadro abaixo um exemplo de sua sintaxe:
+
+<a href="https://www.example.com" target="minhaJanela">Abrir em uma janela chamada minhaJanela</a>
+Neste contexto, no quadro abaixo temos um exemplo de seu uso:
+
+<a href="https://www.example.com" target="_blank">Abrir em Nova Aba</a>
+O link “https://www.example.com” é aberto em uma nova janela ou aba do navegador. 
+
+OBS: O uso do atributo target permite um controle mais preciso sobre o comportamento de abertura de links em uma página da web.
+
+Atributo download
+O atributo download instrui o navegador a fazer o download do recurso especificado quando o link é clicado, em vez de navegá-lo. Veja no quadro abaixo um exemplo:
+
+<a href="documento.pdf" download>Download do Documento</a>
+
+Neste exemplo, quando o usuário clica no link "Download do Documento", o arquivo documento.pdf será baixado em vez de ser aberto no navegador.
+
+É importante observar que este atributo só funciona para links que apontam para recursos que podem ser baixados, como arquivos PDF, imagens, vídeos, arquivos de áudio, etc. Se o recurso estiver em uma origem diferente do site onde o link está sendo hospedado, pode haver restrições de segurança relacionadas à política de mesma origem (CORS - Cross-Origin Resource Sharing).
+
+Atributo rel
+O atributo rel na tag <a> é usado para definir a relação entre o documento atual e o documento vinculado pelo link. Embora seja opcional, ele desempenha um papel importante em vários aspectos, incluindo acessibilidade, SEO (Search Engine Optimization) e segurança.
+
+No quadro abaixo, podemos ver alguns valores comuns para o atributo rel:
+
+nofollow: Indica aos mecanismos de busca que o link não deve ser seguido por robôs de busca. Isso é útil para evitar a passagem de PageRank para o site vinculado, o que pode ser desejável em certos casos, como links de comentários em blogs. Veja um exemplo no quadro abaixo.
+
+<a href="https://www.example.com" rel="nofollow">Link Externo</a>
+
+OBS: PageRank (PR) é uma métrica criada por Larry Page e utilizada pelo Google dentro do seu algoritmo para entender a importância que um site, ou página, tem para ele (Google) frente a Internet.
+
+noopener: Este valor é usado para evitar que a página vinculada tenha acesso ao contexto da página de origem, o que pode ser explorado para ataques de segurança, como phishing. Veja um exemplo no quadro abaixo.
+
+<a href="https://www.example.com" rel="noopener">Link Externo</a>
+
+OBS: Phishing é uma forma de ataque cibernético na qual os hackers tentam enganar as pessoas para que divulguem informações confidenciais, como senhas, números de cartões de crédito e outras informações pessoais, geralmente fingindo ser uma entidade confiável.
+
+noreferrer: Similar ao noopener, o valor noreferrer impede que o navegador envie o cabeçalho Referer ao acessar a página vinculada, o que pode revelar informações sobre a origem da solicitação. Veja um exemplo no quadro abaixo.
+
+<a href="https://www.example.com" rel="noreferrer">Link Externo</a>
+
+noopener noreferrer: Uma combinação dos dois valores acima, o que impede que a página vinculada acesse o contexto da página de origem e também evita a divulgação do cabeçalho Referer. Veja um exemplo no quadro abaixo.
+
+<a href="https://www.example.com" rel="noopener noreferrer">Link Externo</a>
+
+Além desses valores, o atributo rel pode ser usado para indicar uma variedade de outras relações entre os documentos vinculado e de origem, como alternate, author, help, license, entre outros.
+
+Atributo title
+O atributo title na tag <a> é usado para fornecer uma dica (tooltip) quando o usuário passa o cursor sobre o link. Essa dica de ferramenta é útil para fornecer informações adicionais sobre o destino do link, como uma breve descrição do conteúdo vinculado ou instruções adicionais.
+
+Veja no quadro abaixo um exemplo de como usar o atributo title:
+
+<a href="https://www.example.com" title="Visite o site exemplo">Link Externo</a>
+
+Neste exemplo, quando o usuário passa o cursor sobre o link "Link Externo", uma dica de ferramenta será exibida com o texto "Visite o site exemplo", conforme figura abaixo. 
+
+Demonstra o resultado do uso do atributo title da tag <a> no navegador.
+
+Link da imagem: https://lh7-us.googleusercontent.com/wzJcf_DbEqtgYu6FaWw3GqytTlrlhFeMrUj9xpqu2YUJXrNgzxN-JnzSSMqGWMuJE8VJrcvT9ztbtqgJe80IgorkJJkvlpuQqM9ESk9dez3kToheeQheLRDAhlSmHCduAOV8pjlicY-gL1nvSvMDEw
+
+Figura 3 -  Demonstra o resultado do uso do atributo title da tag <a> no navegador.
+Elaborado pelo autor (2025)
+
+Descrição da imagem: Nesta figura, quando o usuário passa o cursor sobre o link "Link Externo", uma dica de ferramenta será exibida com o texto.
+
+O texto fornecido no atributo title pode ser personalizado conforme necessário para fornecer informações relevantes para os usuários. É importante notar que as dicas de ferramentas podem variar de tamanho dependendo do navegador e da configuração do usuário, portanto, é melhor manter o texto conciso e informativo. 
+-->

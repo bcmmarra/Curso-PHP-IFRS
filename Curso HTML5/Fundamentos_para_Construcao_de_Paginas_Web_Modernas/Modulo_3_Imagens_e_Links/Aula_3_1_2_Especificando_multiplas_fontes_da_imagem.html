@@ -1,0 +1,25 @@
+<!-- 
+3.1.2 Especificando múltiplas fontes da imagem
+A tag <picture> em HTML foi projetada para oferecer maior controle sobre como as imagens são exibidas em diferentes dispositivos e resoluções de tela. Ela permite ao desenvolvedor especificar múltiplas fontes de imagem e instruir o navegador a escolher a imagem mais apropriada com base em critérios como dimensões da viewport, resolução da tela, e outros fatores. Isso é especialmente útil para implementar designs responsivos e para otimizar o carregamento de imagens, melhorando tanto a performance quanto a experiência do usuário em dispositivos variados.
+
+OBS: A viewport é a área visível da página web no navegador de um usuário. Em outras palavras, é a parte da página que está atualmente visível sem a necessidade de rolar.
+
+A tag <picture> funciona como um contêiner para um ou mais elementos <source> e um elemento <img> de fallback. Cada <source> pode ter atributos que especificam a mídia ou as condições sob as quais essa fonte de imagem deve ser usada. Se nenhum <source> corresponder às condições atuais, o navegador usará a imagem especificada no elemento <img>.
+
+OBS: O fallback para um elemento <picture> é uma imagem de substituição que será exibida caso nenhum dos arquivos de imagem especificados nas tags <source> seja suportado pelo navegador do usuário. 
+
+Vejamos alguns dos seus principais atributos:
+
+<source srcset="...">: Especifica o caminho da imagem. Pode incluir uma lista de imagens com diferentes tamanhos e a largura da viewport para cada uma.
+<source media="(min-width: ...)">: Define condições de mídia CSS, como a largura da viewport, para que o navegador escolha a imagem baseada nessas condições.
+<source type="...">: Permite especificar o tipo MIME da imagem, o que pode ser usado para fornecer formatos de imagem diferentes (como WebP) para navegadores que suportam esses formatos.
+Veja abaixo um exemplo de uso da tag <picture>:
+
+<picture>
+    <source media="(min-width: 800px)" srcset="image-large.jpg">
+    <source media="(min-width: 450px)" srcset="image-medium.jpg">
+    <img src="image-small.jpg" alt="Descrição da imagem">
+</picture>
+
+Neste exemplo, image-large.jpg é exibido para viewports com largura mínima de 800 pixels, image-medium.jpg para viewports com largura mínima de 450 pixels, e image-small.jpg é usado como fallback para viewports menores ou quando os formatos fornecidos nos elementos <source> não são suportados pelo navegador. 
+-->

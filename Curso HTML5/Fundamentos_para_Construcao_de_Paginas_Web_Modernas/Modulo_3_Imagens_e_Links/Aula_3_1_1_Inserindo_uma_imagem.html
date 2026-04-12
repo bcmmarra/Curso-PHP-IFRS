@@ -1,0 +1,160 @@
+<!-- 
+3.1.1 Inserindo uma imagem
+Para inserir uma imagem em uma página HTML, você pode usar a tag <img>. O Quadro abaixo apresenta um exemplo de como você pode usar essa tag:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem">
+
+Neste exemplo:
+A tag <img> é usada para inserir a imagem.
+O atributo src especifica o caminho para a imagem que você deseja exibir.
+
+O atributo alt fornece um texto alternativo para a imagem, que é exibido se a imagem não puder ser carregada ou se o usuário estiver usando um leitor de tela.
+OBS: A tag <img> é uma tag de auto término, o que significa que não há uma tag de fechamento </img>.
+
+Para ilustrar o uso de imagens em arquivos HTML, vamos experimentar a utilização da tag <img> em nosso projeto de teste, denominado “meu-projeto-html”. Primeiro, baixe o uma imagem (com extensão .PNG) de sua preferência na internet. Renomeie este arquivo para “imagem.png”. Em seguida, salve esta imagem na pasta “imagens” do nosso projeto, conforme demonstrado na figura abaixo:
+
+Estrutura de pastas do projeto "meu-projeto-html"
+
+Figura 1 - Estrutura de pastas do projeto "meu-projeto-html"
+Elaborado pelo autor (2025)
+
+projetos-web/
+├── meu-projeto-html/
+│   ├── estilos/
+│   ├── imagens/
+|   |   ├── imagem.png
+│   ├── scripts/
+│   └── index.html
+
+Descrição da imagem: No VS Code, o arquivo imagem.png foi adicionado à pasta imagens dentro de meu-projeto-html.\
+
+Em seguida, altere o arquivo index.html para mostrar a imagem no navegador, conforme quadro abaixo.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Projeto HTML</title>    
+</head>
+<body>
+    <h1>Bem-vindo ao Meu Projeto HTML</h1>
+    <p>Este é um parágrafo de exemplo.</p>  
+    <img src=".././Modulo_1_Introducao_ao_HTML5_Historia_Evolucao_e_Principais_Caracteristicas/projetos-web/meu-projeto-html/imagens/imagem.png" alt="Logotipo do IFRS">
+    <img src="https://static.wixstatic.com/media/913d6f_6341b531557b4c66a6619426a81262d7.png/v1/fill/w_308,h_64,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/913d6f_6341b531557b4c66a6619426a81262d7.png" alt="Logotipo do IFRS">
+</body>
+</html>
+
+<!--
+Fonte: Elaborado pelo autor.
+
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado do uso da tag <img> no navegador.
+
+Figura 2 - Demonstra o resultado do uso da tag <img> no navegador.
+Elaborado pelo autor (2025)
+
+Descrição: Esse código resulta em uma página web com o título "Bem-vindo ao Meu Projeto HTML", seguido por um parágrafo de exemplo. Além disso, há uma imagem do logotipo do IFRS, representado pelo  arquivo imagem.png.\
+
+Cabe salientar que a tag <img> em HTML possui vários atributos que permitem especificar diferentes propriedades da imagem que está sendo exibida (Teruel, 2014). 
+
+Atributo src
+O atributo src na tag <img> é um atributo obrigatório e representa a origem (source) da imagem que será exibida na página da web. Ele especifica o URL (Uniform Resource Locator) ou o caminho do arquivo da imagem que o navegador deve carregar e exibir (MDN Web Docs, 2024). Veja um exemplo da sua sintaxe no quadro abaixo:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem">
+Definir corretamente o caminho de uma imagem em HTML é essencial para garantir que ela seja exibida corretamente no navegador. Existem duas formas principais de especificar esses caminhos: caminhos relativos e caminhos absolutos.
+
+Caminhos Relativos 
+Um caminho relativo especifica a localização da imagem em relação ao arquivo HTML atual. É amplamente utilizado porque facilita a movimentação do site entre diferentes ambientes (como desenvolvimento e produção) sem a necessidade de alterar os caminhos das imagens. Observe abaixo alguns exemplos de uso de caminhos relativos:
+
+Mesmo diretório: quando a imagem está no mesmo diretório que o arquivo HTML, conforme quadro abaixo.
+<img src="imagem.jpg" alt="Descrição da Imagem">
+
+Subdiretório: quando a imagem está em um subdiretório do diretório do arquivo HTML, conforme quadro abaixo.
+<img src="imagens/imagem.jpg" alt="Descrição da Imagem">
+
+Diretório Superior: quando a imagem está em um diretório acima do diretório do arquivo HTML, conforme quadro abaixo. 
+<img src="../imagem.jpg" alt="Descrição da Imagem">
+OBS: Observe que cada .. sobe um nível na hierarquia de diretórios.
+
+Combinação de níveis: combina subdiretórios e diretórios superiores, conforme quadro abaixo.
+<img src="../subdiretorio/imagens/imagem.jpg" alt="Descrição da Imagem">
+
+Caminhos absolutos
+Um caminho absoluto fornece a localização completa da imagem, incluindo o protocolo (http ou https), o domínio e o caminho completo do diretório. É útil para imagens hospedadas em outros servidores ou para recursos compartilhados entre diferentes sites. Observe abaixo alguns exemplos de uso de caminhos absolutos:
+
+URL completa: especifica o URL completo, incluindo protocolo e domínio, conforme quadro abaixo.
+<img src="https://www.exemplo.com/imagens/imagem.jpg" alt="Descrição da Imagem">
+
+Caminho completo no servidor: indica o caminho completo desde a raiz do servidor, conforme quadro abaixo.
+
+<img src="/caminho/completo/imagens/imagem.jpg" alt="Descrição da Imagem">
+Escolher entre caminhos relativos e absolutos depende das necessidades do projeto e da localização dos recursos. Entender as diferenças e aplicá-las corretamente é essencial para a eficiência e a organização de qualquer projeto web.
+
+Atributo alt
+O atributo alt na tag <img> é usado para fornecer um texto alternativo para a imagem. Ele é essencial para acessibilidade na web, pois é lido por leitores de tela para usuários com deficiência visual ou quando a imagem não pode ser carregada (W3C Schools, 2024).
+
+Veja um exemplo de sua sintaxe no quadro abaixo:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem">
+O texto alternativo deve descrever o conteúdo e o propósito da imagem. Isso pode incluir uma breve descrição do que está na imagem ou fornecer informações contextuais sobre a função da imagem na página.
+
+É uma boa prática sempre incluir o atributo alt em todas as tags <img>, mesmo que a imagem seja puramente decorativa. Para imagens puramente decorativas, você pode usar um texto alternativo vazio (alt="") para indicar aos leitores de tela que a imagem não tem significado semântico, conforme quadro abaixo.
+
+<img src="decorative-image.jpg" alt="">
+O texto alternativo é importante para garantir que todos os usuários possam compreender o conteúdo da página, independentemente de suas capacidades visuais ou das condições de carregamento da imagem.
+
+Atributo width
+O atributo width na tag <img> é usado para especificar a largura da imagem em pixels. Ele permite controlar o tamanho da imagem na página da web.  Veja um exemplo de sua sintaxe no quadro abaixo:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem" width="300">
+Neste exemplo, "300" é o valor da largura da imagem em pixels.
+
+>Ao definir a largura da imagem usando o atributo width, você pode controlar o tamanho da imagem na página sem afetar sua proporção de aspecto. No entanto, é importante usar esse atributo com cautela para garantir que a imagem não seja distorcida ou pixelizada.
+
+OBS: Lembre-se de que definir explicitamente a largura da imagem pode não ser a melhor prática em todos os casos, especialmente para imagens responsivas. Em vez disso, você pode preferir usar CSS ou técnicas de dimensionamento responsivo para controlar o tamanho da imagem de forma mais flexível, adaptando-a ao tamanho da tela do dispositivo ou ao layout da página.
+
+Atributo height
+O atributo height na tag <img> é usado para especificar a altura da imagem em pixels. Ele permite controlar o tamanho vertical da imagem na página da web. Veja um exemplo de sua sintaxe no quadro abaixo:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem" height="200">
+Neste exemplo, "200" é o valor da altura da imagem em pixels.
+
+Ao definir a altura da imagem usando o atributo height, você pode controlar o tamanho vertical da imagem na página sem afetar sua proporção de aspecto. No entanto, é importante usar esse atributo com cautela para garantir que a imagem não seja distorcida ou pixelizada.
+
+OBS: Assim como com o atributo width, é importante lembrar que definir explicitamente a altura da imagem pode não ser a melhor prática em todos os casos, especialmente para imagens responsivas. Em vez disso, você pode preferir usar CSS ou técnicas de dimensionamento responsivo para controlar o tamanho da imagem de forma mais flexível, adaptando-a ao tamanho da tela do dispositivo ou ao layout da página.
+
+IMPORTANTE: Se você informar apenas o valor do atributo height ou apenas o valor do atributo width, a outra dimensão será ajustada automaticamente para manter a proporção original da imagem.
+
+Atributo title
+O atributo title na tag <img> é opcional e é usado para fornecer uma dica de ferramenta (tooltip) quando o usuário passa o mouse sobre a imagem. Essa dica de ferramenta pode fornecer informações adicionais sobre a imagem. Veja um exemplo de sua sintaxe no quadro abaixo:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem" title="Título da Imagem">
+Veja o resultado no navegador, conforme figura abaixo:
+
+Demonstra o resultado do uso do atributo title da tag <img> no navegador.
+
+Figura 3 - Demonstra o resultado do uso do atributo title da tag <img> no navegador.
+Elaborado pelo autor (2025).
+link da imagem: https://lh7-us.googleusercontent.com/NfZJgfecdmEnMlaKbwxdVWIqMAK4gKjC1jw8h_-ID5eIVlGLS23uMmIXDKXv1c52vw_r_6v4VmiIVfiNJZQX1B3WTKKJz5Gz3UcCZ1AcO7JfyfGXUlFpOjEVUCyy4wyMmLbtTaJQH7vPWCTYcCUSfA
+
+Descrição da imagem: No navegador, o atributo title na tag <img> exibe um texto quando o cursor passa sobre a imagem, fornecendo informações adicionais como uma dica. Neste caso, exibe o texto "Título da Imagem" quando o usuário passa o mouse sobre a imagem
+
+Atributo style
+O atributo style na tag <img> é usado para aplicar estilos CSS diretamente à imagem. Isso permite controlar vários aspectos visuais da imagem, como tamanho, cor, margens, entre outros (Alves, 2021; MDN Web Docs, 2024). Veja um exemplo de sua sintaxe no quadro abaixo:
+
+<img src="caminho_para_sua_imagem/imagem.jpg" alt="Descrição da Imagem" style="width: 300px; height: 200px; border: 1px solid black;">
+Veja o resultado no navegador, conforme figura abaixo:
+link da imagem: https://lh7-us.googleusercontent.com/fIP1obAFneN-xOFlffOb3IqhakWAkqzhrivArCtO-eRbCTu_Twl_0XeMXB54qjvSnJSJQP2rYEac5lmEEiEH0IobREacj4UuoRB0Ceiegn5mvEpc5MXufnxmES42S0J_GbUc0iqjpvxfFsvPRy8Feg
+
+Demonstra o resultado do uso do atributo style na tag <img> no navegador.
+
+Figura 4 - Demonstra o resultado do uso do atributo style na tag <img> no navegador.
+Elaborado pelo autor (2025)
+
+Descrição da imagem: No navegador, o uso do atributo style na tag <img> permite aplicar estilos diretamente à imagem. Neste exemplo, a imagem tem uma largura de 300 pixels, altura de 200 pixels e uma borda preta de 1 pixel ao redor.
+
+O atributo style permite especificar um conjunto de regras de estilo diretamente no HTML. No entanto, o uso excessivo de estilos inline pode tornar o HTML menos legível e mais difícil de manter. Portanto, em situações mais complexas, é preferível usar classes ou IDs CSS externos para estilizar elementos HTML. 
+-->
