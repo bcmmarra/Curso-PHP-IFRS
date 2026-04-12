@@ -1,0 +1,135 @@
+<!-- 
+2.3.3 Formatação de texto
+Embora a maioria das tags HTML sejam usadas para criar elementos, o HTML também fornece tags de formatação de texto para aplicar estilos específicos relacionados ao texto a partes do texto. Este tópico inclui exemplos de formatação de texto HTML, como destaque, negrito, itálico, sublinhado, tachado, sobrescrito e subscrito.
+
+Destaque
+O elemento <mark> é novo no HTML5 e é utilizado para marcar ou destacar texto em um documento “devido à sua relevância em outro contexto” (MDN Web Docs, 2024). No quadro abaixo, mostramos um exemplo de código HTML mostrando os resultados de uma pesquisa onde o usuário inseriu uma consulta de pesquisa e os resultados são mostrados destacando a consulta desejada.
+-->
+
+<p>Aqui está o conteúdo de um artigo que contém a <mark> consulta pesquisada </mark> que estamos procurando. Destacar o texto tornará mais fácil para o usuário encontrar o que procura.</p>
+
+<!--
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado da utilização da tag <mark> no navegador
+
+Figura 1 - Demonstra o resultado da utilização da tag <mark> no navegador
+Fonte: Elaborado pelo autor (2025)
+Link da imagem: https://lh7-us.googleusercontent.com/Q9x11UKTwgmI9R1ilBU29bgkXXPsO3erjwOcfTBIs291cRihgCqn1ztESqv04QxUo2flcCjER5ROeClA9TU_ibaC3W33Y1lcYrYg8bt7Vq8ettZL_jGZgR3EQff12EZ_T-OexssuGJXInsu9i9JSNw
+
+Descrição da imagem: No navegador, a tag <mark> destaca o texto, fazendo com que ele apareça com um fundo amarelo, semelhante a um marcador de texto. Neste caso, fica em destaque "consulta pesquisada"
+
+OBS: A formatação padrão é texto preto sobre fundo amarelo, mas isso pode ser alterado com CSS (Cascading Style Sheets).
+
+Texto em negrito
+Para texto em negrito, use as tags <strong> ou <b>. Veja o exemplo demonstrado no quadro abaixo:
+-->
+
+<strong>Texto em negrito aqui</strong>
+<b>Outro texto em negrito aqui</b>
+
+<!--
+Veja o resultado no navegador, conforme figura abaixo:
+
+Demonstra o resultado do uso das tags <strong> e <b> no navegador.
+
+Figura 2 - Demonstra o resultado do uso das tags <strong> e <b> no navegador.
+Fonte: Elaborado pelo autor (2025)
+Link da iamgem: https://lh7-us.googleusercontent.com/3pUboIeci6oI-u51wiGUX9JqWrM8aeA-s35_HTnDb8yaRdVG0DLXzDDWANgRzMJoKOpyNj2kz9AL5Jjai1UXcg7pRkmqVEvG63PmBVmb3s-ENXQHMijLVS33S5GLGsdBc_XKvCjS8TYQ6WxakB_zUQ
+
+Descrição da imagem: No navegador, tanto a tag <strong> quanto a tag <b> fazem o texto aparecer em negrito. 
+
+Qual é a diferença?
+Observamos que ambas tags são usadas para aplicar ênfase ao texto, mas têm diferenças semânticas que afetam como os motores de busca e leitores de tela interpretam o conteúdo. Use <strong> quando quiser enfatizar que o texto é semanticamente importante (que tem um significado forte), como avisos, títulos ou palavras-chave. Use <b> apenas para estilizar o texto em negrito, sem atribuir significado semântico adicional (W3C Schools, 2024).
+
+Texto em itálico
+Para colocar o texto em itálico, use as tags <em> ou <i>. Veja um exemplo, conforme apresentado no quadro abaixo:
+-->
+
+<em>Texto em itálico aqui</em>
+<i>Texto em itálico aqui</i>
+
+<!--
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado do uso das tags <em> e <i> no navegador.
+
+Figura 3 - Demonstra o resultado do uso das tags <em> e <i> no navegador.
+Fonte: Elaborado pelo autor (2025)
+Link da imagem: https://lh7-us.googleusercontent.com/YCKu0oeCDBtkRZvlkcdE2S_I1T1YyX2BsXPLVqhViyi0IDODMVy_erWV6bPHzjBwPUeWgpjbjq4LewMyQxBudgS-tDbLDgTc5StI3Ey0kYTgkLnljSr_nVFF5gXcHm3cXQqJy4V_NbzVjhnIzzA-6w
+
+Descrição da imagem: No navegador, tanto a tag <em> quanto a tag <i> fazem o texto aparecer em itálico.
+
+Qual é a diferença?
+Ambas HTML são usadas para aplicar ênfase ao texto, mas elas têm diferenças semânticas que afetam como os motores de busca e leitores de tela interpretam o conteúdo. Use <em> quando quiser enfatizar que o texto é semanticamente enfatizado, como citações, termos técnicos ou expressões idiomáticas. Use <i> apenas para estilizar o texto em itálico, sem atribuir significado semântico adicional.  Por exemplo, se você quiser enfatizar a ação dentro de uma frase, pode fazê-lo enfatizando-a em itálico via <em>: "Você já terminou de estudar?". Mas se você estivesse identificando um livro ou jornal que normalmente colocaria em itálico estilisticamente, você simplesmente usaria <i>: "Fui forçado a ler Romeu e Julieta no ensino médio.".
+
+Texto sublinhado
+A tag <u> é usada para sublinhar texto. No entanto, o uso desta tag é desencorajado devido à sua falta de semântica clara. Em vez disso, é preferível usar CSS para estilizar o texto, incluindo a adição de sublinhado, pois isso separa a formatação do conteúdo e fornece mais controle sobre a aparência do texto. No quadro abaixo está um exemplo de como você pode usar esta tag:
+-->
+
+<p>Este texto está <u>sublinhado</u>.</p>
+
+<!--
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado do uso da tag <u> no navegador.
+
+Figura 4 - Demonstra o resultado do uso da tag <u> no navegador.
+Fonte: Elaborado pelo autor (2025)
+Link da imagem: https://lh7-us.googleusercontent.com/AkMa8pgmWDEnVVGfeoB6zkUiq-_tYumL_F9ud9HUtHzB21Um8af1IgwojfywWerfiZgslVk-DpHntjWqXPa0ybJwrYNstkH1Cg1hYykO5lSi20rBUOJ5_qLDghS8vX2xrrg9fBvloDwAlyL5a0Hblg
+
+Descrição da imagem: No navegador, a tag <u> sublinha o texto, destacando-o com uma linha horizontal abaixo das palavras. Neste caso, a palavra "sublinhado" está com este efeito.
+
+Texto tachado
+A tag <s> é usada em HTML para representar texto que foi "riscado" ou "cortado", indicando que o texto não é mais válido ou não é mais preciso. Isso é comumente usado para mostrar informações que foram removidas ou desatualizadas. Por padrão, o texto marcado com <s> é exibido com uma linha horizontal através dele, indicando que foi "cortado". O quadro abaixo apresenta um exemplo de como você pode usar essa tag:
+-->
+
+<p>Este produto custava R$100, mas agora está em promoção por <s>R$80</s> R$60.</p>
+
+<!--
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado do uso da tag <s> no navegador.
+
+Figura 5 - Demonstra o resultado do uso da tag <s> no navegador.
+Fonte: Elaborado pelo autor (2025)
+Link da imagem: https://lh7-us.googleusercontent.com/7uX-M_5QqPM40aW6OuLYlcjFiHDyZdcxWnJuG8gO2F68LMyLWxP3xm3H89-e60h0KIcvTLTSs_amYjF9poHnwlewAtI0tdiyevoPzgZXaAFFYK6U5q4nji7U23LoXGt1t_vBGRSnrSN3ezORrZo2Uw
+
+Descrição da imagem: No navegador, a tag <s> risca o texto com uma linha horizontal, indicando que o texto foi deletado ou está incorreto. Neste caso, "R$80" está com este efeito.
+
+Texto sobrescrito
+A tag HTML <sup> é usada para definir texto sobrescrito, ou seja, para colocar o texto em uma posição superior à linha de base normal. Essa tag é comumente utilizada para representar exponentes, notações matemáticas, marcas de registro, entre outros. Veja um exemplo no quadro abaixo:
+-->
+
+<p>2<sup>3</sup> representa dois elevado ao cubo.</p>
+<p>O custo é de R$10<sup>99</sup>.</p>
+
+<!--
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado do uso da tag <sup> no navegador.
+
+Figura 6 - Demonstra o resultado do uso da tag <sup> no navegador.
+Fonte: Elaborado pelo autor (2025)
+Link da imagem: https://lh7-us.googleusercontent.com/r47QlzU7aA1WcbMAdxBMqsQBPwm037uz_sO4xKmgmOdHKD8FuunVKrt6frzGNsOEtgt9oYevO1qnybwql5WwIctuQaKcKldXxPvnaNw3IVnWiid9KoBIq-pcHhtjQsOJVKxUvxcLw_ITvLYtQOHaPw
+
+Descrição da imagem:  No navegador, a tag <sup> faz o texto aparecer em sobrescrito, elevando-o acima da linha base, como em notas de rodapé ou expoentes. Neste caso, "99" está com este efeito.
+
+Texto subscrito
+A tag HTML <sub> é usada para definir texto subscrito, ou seja, para colocar o texto em uma posição inferior à linha de base normal. Essa tag é frequentemente utilizada para representar fórmulas químicas, notas de rodapé, números ordinais, entre outros. Veja um código de exemplo no quadro abaixo:
+-->
+
+<p>A fórmula da água é H<sub>2</sub>O.</p>
+<p>Este é o texto da nota de rodapé<sub>1</sub>.</p>
+
+<!--
+Veja o resultado no navegador, conforme a figura abaixo:
+
+Demonstra o resultado do uso da tag <sub> no navegador.
+
+Figura 7 - Demonstra o resultado do uso da tag <sub> no navegador.
+Fonte: Elaborado pelo autor (2025)
+Link da imagem: https://lh7-us.googleusercontent.com/f3daCUx5VhoFL923WcqF97PH69ImGJ7f4xyotiKooIfcCHY2ALTCXI3VKifibo2x3-EmMIspOGkDRG-y4FfKVL5FZWcw6E0HsoKX6lE-qP8d0A_NHpH9UXf3UCAEbNmwa6SNEBSCGjMuJmJzzfxzQg
+
+Descrição da imagem: No navegador, a tag <sub> faz o texto aparecer em subscrito, posicionando-o abaixo da linha base, como em fórmulas químicas ou notas de rodapé. Neste caso, o "2" em "H₂O" e o "1" em "rodapé₁" tem esse efeito aplicado. 
+-->

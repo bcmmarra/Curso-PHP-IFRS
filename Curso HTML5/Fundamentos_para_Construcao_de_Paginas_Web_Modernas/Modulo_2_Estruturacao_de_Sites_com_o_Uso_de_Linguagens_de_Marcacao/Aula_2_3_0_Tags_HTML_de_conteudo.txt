@@ -1,0 +1,2 @@
+2.3 Tags HTML de conteúdo
+Agora que você já conhece as principais tags estruturais, pode organizar o seu conteúdo de forma adequada. Assim, no decorrer deste módulo, vamos listar no decorrer deste curso as principais tags para incluir conteúdo à página, como títulos, parágrafos, imagens, links, etc.

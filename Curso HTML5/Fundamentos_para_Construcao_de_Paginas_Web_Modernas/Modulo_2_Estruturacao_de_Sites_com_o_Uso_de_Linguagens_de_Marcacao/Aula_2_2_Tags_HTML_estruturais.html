@@ -1,0 +1,101 @@
+<!-- 
+2.2 Tags HTML estruturais
+Quando estamos desenvolvendo um web site, percebemos que as páginas da web podem e serão muito diferentes umas das outras, mas todas tendem a compartilhar componentes padrão semelhantes. Geralmente, uma página desenvolvida em HTML possui as seguintes partes:
+
+Cabeçalho (header): representa, normalmente, uma grande faixa na parte superior com um grande título e/ou logotipo. É aí que, geralmente, ficam as principais informações comuns sobre um site, sendo mostrado em diversas páginas do site.
+
+Barra de navegação: contém links para as principais seções do site; geralmente representado por botões de menu, links ou guias. Como o cabeçalho, esse conteúdo geralmente permanece consistente de uma página para outra. É uma parte muito importante em nosso site, pois  uma navegação inconsistente em seu site levará a usuários confusos e frustrados. 
+
+Conteúdo principal: representa uma grande área no centro do site que contém a maior parte do conteúdo exclusivo de uma determinada página web, por exemplo, o vídeo que você deseja assistir ou a história principal que você está lendo ou o mapa que deseja visualizar ou as manchetes de notícias, etc. Esta é a única parte do site que, definitivamente, irá variar de página para página!
+
+Barra lateral (sidebar): contém algumas informações periféricas, links, cotações, anúncios etc. Geralmente, isso é contextual ao conteúdo principal (por exemplo, em uma página de um artigo de notícias, a barra lateral pode conter a biografia do autor ou links para artigos relacionados), mas há também casos em que você encontrará alguns elementos recorrentes como um sistema de navegação secundário.
+
+Rodapé (footer): representa uma faixa na parte inferior da página que, geralmente, contém avisos de direitos autorais ou informações de contato. É um lugar para colocar informações comuns (como o cabeçalho). O rodapé também fornece links para acesso rápido a conteúdo popular.  
+
+Na figura abaixo, podemos verificar um site e identificar suas diferentes partes.
+
+Exemplo de um site e suas partes
+
+Figura 1 - Exemplo de um site e suas partes
+Fonte: https://ifrs.edu.br/
+link da imagem: https://lh7-us.googleusercontent.com/JIU32tVAXNinroifRfvlOWWyxVGV-TvovvHiYNOLZ9BsibEUeL94EPMdM7UrFXvJ43a6dR5LLD_-4rQl2befK9PCWv6GKyrVODIq4o9HjNVvm5LRFQrJp6iQETpm-b76g6JAyH5oniJM
+
+Descrição da imagem: O site é composto por várias partes: o cabeçalho, que fica no topo e contém o título e o logotipo; a barra lateral, que contém o menu de navegação; a parte principal, onde são exibidas as notícias ou o conteúdo principal; e o rodapé, que fica na parte inferior e contém informações adicionais, como contatos ou links úteis.
+
+O exemplo acima permite ilustrar um exemplo típico de layout de website. Em seu código HTML, você pode marcar seções de conteúdo com base em sua funcionalidade. Um dos principais objetivos do HTML é dar estrutura de texto e significado, também conhecido como semântica, para que um navegador possa exibi-lo corretamente. 
+
+Para implementar essa marcação semântica, o HTML fornece tags dedicadas que você pode usar para representar essas seções, por exemplo:
+
+Cabeçalho: <header>.
+Barra de navegação: <nav>.
+Conteúdo principal: <main>, com várias subseções de conteúdo representadas por <section>,<article> e elementos <div>.
+Rodapé: <footer>.
+
+Veja na figura abaixo um exemplo gráfico da disposição de cada uma destas seções em um documento HTML:
+
+Exemplo gráfico da disposição das seções de um documento HTML.
+
+Figura 2 - Exemplo gráfico da disposição das seções de um documento HTML.
+Fonte: Banco de Imagens Google, 2024
+Link da imagem: https://lh7-us.googleusercontent.com/wWZmAoQ1--rD_V5KRQXFeNs0dAHr4zPQP0T_NfGqTesmUGQ-N0CGMHP3ibO0KpM7wNFrlZTJxsSZO1bfndEA13EM8N0py9JbkydYe7teBxlOF1jOwv28NdNgnrzAD1rRIMch7vqG4re91omcqHNMEg
+
+Descrição da imagem: Um documento HTML é dividido em várias seções: o header (cabeçalho) e o nav (navegação), seguidos pelos section 1 e section 2, que contêm o conteúdo principal. O aside é uma barra lateral com informações adicionais, e o footer (rodapé) está na parte inferior com detalhes complementares.
+
+Essas são as tags principais do HTML e, com elas, conseguimos definir uma estrutura básica para o nosso site e dentro dos padrões estabelecidos pelos principais navegadores de Internet. 
+
+Neste sentido, imagine a seguinte estrutura básica para um site, conforme quadro abaixo:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maurício Rosito">
+    <meta name="description" content="Aula de Programação Web II ">
+    <link rel="stylesheet" href="css/estilo.css" >
+    <title> Aula de Programação Web </title>
+</head>
+<!-- Corpo do Documento -->
+<body>      
+    <!-- Cabeçalho  da página-->
+    <header>cabeçalho</header>
+    <!-- Menu do Site-->
+    <nav>Menu</nav>
+
+    <!-- Conteúdo Principal-->
+    <main>
+        <!-- Conteúdo do site-->
+        <section>
+            <article>Conteúdo do site</article>
+            <article>Mais conteúdo do site</article>
+        </section>
+        <!--Conteúdo Relacionado, colocar ou não-->
+        <aside>Conteúdo relacionado</aside>
+    </main>    
+    <!-- Rodapé do site-->
+    <footer>Rodapé</footer>
+</body>
+</html>
+
+<!-- 
+Veja abaixo a listagem das principais tags HTML estruturais:
+
+<header></header> – Essas tags definem um cabeçalho. Portanto, todo conteúdo que estiver dentro dela faz parte de um cabeçalho, podendo ser utilizado dentro de outras sessões. Não confundir com as tags <head>;
+
+<main></main> – Essas tags representam o conteúdo principal do seu corpo, ou seja, o conteúdo relacionado diretamente com o tópico central da página ou com a funcionalidade central da aplicação;
+
+<footer></footer> – Essas tags definem um rodapé para a página, geralmente utilizadas no final da página;
+
+<section></section> – Essas tags definem uma sessão para sua página;
+
+<article></article> – Essas tags definem um artigo da sua página. Nesse sentido, são utilizadas para separar o conteúdo da sua página. Muito utilizado principalmente por blogs ou páginas de conteúdo;
+
+<aside></aside> – Essas tags representam uma seção de uma página cujo conteúdo é tangencialmente relacionado ao conteúdo do seu entorno, que poderia ser considerado separado do conteúdo;
+
+<nav></nav> – Essa tag define um conteúdo de navegação. Portanto, é muito utilizado em conjunto com listas e na criação de menus;
+
+<div></div> – Define uma divisão da página. Desta forma, funciona como um container para conteúdo de fluxo. Uma vez que não possui um valor semântico, é muito utilizado para organizar melhor o conteúdo. 
+-->
+
+<!-- comentário --> <!-- São tags de comentários (que é aberta com--> <!-- e fechada com --> <!--), ou seja, todos elementos incluídos dentro dela serão apenas comentários, não serão visíveis no navegador. -->
