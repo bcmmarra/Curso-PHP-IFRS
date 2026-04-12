@@ -1,0 +1,186 @@
+<!-- 
+4.2.2 Principais atributos da tabela
+A tag <table> suporta diversos atributos que permitem controlar a aparência e o comportamento da tabela (MDN Web Docs, 2024). Embora muitos desses atributos sejam considerados obsoletos em favor de estilos CSS para controle de layout e apresentação, eles ainda podem ser encontrados em códigos mais antigos ou utilizados por razões de simplicidade em exemplos básicos. 
+
+A seguir, neste documento, veremos alguns dos atributos mais comuns da tag <table>.
+
+Atributo border
+O atributo border da tag <table> é usado para especificar a largura da borda da tabela. O valor do atributo define a espessura da borda ao redor da tabela e suas células. A largura da borda é especificada em pixels. Por exemplo, border="1" cria uma borda ao redor da tabela e suas células com 1 pixel de espessura. 
+
+Veja um exemplo no quadro abaixo: 
+-->
+<table border="1">
+    <tr>
+        <th>Cabeçalho 1</th>
+        <th>Cabeçalho 2</th>
+    </tr>
+    <tr>
+        <td>Célula 1</td>
+        <td>Célula 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a tabela terá uma borda sólida com 1 pixel de espessura ao redor de toda a tabela e das células individuais. Se você definir border="0", a tabela não exibirá nenhuma borda.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+link da imagem: https://lh7-us.googleusercontent.com/4sQqc-q52n4ygXCNyeRKisiMbopdS_CWCmWpb5m6pfPcRRG9lJgd9JRFQvMOjEUSNbtUolPM9vHf3AyijgH84jyjPsHtcSaG7K_sq9xUd0onpq7w__QKbkBd7IofCpko25n08PPAeJyg_yxjhlrgNg
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis. A tabela possui duas colunas com cabeçalhos: "Cabeçalho 1" e "Cabeçalho 2". Abaixo dos cabeçalhos, há uma linha de dados com duas células: "Célula 1" e "Célula 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo cellpadding
+O atributo cellpadding da tag <table> é usado para definir o espaço de preenchimento (padding) dentro das células da tabela, isto é, o espaço entre as bordas da célula e o conteúdo dentro da célula. Esse atributo ajuda a controlar a aparência das tabelas, tornando o conteúdo dentro das células mais legível e esteticamente agradável ao criar um espaço ao redor do texto ou de outros elementos dentro das células.
+
+No quadro abaixo está um exemplo de como o cellpadding pode ser usado em uma tabela HTML.
+-->
+<table border="1" cellpadding="10">
+     <tr>
+        <th>Cabeçalho 1</th>
+        <th>Cabeçalho 2</th>
+    </tr>
+    <tr>
+        <td>Célula 1</td>
+        <td>Célula 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, o atributo cellpadding="10" aplica um preenchimento de 10 pixels ao redor do conteúdo de cada célula (<td> e <th>) na tabela. Isso significa que haverá um espaço de 10 pixels entre o conteúdo de cada célula e as bordas da célula.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis e espaçamento interno de 10 pixels nas células. A tabela tem dois cabeçalhos: "Cabeçalho 1" e "Cabeçalho 2". Abaixo, há uma linha de dados com duas células: "Célula 1" e "Célula 2".
+
+Link da imagem: https://lh7-us.googleusercontent.com/_7XVqv3XsWb4QwI7F4IugZaYSVboY6NVAIF6DpC-zx9dYZComjYo8bKWxBOuueebCVcy5obPMr1KRDyw_8Lllq0hUqNGmmNvZoUP_mPYb8k5Rif1L3pfP2ZgEPUcpEnM3cBvv9RaX7hbW7IU2MRrJQ
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo cellspacing
+O atributo cellspacing da tag <table> é usado para definir a distância entre as bordas adjacentes das células, isto é, o espaço entre as células de uma tabela.  Este valor é especificado em pixels.
+
+Veja o exemplo conforme quadro abaixo:
+-->
+<table border="1" cellspacing="20">
+    <tr>
+        <th>Cabeçalho 1</th>
+        <th>Cabeçalho 2</th>
+    </tr>
+    <tr>
+        <td>Célula 1</td>
+        <td>Célula 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste caso, haverá um espaço de 20 pixels entre as células da tabela.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+link da imagem: https://lh7-us.googleusercontent.com/hvMcJ5JQHCqpQfZ3QXSSxUNK3DfCtzbUtphMdqh7cOEDlasKKaYixmANArgnLPnYRU3oCZT6BKxBCgWoR-P_R8-9J-Fbhebw3GFUylN2--h8sv3r9j-5A7ZnDIJv2rRLAKRfXwX4w65O4PUzQt_BaA
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis e espaçamento de 20 pixels entre as células. A tabela tem dois cabeçalhos: "Cabeçalho 1" e "Cabeçalho 2". Abaixo, há uma linha de dados com duas células: "Célula 1" e "Célula 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo width
+O atributo width da tag <table> é usado para definir a largura da tabela. Este atributo pode ser especificado em pixels ou em percentual do elemento contêiner. Definir a largura da tabela ajuda a controlar o layout da página, garantindo que a tabela ocupe o espaço desejado.
+
+Veja no quadro abaixo um exemplo de uso com valor em pixels.
+-->
+<table border="1" width="300">
+    <tr>
+        <th>Coluna 1</th>
+        <th>Coluna 2</th>
+    </tr>
+    <tr>
+        <td>Dado 1</td>
+        <td>Dado 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a tabela terá uma largura fixa de 300 pixels.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/vp7lmGS4R-yHD2AKDjtkVsNDRm_pZe-4BmBB3sKukWPnHBJBeqJffPgOPs79KbGfSZK3qlqrDreyqJI4s1gtyL0xRwpl0jxel3FQd-zC_MC5KjUVuHoS88K68gXR9AdAkJosLpgoCGl9NU6czDPN3A
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis e uma largura total de 300 pixels. A tabela tem dois cabeçalhos: "Coluna 1" e "Coluna 2". Abaixo, há uma linha de dados com duas células: "Dado 1" e "Dado 2".
+
+Agora, veja no quadro abaixo um exemplo de uso com valor em percentual:
+-->
+<table border="1" width="50%">
+    <tr>
+        <th>Coluna 1</th>
+        <th>Coluna 2</th>
+    </tr>
+    <tr>
+        <td>Dado 1</td>
+        <td>Dado 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste caso, a tabela ocupará 50% da largura do seu contêiner pai.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/1b6kkELeY5mZEQaTjJ0jk7Ld3kyyu9m1c6bk2L0j2RO3ZKVwuHN0XD2a2iJnalbRzza_FMBAhnnYoBYhY4SpYNaVxCHmwdv9WHXZ_N1eHoA9cmS1rIm3CIalvs-kly53lxOAnBmNslA8-gQGBAgENQ
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis que ocupa 50% da largura do contêiner onde está inserida. A tabela tem dois cabeçalhos: "Coluna 1" e "Coluna 2". Abaixo, há uma linha de dados com duas células: "Dado 1" e "Dado 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo height
+O atributo height da tag <table> em HTML é utilizado para definir a altura da tabela. Assim como o atributo width, o valor do height pode ser especificado em pixels ou em percentual, influenciando como a tabela será exibida na página.
+
+Veja no quadro abaixo um exemplo de uso com valor em pixels:
+-->
+<table border="1" height="150">
+    <tr>
+        <td>Célula 1</td>
+        <td>Célula 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a altura da tabela é definida como 150 pixels.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/GszBVtdAMI9U47ysFeJ3LXT2XmbCs-_bH3AwNrvQaSXpX5hLJjPJ0ZQ2C4_2xRIlNyrxrsDgySgdJN2c2ls5GjwnxPjHTj-breowawURtpigkKcHlbr1kinMYnKLqlH__gpVOW11sw14G-0LdiPoPg
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis e uma altura total de 150 pixels. A tabela tem uma linha com duas células: "Célula 1" e "Célula 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo align
+O atributo align da tag <table> é usado para definir o alinhamento da tabela em relação ao seu contêiner. Esse atributo pode tomar alguns valores diferentes, como left, center, ou right, indicando onde a tabela deve ser posicionada horizontalmente na página ou dentro de seu elemento contêiner.
+
+Vejamos um exemplo, conforme quadro abaixo:
+-->
+ <table border="1" align="center">
+    <tr>
+        <th>Cabeçalho 1</th>
+        <th>Cabeçalho 2</th>
+    </tr>
+    <tr>
+        <td>Dado 1</td>
+        <td>Dado 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a tabela será centralizada dentro de seu contêiner.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+link da imagem: https://lh7-us.googleusercontent.com/JKxI9CJVssLHcJXGOe3b9MrGqbv9RIxYN0M9GMxtjZHZlpkHPktKuNtVESO-ahwhrG_fCidQWtkxphljFyn_NOX8-f1a2CpNFfkJnaQEIq4T4SW9v1KJgIkNjRpZwvuVeEF43sslX-rx_vmUohsMsw
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis e centraliza a tabela na página. A tabela tem dois cabeçalhos: "Cabeçalho 1" e "Cabeçalho 2". Abaixo, há uma linha de dados com duas células: "Dado 1" e "Dado 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+-->

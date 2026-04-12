@@ -1,0 +1,77 @@
+<!-- 
+4.2.4 Principais atributos das células da tabela
+As tags <td> (table data) e <th> (table header) são elementos essenciais na criação de tabelas em HTML, definindo respectivamente as células de dados e cabeçalhos de colunas/linhas dentro de uma tabela. Estas tags suportam uma variedade de atributos para controlar a aparência e o comportamento das células da tabela. 
+
+OBS: Embora muitos desses atributos sejam considerados obsoletos em HTML5 em favor da estilização CSS, eles ainda são usados em alguns contextos para fins de simplicidade ou compatibilidade. 
+
+A seguir, neste documento, veremos alguns dos atributos comuns para <td> e <th>.
+
+Atributo colspan
+O atributo colspan é usado em HTML dentro de células de tabela (<td> ou <th>) para indicar o número de colunas que a célula deve abranger horizontalmente. Esse atributo é útil para criar layouts de tabela mais complexos, permitindo que uma célula se estenda por várias colunas.
+
+Veja no quadro abaixo um exemplo: 
+-->
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th colspan="2">Informações de Contato</th>
+    </tr>
+    <tr>
+        <td>João Silva</td>
+        <td>28</td>
+        <td>Email: joao@example.com</td>
+        <td>Telefone: 1234-5678</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a tabela tem quatro colunas. Na primeira linha, a célula "Informações de Contato" usa colspan="2", o que significa que ela abrange duas colunas. Isso cria uma divisão lógica no cabeçalho da tabela, agrupando "Email" e "Telefone" sob um título comum sem dividir esse título em duas células separadas.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/95hwEdn-8gwh7QrXgSjexqBHuRiTSjupV26zMuaVISvhDMSOWbVrItuugkXuEWeg62VlQIpdKlJ7yr_dfkY1rFKfZwd3HY6AY89XFVfJ9XhAl_e7byMBapSWLPA5XvOG95hS2PPIjjqHU7LC7r9wCg
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis. A primeira linha tem três cabeçalhos: "Nome", "Idade", e "Informações de Contato" (este último ocupando duas colunas). A segunda linha tem quatro células: "João Silva", "28", "Email: joao@example.com", e "Telefone: 1234-5678".
+
+Atributo rowspan
+O atributo rowspan em HTML é usado dentro de uma célula de tabela (<td> ou <th>) para indicar quantas linhas essa célula deve abranger verticalmente. Isso é útil quando você deseja que uma célula se estenda através de várias linhas na tabela, criando assim uma estrutura de tabela mais complexa e permitindo um layout mais flexível.
+
+Veja no quadro abaixo um exemplo:
+-->
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+    </tr>
+    <tr>
+        <td rowspan="2">João</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>23</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a célula contendo o nome "João" se estende por duas linhas. O atributo rowspan="2" diz ao navegador que essa célula deve ocupar o espaço de duas linhas na vertical. A segunda linha da tabela não inclui uma célula para "Nome", pois a célula da primeira linha se estende para baixo e a ocupa.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/BRBosJWiVzGn3KDtGbJwzRywEfFvnSBPU5qwIXPw3sYZNxezul9EFNLpsWK1ZZus2AQ3coYRAc_k-ILZuNmGkCvuqOx7omQf06yxD_-m4FwNBGG0F70ZyR70FeP5dsHQyQuGbFfXJ4Vqg6DngZNwjw
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis. A primeira linha tem dois cabeçalhos: "Nome" e "Idade". A segunda linha tem duas células: "João" (ocupando duas linhas) e "22". A terceira linha tem uma célula com o valor "23". Assim, "João" aparece ao lado de ambas as idades, "22" e "23".
+
+IMPORTANTE: Se o valor de rowspan for maior do que o número de linhas disponíveis na tabela, a célula se estenderá até o fim da tabela, mas não além disso.
+
+Demais atributos
+As tags <th> e <td> suportam uma variedade de atributos para controlar a aparência e o comportamento das células da tabela. Entretanto, muitos desses atributos são considerados obsoletos em HTML5 em favor da estilização CSS. Porém, eles ainda são usados em alguns contextos para fins de simplicidade ou compatibilidade. Vejamos mais alguns atributos comuns para essas tags:
+> align: Especifica o alinhamento horizontal do conteúdo dentro da célula. Os valores podem ser left, center, ou right. Este atributo é considerado obsoleto em HTML5, com o CSS sendo a maneira preferida de alinhar conteúdo.
+
+> valign: Controla o alinhamento vertical do conteúdo dentro da célula, com valores como top, middle, bottom e baseline. O valign também é considerado obsoleto.
+
+> bgcolor: Especifica a cor de fundo da célula. Pode ser um nome de cor, um valor hexadecimal, ou um valor RGB. Este atributo é considerado obsoleto, com CSS sendo recomendado para definir cores de fundo.
+
+> width e height: Definem, respectivamente, a largura e a altura da célula. Ambos são considerados obsoletos para células individuais, sendo recomendado o uso de CSS.
+
+-->

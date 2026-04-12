@@ -1,0 +1,124 @@
+<!-- 
+4.2.5 Melhorando a semântica e acessibilidade das tabelas
+Melhorar a semântica e a acessibilidade de uma tabela HTML é essencial para garantir que todos os usuários, incluindo aqueles que usam tecnologias assistivas como leitores de tela, possam entender e navegar pelos dados apresentados. 
+
+Neste documento estão algumas sugestões para você criar tabelas mais acessíveis e semanticamente corretas.
+
+Use <th> para cabeçalhos de coluna e linha
+Utilize a tag <th> (table header) em vez de <td> (table data) para marcar cabeçalhos de colunas e linhas. Isso ajuda os leitores de tela a identificar a função das células e a fornecer um contexto adequado aos usuários. Se necessário, para maior clareza, você pode usar na tag <th> os atributos scope="col" para cabeçalhos de colunas e scope="row" para cabeçalhos de linhas. 
+
+OBS: Leitores de tela são softwares assistivos que permitem que pessoas com deficiência visual ou cegas acessem e interagirem com conteúdo em computadores, smartphones e outros dispositivos eletrônicos. Eles funcionam convertendo texto e elementos gráficos em fala ou em braille (através de uma linha braille), permitindo que o usuário ouça ou leia o conteúdo da tela.
+
+Veja um exemplo no quadro abaixo: 
+-->
+<table border="1">
+    <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Idade</th>
+    </tr>
+    <tr>
+        <th scope="row">João</th>
+        <td>30</td>
+    </tr>
+    <tr>
+        <th scope="row">Ana</th>
+        <td>25</td>
+   </tr>
+</table>
+
+<!-- 
+Neste exemplo, os cabeçalhos "Nome" e "Idade" são especificados como cabeçalhos de coluna (scope="col"), enquanto "João" e "Ana" são especificados como cabeçalhos de linha (scope="row"). Isso ajuda a indicar a função desses cabeçalhos na organização dos dados da tabela, tornando-a mais acessível para tecnologias assistivas.
+
+Link da imagem: https://lh7-us.googleusercontent.com/6leF50N3Va_8jEiT6k6rm6SLXbkt8Nc_V9t1Sk6_xE4MtxHlQMqqRBdx4p5eSAtOTDFs1jIp8LXi07DdFM_hGXdWCN7ALAV--LBtBn0_01hj5x8ux5WjFeYm--Hi1aTL0x3lGcZAzo5SHyzK4Sdtfg
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis. A primeira linha tem dois cabeçalhos de coluna: "Nome" e "Idade". As linhas seguintes têm cabeçalhos de linha: "João" com a idade "30" na segunda coluna, e "Ana" com a idade "25" na segunda coluna. Os cabeçalhos de linha estão em negrito e identificam cada linha.
+
+Use <caption> para descrever a tabela
+O elemento <caption> em HTML é usado para fornecer um título ou legenda para uma tabela. Ele é colocado imediatamente após a tag de abertura <table>, antes de quaisquer linhas (<tr>), cabeçalhos de coluna (<th>), etc. O propósito do <caption> é oferecer um contexto ou uma descrição geral da tabela, melhorando sua acessibilidade e compreensão.
+
+Vejamos um exemplo no quadro abaixo:
+-->
+<table border="1">
+     <caption>Horário de Aulas</caption>
+     <tr>
+         <th>Dia</th>
+         <th>Matéria</th>
+         <th>Professor(a)</th>
+     </tr>
+     <tr>
+         <td>Segunda-feira</td>
+         <td>Matemática</td>
+         <td>Prof. Carlos</td>
+     </tr>
+     <tr>
+         <td>Terça-feira</td>
+         <td>Português</td>
+         <td>Profª. Maria</td>
+     </tr>        
+</table>
+
+<!-- 
+Neste exemplo, a <caption> "Horário de Aulas" fornece um entendimento imediato do propósito da tabela para o usuário, bem como para tecnologias assistivas, como leitores de tela.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/2rSOQM2Ikzd8b_9grYS0ikoNn02GgpnSdzNx9_yx0ver_3R7t2kyOrJIwfNfKAPbyVjH1mbMYwiNIdpZesGhap3A21xOlZkrlK5fc8tajBxBEnJWQuw6P18KBrAUPmXwk-fHoh2DwbK40HtxUFCDjA
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis e o título "Horário de Aulas" acima da tabela. A primeira linha contém os cabeçalhos "Dia", "Matéria" e "Professor(a)". A segunda linha tem os dados "Segunda-feira", "Matemática" e "Prof. Carlos". A terceira linha tem os dados "Terça-feira", "Português" e "Profª. Maria".
+
+Agrupe cabeçalhos e corpo da tabela com <thead>, <tbody> e <tfoot>
+Agrupar cabeçalhos, corpo e rodapé de uma tabela usando <thead>, <tbody> e <tfoot> no HTML é uma prática recomendada para criar tabelas estruturadas, semânticas e acessíveis. Esses elementos ajudam a definir explicitamente diferentes seções de uma tabela, melhorando a legibilidade do código e permitindo que navegadores e tecnologias assistivas, como leitores de tela, interpretem e apresentem a tabela de maneira mais eficaz. 
+
+Vejamos abaixo mais informações sobre estas tags:
+
+<thead>: é usada para agrupar um ou mais elementos <tr> que contêm células de cabeçalho da tabela. Os cabeçalhos de coluna localizados dentro de <thead> ajudam a descrever o tipo de informação contida nas colunas do <tbody>.
+<tbody>: é utilizada para agrupar o conteúdo principal da tabela, contendo uma ou mais linhas (<tr>) de células de dados (<td>). Uma tabela pode ter múltiplos elementos <tbody> para agrupar logicamente diferentes seções de dados dentro da mesma tabela.
+<tfoot>: contém um ou mais elementos <tr> que resumem ou concluem as informações apresentadas nas colunas do <tbody>. O <tfoot> deve ser colocado dentro do elemento <table> e, idealmente, antes do <tbody>, apesar de ser visualmente renderizado na parte inferior da tabela. Essa prática é recomendada porque permite que navegadores processem e exibam o rodapé antes mesmo de todo o corpo da tabela ser carregado, o que pode ser especialmente útil para tabelas muito grandes com muitas linhas de dados.
+Venhamos um exemplo, conforme quadro abaixo:
+-->
+<table border="1">
+    <caption>Horário Semanal de Aulas</caption>
+    <thead>
+        <tr>
+            <th>Dia da Semana</th>
+            <th>Matéria</th>
+            <th>Horário</th>
+        </tr>
+    </thead>
+    <tfoot>
+        <tr>
+            <td colspan="3">Horários sujeitos a alterações</td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+            <td>Segunda-feira</td>
+            <td>Matemática</td>
+            <td>08:00 - 10:00</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 
+Vejamos o resultado no navegador, conforme figura abaixo.
+
+Link da imagem: https://lh7-us.googleusercontent.com/qyqk7SBEhd3uJyYG6d-LFydXTaY_fC3PahTb8Hc_Z7EnD-FhDN82ZtS6PqeU6w2cvkiOGWnkSp6sMPwT_q_S0jtlIPh3KSGJXcN78qeTzKsEyw54_-NJmJ5P0FaClnVg5jvydPD5v3NJSSrQmor1Ng
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis e o título "Horário Semanal de Aulas" acima da tabela. A primeira linha no cabeçalho (<thead>) contém os cabeçalhos "Dia da Semana", "Matéria" e "Horário".  No rodapé (<tfoot>), há uma linha que abrange todas as três colunas com a mensagem "Horários sujeitos a alterações". No corpo da tabela (<tbody>), há uma linha com os dados "Segunda-feira", "Matemática" e "08:00 - 10:00".
+
+A organização clara das tabelas usando <thead>, <tbody> e <tfoot> contribui significativamente para a usabilidade e acessibilidade da web, tornando o conteúdo mais acessível e a experiência do usuário mais inclusiva.
+
+Assegure contraste suficiente de cor
+Garanta que sua tabela tenha contraste de cor suficiente entre o texto e o fundo para que seja facilmente legível por todos os usuários, incluindo aqueles com deficiência visual.
+
+Evite usar tabelas para layout
+Utilize tabelas apenas para dados tabulares, não para o layout da página. Usar tabelas para layout pode confundir leitores de tela e tornar o conteúdo menos acessível.
+
+Teste com leitores de tela
+Teste suas tabelas com leitores de tela para garantir que elas sejam acessíveis. Preste atenção à forma como os dados são lidos e se a navegação é lógica e intuitiva. Veja abaixo alguns exemplos de Leitores de Tela:
+
+NVDA (NonVisual Desktop Access): Um leitor de tela gratuito e de código aberto para Windows.
+JAWS (Job Access With Speech): Um dos leitores de tela mais populares, disponível para Windows.
+VoiceOver: Integrado nos sistemas operacionais macOS e iOS da Apple.
+TalkBack: O leitor de tela padrão para dispositivos Android.
+-->

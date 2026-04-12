@@ -1,0 +1,28 @@
+<!-- 
+4.3.5 Botões
+O elemento <button> em HTML é usado para criar um botão clicável, que pode executar uma ação quando pressionado. Os botões são elementos essenciais em interfaces web, permitindo aos usuários interagir com a página de maneiras diversas, como enviar formulários, executar scripts JavaScript, ou simplesmente agir como links.
+
+O elemento <button> pode ser configurado de três maneiras principais, usando o atributo type:
+
+submit: O padrão se nenhum type for especificado. Usado para enviar um formulário ao servidor.
+reset: Redefine os campos de um formulário para seus valores padrão.
+button: Não tem comportamento padrão de envio ou redefinição e é comumente usado para executar um script JavaScript.
+Veja no quadro abaixo um exemplo: 
+-->
+<form action="submit.php" method="post">
+
+    <button type="submit">Enviar</button>
+
+</form>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/csJW-AZ3-KxHTWqNdhTzqUF9TWMes8wFFkVscf8yj2SbdhxDt1rfNvScv-_jYFUQLPN3y-UKIF1I5TCp0FS34mAKFff5lz4rZDyz1J71gItXbKZiNdFsXBphtJu498yMYjBbwSK7g2JBbLa8iBPQUA
+
+Descrição: No navegador, esse código cria um formulário com um  botão "Enviar". Este botão é usado para enviar os dados inseridos no formulário para o servidor para processamento posterior.
+
+Este botão, quando colocado dentro de um formulário, envia os dados do formulário ao servidor.
+
+OBS: A diferença entre <input type="submit"> e <button type="submit"> reside principalmente na flexibilidade e na capacidade de personalização. Ambos desempenham a função básica de enviar um formulário ao servidor, mas há nuances importantes que podem influenciar qual escolher dependendo do contexto específico do projeto. Enquanto que o elemento <input type="submit"> é tradicionalmente usado em formulários HTML para criar um botão de envio, o conteúdo (o texto do botão) é definido pelo atributo value. Dessa forma, não é possível incluir HTML ou ícones dentro do botão; ele suporta apenas texto. O elemento <button> oferece uma maior flexibilidade. Pode conter conteúdo HTML, permitindo a inclusão de ícones, imagens ou formatação especial dentro do botão.
+-->

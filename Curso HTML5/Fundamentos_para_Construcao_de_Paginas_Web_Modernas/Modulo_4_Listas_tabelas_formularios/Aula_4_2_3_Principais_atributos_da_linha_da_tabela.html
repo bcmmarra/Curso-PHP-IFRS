@@ -1,0 +1,94 @@
+<!-- 
+4.2.3 Principais atributos da linha da tabela
+Vimos que a tag <tr> é usada para definir uma linha em uma tabela, e é onde as células da tabela, definidas pelas tags <td> (célula de dados da tabela) ou <th> (célula de cabeçalho da tabela), são organizadas (Alves, 2021; MDN Web Docs, 2024). Embora a tag <tr> em si não suporte uma ampla gama de atributos específicos como outras tags HTML, existem alguns atributos comumente usados em conjunto com <tr> para melhorar a acessibilidade, estilo e semântica da tabela. 
+
+OBS: No HTML5, em vez de usar atributos diretamente nas tags <tr>, recomenda-se aplicar estilos CSS para alcançar os efeitos desejados. CSS oferece muito mais flexibilidade e controle sobre a apresentação das tabelas, permitindo estilização consistente e responsiva.
+
+Atributo align
+O atributo align da tag <tr> é usado para especificar o alinhamento horizontal do conteúdo dentro das células (<td> ou <th>) de uma determinada linha (<tr>) da tabela. Os valores possíveis para este atributo incluem left, center, e right, determinando se o texto dentro das células da linha será alinhado à esquerda, ao centro, ou à direita, respectivamente.
+
+Veja no quadro abaixo um exemplo: 
+-->
+
+<table border="1">
+    <tr align="center">
+        <th>Cabeçalho 1</th>
+        <th>Cabeçalho 2 com texto maior</th>
+    </tr>
+    <tr align="left">
+        <td>Dado 1  com texto grande</td>
+        <td>Dado 2</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, o conteúdo das células na primeira linha (<tr>) será centralizado, enquanto o conteúdo das células na segunda linha será alinhado à esquerda. 
+
+Veja na figura abaixo o resultado no navegador.
+
+link da imagem: https://lh7-us.googleusercontent.com/fXoeCWtUpL2iKvC8ziqg39qgi4bL0UxmjHUdo2eEGFqMDmSgOYQUWLChnZZPLUAzJFdHRENMW02evMshrEmIC5RG_huOQo-ojsGigm6fyYZ-zYiY5JfBUbNwTvOGQPnvbqwTQj1Sx8dtm4ltw__q9A
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis. A primeira linha tem dois cabeçalhos centralizados: "Cabeçalho 1" e "Cabeçalho 2 com texto maior". A segunda linha tem duas células alinhadas à esquerda: "Dado 1 com texto grande" e "Dado 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo valign
+O atributo valign da tag <tr> especifica o alinhamento vertical das células dentro de uma linha da tabela (<tr>). Este atributo pode ajudar a determinar como o conteúdo dentro das células (<td> ou <th>) é alinhado verticalmente. 
+Os valores comuns para valign incluem:
+
+top: Alinha o conteúdo da célula ao topo da célula.
+middle: Alinha o conteúdo da célula ao centro vertical da célula.
+bottom: Alinha o conteúdo da célula à parte inferior da célula.
+baseline: Alinha o conteúdo da célula em relação à linha de base dos textos dentro da mesma linha da tabela
+
+Veja um exemplo, conforme quadro abaixo:
+-->
+
+<table border="1" height="150" width="200">
+    <tr valign="middle">
+        <td>Linha 1, Célula 1</td>
+        <td>Linha 1, Célula 2</td>
+    </tr>
+    <tr valign="top">
+        <td>Linha 2, Célula 1</td>
+        <td>Linha 2, Célula 2</td>
+    </tr>
+</table>
+
+<!-- 
+O conteúdo das células na primeira linha (<tr>) é alinhado verticalmente ao meio (middle), enquanto o conteúdo das células na segunda linha é alinhado ao topo (top).
+
+Veja na figura abaixo o resultado no navegador.
+
+link da imagem: https://lh7-us.googleusercontent.com/zmHr-lPJGwI59CdqtEiDY8z0Jb-yMHQRnEOARh_qBooyS-dTKWbyngfz8R14xG0ITtiQcCqfk4LDxU2gdrDdcBNgOiw_tBau9bBV-8CGXdrzUCLeTYeBkXRIAnG4Pd9GtDZaJNyZJ_iImIkPcRmPQw
+
+Descrição: No navegador, este código cria uma tabela com bordas visíveis, 150 pixels de altura e 200 pixels de largura. A primeira linha tem duas células com conteúdo centralizado verticalmente: "Linha 1, Célula 1" e "Linha 1, Célula 2". A segunda linha tem duas células com conteúdo alinhado ao topo: "Linha 2, Célula 1" e "Linha 2, Célula 2".
+
+OBS: Este atributo está obsoleto em HTML5.
+
+Atributo bgcolor
+O atributo bgcolor da tag <tr> é utilizado para definir a cor de fundo de uma determinada linha de conteúdo em uma tabela. Este atributo aceita valores de cores em diferentes formatos, como nomes de cores (por exemplo, "red", "blue"), valores hexadecimais (por exemplo, "#FF0000" para vermelho), ou valores RGB (por exemplo, "rgb(255, 0, 0)" para vermelho).
+Vejamos no quadro abaixo um exemplo:
+-->
+<table>
+    <tr bgcolor="#FF0000">
+        <td>Coluna 1</td>
+        <td>Coluna 2</td>
+    </tr>
+    <tr bgcolor="lightblue">
+        <td>Coluna 3</td>
+        <td>Coluna 4</td>
+    </tr>
+</table>
+
+<!-- 
+Neste exemplo, a primeira linha da tabela terá um fundo vermelho (especificado pelo valor hexadecimal), enquanto a segunda linha terá um fundo azul claro (especificado pelo nome da cor).
+
+Veja na figura abaixo o resultado no navegador.
+
+link da imagem: https://lh7-us.googleusercontent.com/b0zxzU_qivwi0XdYd1sixwanfSkwErFFoghFcP9Qdw1NhJtWB-dMNJZmU5J_CVqDToNXjrSdrfQkkFbqnM3A2lxmaFJWjI7NsKopVSzg_WKQQZ8x5jXsJDQUf3l9zgbtuC7d5zF2PNQFOLHSe2N-5A
+
+Descrição: No navegador, este código cria uma tabela onde a primeira linha tem um fundo vermelho e contém duas células: "Coluna 1" e "Coluna 2". A segunda linha tem um fundo azul claro e também contém duas células: "Coluna 3" e "Coluna 4".
+
+OBS: Este atributo está obsoleto em HTML5.
+-->

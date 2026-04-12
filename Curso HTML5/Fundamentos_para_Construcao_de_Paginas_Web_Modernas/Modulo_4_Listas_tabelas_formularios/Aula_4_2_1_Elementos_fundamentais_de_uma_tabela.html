@@ -1,0 +1,53 @@
+<!-- 
+4.2.1 Elementos fundamentais de uma tabela
+Para criar uma tabela em HTML, é essencial conhecer os elementos-chave que constituem a estrutura de uma tabela. 
+
+Tag <table>
+Criar uma tabela no HTML5 envolve o uso da tag <table> e algumas tags relacionadas para definir linhas, células e, opcionalmente, cabeçalhos de colunas (Neto; Santos; Aguiar, 2013). Logo, podemos dizer que a tag <table> é o container que define a tabela. Todos os outros elementos de tabela são inseridos dentro deste elemento. Esta tag tem um conjunto de atributos que ajudam na sua formatação, os quais veremos em breve neste documento.
+
+Tag <tr>
+Dentro da tag <table>, use a tag <tr> para iniciar e terminar cada linha da tabela. Pode conter células de cabeçalho (<th>) da tabela ou células de dados (<td>).
+
+Tag <th>
+Dentro de cada tag <tr>, você pode usar a tag <th> para definir células de cabeçalho (Table Header) da tabela, que são usadas para definir títulos para colunas ou linhas da tabela (W3C Schools, 2024). As células <th> são, por padrão, formatadas em negrito e centralizadas.
+
+Tag <td>
+Dentro de cada tag <tr>, você também pode usar a tag <td> para definir células de dados (Data Cell) da tabela, ou seja, será o lugar você coloca o conteúdo das informações da tabela.
+
+Vejamos no quadro abaixo um exemplo básico de como você pode criar uma tabela em HTML5: 
+-->
+<table border="1">
+     <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Profissão</th>
+    </tr>
+    <tr>
+        <td>Maria</td>
+        <td>28</td>
+        <td>Designer</td>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>32</td>
+        <td>Desenvolvedor</td>
+    </tr>
+</table>
+
+<!-- 
+Onde:
+
+<table border="1">: Cria a tabela e, opcionalmente, define a largura da borda da tabela como 1.  No HTML5, o atributo border é considerado obsoleto, e é recomendado usar CSS para estilizar as bordas, mas ainda é comum ver o uso para exemplos simples para aprendizado.
+
+<tr>: Define uma linha na tabela.
+
+<th>: Define uma célula de cabeçalho na linha. Células <th> são usadas para cabeçalhos de coluna e são, por padrão, negrito e centralizado.
+
+<td>: Define uma célula padrão (data cell) na linha, usada para dados da tabela.
+
+Veja o resultado no navegador, conforme figura abaixo.
+
+link da imagem: https://lh7-us.googleusercontent.com/OAhkImAgm24uI93tfonNHy46oWzri5zq5wTGhelBDPSkM3VmBwHaZve958c2amB-LpMSrrLGVk4X6CI7RQ-luAoYDnA0MEchrANOTFOT3_GxJ13t-KPuiI_6H5Uo2twnUHK_xycPBEa0ApX9K-pzYQ
+
+Descrição da imagem: No navegador, este código cria uma tabela com bordas visíveis. A tabela tem três colunas: "Nome", "Idade" e "Profissão". Na primeira linha de dados, os valores são "Maria", 28, e Designer. Na segunda linha de dados, os valores são "João", 32, e Desenvolvedor.
+-->

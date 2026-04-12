@@ -1,0 +1,32 @@
+<!-- 
+4.3.6 Agrupando elementos de formulário
+Os elementos <fieldset> e <legend> são usados em conjunto em formulários HTML para agrupar logicamente um conjunto de elementos de formulário e definir um título para esse grupo, respectivamente. Essa combinação não apenas melhora a organização visual dos formulários, mas também aumenta a acessibilidade, facilitando a navegação e compreensão do formulário por usuários que utilizam leitores de tela.
+
+Veja abaixo um exemplo no quadro abaixo: 
+-->
+<form action="submit.php" method="post">
+    <fieldset>
+        <legend>Informações de Contato</legend>       
+
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name"><br>
+   
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br>
+         
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone">
+     </fieldset>       
+
+     <input type="submit" value="Enviar">
+</form>
+
+<!-- 
+Neste exemplo, o <fieldset> é usado para agrupar campos relacionados às informações de contato do usuário, com <legend> fornecendo um título claro para o grupo. Isso não apenas melhora a organização visual do formulário, mas também facilita a compreensão dos usuários sobre quais informações estão sendo solicitadas.
+
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/78U7QLF6Kv1isBoakjjllhvTn9UFIfc_cA2ynamFZTlZjq2ZXGAeeyYM1D_smayLfvS-cEgAmbAcmCbHLjhuYVVs-27sx8QWF_tFfdiPBLm_wXjp1KayXGo1AI8NNhkOYTF7BWqoIRlQbH74r6GMOA
+
+Descrição: No navegador, esse código cria um formulário com um conjunto de informações de contato. O formulário tem um campo para o nome, um para o e-mail e um para o telefone. Os campos são agrupados dentro de um elemento <fieldset>, que tem uma legenda descrevendo o grupo de campos. Ao clicar no botão "Enviar", os dados inseridos serão submetidos para o servidor.
+-->

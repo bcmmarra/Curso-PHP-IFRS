@@ -1,0 +1,68 @@
+<!-- 
+4.3.3 Lista suspensa de opções
+O elemento <select> é utilizado em formulários HTML para criar uma lista suspensa de opções, permitindo que os usuários escolham uma ou, se especificado, várias opções de uma lista predefinida. Um <select> é composto por uma ou mais tags <option>, cada uma representando uma opção diferente na lista suspensa.
+
+Os atributos básicos deste elemento são os seguintes:
+
+id: Uma identificação única para o campo, que pode ser usada para referenciá-lo com CSS ou JavaScript.
+name: O nome do campo, que é enviado com o formulário.
+required: Indica que o usuário deve selecionar uma opção antes de enviar o formulário.
+multiple: Quando presente, permite que o usuário selecione mais de uma opção simultaneamente.
+size: Se combinado com multiple, define quantas opções são visíveis sem rolar.
+
+Veja um exemplo no quadro abaixo: 
+-->
+
+<form action="submit.php" method="post">
+    <label for="fruta">Escolha sua fruta favorita:</label>
+    <select name="fruta" id="fruta" required>
+        <option value="">Selecione uma opção</option>
+        <option value="maça">Maçã</option>
+        <option value="banana">Banana</option>
+        <option value="laranja">Laranja</option>
+        <option value="manga">Manga</option>
+    </select>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<!-- 
+Neste exemplo, o usuário pode escolher sua fruta favorita de uma lista suspensa. A opção inicial é intencionalmente deixada em branco e marcada como não selecionável para encorajar o usuário a fazer uma escolha consciente, ao mesmo tempo em que atende ao requisito do campo ser preenchido.
+
+Veja o resultado no navegador, conforme a figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/WquPvsh8dXw2HAQffU727A7HegYZZEfaKaQnCp3FaS2IavvfWTCk6ngi7BMKkJalG_eFtBr5Zr2pZXiYGcPv-kUanlPCkxfYniOgnyyHI3gKlXQWd4Ad0S3SsbvPGgNZ7VU9QWFewXRVnPRK6Tju6Q
+
+Descrição: No navegador, este código cria um formulário com um menu suspenso: 1) O menu suspenso permite ao usuário selecionar sua fruta favorita entre várias opções, como maçã, banana, laranja e manga; 2) Há um rótulo associado ao menu suspenso indicando "Escolha sua fruta favorita"; 3) Abaixo do menu suspenso, há um botão "Enviar" que, quando clicado, envia a opção selecionada para "submit.php" usando o método POST. O campo é obrigatório, então uma opção deve ser selecionada antes de enviar o formulário.
+
+A tag <optgroup> pode ser usada para agrupar opções relacionadas dentro do <select>, facilitando a organização de listas longas. Ela permite que você crie subseções dentro de uma lista suspensa, cada uma com um rótulo próprio.
+
+Veja no quadro abaixo um exemplo:
+-->
+<form action="submit.php" method="post">
+    <label for="carros">Escolha um carro:</label>
+    <select name="carros" id="carros">
+        <optgroup label="Fabricantes Alemães">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+        </optgroup>
+        <optgroup label="Fabricantes Japoneses">
+            <option value="toyota">Toyota</option>
+            <option value="nissan">Nissan</option>
+            <option value="honda">Honda</option>
+       </optgroup>
+    </select>      
+</form>
+
+<!-- 
+Neste exemplo, o elemento <select> é usado para criar uma lista suspensa onde o usuário pode escolher uma marca de carro. As marcas são organizadas em dois grupos: "Fabricantes Alemães" e "Fabricantes Japoneses". Cada grupo é criado usando a tag <optgroup>, com o atributo label fornecendo o nome do grupo.
+
+Veja o resultado no navegador, conforme a figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/rO4-CzyP2nNjoUVN_hWgYWP-kCLyI3JGTVs0i8HZzzh5mOp-jkK3bsNEX2eIfl1-J7feCcvdD2Hd5MKXG9dGvvqpqK20rPG61qwSS-W1mjUNyHp8JLZYAIcFzCcTHoDPMn4fcCQEf7juvgHBYsl-qg
+
+Descrição: No navegador, este código cria um formulário com um menu suspenso: 1) O menu suspenso permite ao usuário escolher um carro de duas seções distintas: "Fabricantes Alemães" e "Fabricantes Japoneses"; 2) Cada seção é identificada por um rótulo, como "Fabricantes Alemães" e "Fabricantes Japoneses"; 3) Sob cada rótulo, há uma lista de opções de carros, como Mercedes, Audi e BMW para fabricantes alemães, e Toyota, Nissan e Honda para fabricantes japoneses.
+
+Usar <optgroup> em elementos <select> é uma prática recomendada para melhorar a experiência do usuário ao lidar com formulários complexos ou com muitas opções de escolha.
+-->
