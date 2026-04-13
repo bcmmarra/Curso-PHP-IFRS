@@ -1,0 +1,53 @@
+<!-- 
+2.1.5 Estilo da fonte
+A propriedade font-style é utilizada para definir o estilo da fonte de um texto (SILVA, 2012; MDN Web Docs, 2024). Essa propriedade é principalmente conhecida por permitir que os textos sejam exibidos em itálico ou oblíquo, mas também pode ser usada para manter o texto em estilo normal, caso seja necessário sobrescrever um estilo herdado de um contexto superior.
+A propriedade font-style aceita os seguintes valores:
+
+normal: Este é o valor padrão, indicando que o texto deve ser exibido em estilo normal, sem itálico ou oblíquo.
+italic: Aplica um estilo itálico ao texto. Este estilo é geralmente usado para enfatizar uma palavra ou frase dentro de um contexto maior de texto.
+oblique: Também inclina o texto, mas não necessariamente no mesmo estilo que a fonte itálica específica projetada pelo tipógrafo. Em muitos casos, se uma fonte itálica não está disponível, um navegador pode simular o estilo itálico inclinando a fonte normal. Isso é o que oblique faz.
+oblique <angle>: Você pode especificar um ângulo para o texto oblíquo. Por exemplo, oblique 15deg inclina o texto em um ângulo de 15 graus. Esta capacidade oferece mais controle sobre o grau de inclinação do texto.
+
+Vejamos no quadro abaixo um exemplo simples de como você pode usar a propriedade font-style: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Font-Style</title>
+    <style>
+        p {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+        }
+
+        .normal {
+            font-style: normal;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .oblique {
+            font-style: oblique;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="normal">Este parágrafo está em estilo normal.</p>
+    <p class="italic">Este parágrafo está em estilo itálico.</p>
+    <p class="oblique">Este parágrafo está em estilo oblíquo.</p>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/728z_qq5N9uWhEnXiF7ngUMiVC79aITT0jelTb7UojPw0HtG26Uz81dg3aYBQpQ0RIvAPZ3rgta5Gme5zMJTbLnV0Go25UecBbaFGc3-c4CJnF-GyL72BgGa8FrtF1s4cQ_4eQGoKMyFSXwrZBMCcg
+
+Descrição da imagem: No navegador, aparecem três parágrafos. O primeiro parágrafo foi associado à classe .normal, que define o texto como a forma padrão, sem inclinação ou estilo adicional. O segundo parágrafo foi associado à classe .italic, que aplica uma inclinação leve para a direita no texto, criando um efeito itálico. O terceiro parágrafo foi associado à classe .oblique, que também inclina o texto, mas em vez de usar uma forma itálica genuína, ele aplica uma inclinação ao estilo normal da fonte, resultando em um efeito similar ao itálico, porém, em alguns casos, menos pronunciado.
+-->

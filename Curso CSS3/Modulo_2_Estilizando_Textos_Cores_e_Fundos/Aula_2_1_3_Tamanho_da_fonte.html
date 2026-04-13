@@ -1,0 +1,110 @@
+<!-- 
+2.1.3 Tamanho da fonte
+A propriedade font-size é usada para controlar o tamanho do texto de elementos HTML. É uma das propriedades fundamentais para ajustar a legibilidade e a estética visual de páginas web. No CSS3, font-size pode ser especificado em várias unidades, oferecendo flexibilidade para adaptar o design do texto a diferentes dispositivos e contextos de visualização.
+A propriedade font-size trabalha com diferentes tipos de unidades de medida:
+
+Pixels (px): Os pixels são uma unidade fixa e fornecem controle preciso sobre o tamanho do texto. No entanto, o uso de pixels pode limitar a flexibilidade e a acessibilidade, pois não permite que os usuários ajustem facilmente o tamanho do texto nos navegadores. Veja um exemplo no quadro abaixo:
+
+p {
+    font-size: 16px;
+}
+ 
+Em: A unidade em é relativa ao tamanho da fonte do elemento pai. Isso é útil para criar designs escaláveis e manter a harmonia tipográfica.  Assim,1em é igual ao tamanho da fonte do elemento pai. Se um elemento tem um tamanho de fonte de 16px definido pelo pai e você define font-size: 1.5em, então o tamanho da fonte do elemento será 24px. Veja um exemplo no quadro abaixo:
+
+p {
+    font-size: 1.5em; /* 150% do tamanho da fonte do elemento pai */
+}
+
+Vejamos no quadro abaixo um exemplo mais avançado:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de EM em CSS</title>
+    <style>
+        .container {
+            font-size: 16px;
+            /* Tamanho da fonte base para o container */
+        }
+
+        h1 {
+            font-size: 2em;
+            /* 32px, pois 2 * 16px = 32px */
+        }
+
+        p {
+            font-size: 1em;
+            /* 16px, o mesmo que o elemento pai */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Título Principal</h1>
+        <p>Este é um exemplo de texto usando a unidade em. O tamanho da fonte e a margem são definidos em relação ao
+            tamanho da fonte do elemento.</p>
+        <p>O segundo parágrafo aqui seguirá as mesmas regras do anterior, demonstrando consistência na aplicação de
+            `em`.</p>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+Veja na figura abaixo o resultado no navegador:
+
+Link da imagem: https://lh7-us.googleusercontent.com/KQXnS1uYAS2Ycsq0bdBlWoe1ktJ3qEt0y91V7WxuTX3kmPfy4GPeGvx4FXpZRL20an7fnMrQcTrO1uCIU1c9HzZ8LZfCLTjoVgnj-6Pqhl0x5564NxE6Rj4bj0rqQQ2oeu6Zn9A3iT7e3lWo94270g
+
+Descrição da imagem: No navegador, o título principal terá 32 pixels de tamanho de fonte, enquanto os parágrafos terão 16 pixels, seguindo as regras estabelecidas pelo tamanho base definido no contêiner. Isso demonstra como a unidade "em" em CSS é relativa ao tamanho da fonte do elemento pai.
+
+Rem (Root EM): Diferentemente da unidade em, que é relativa ao tamanho da fonte do elemento pai, rem é sempre calculada em relação ao tamanho da fonte definido no elemento raiz (<html>). Isso torna rem particularmente útil para garantir a consistência ao longo de um design, evitando os efeitos cumulativos que podem ocorrer com o uso de `em` em elementos aninhados. Veja um exemplo no quadro abaixo:
+-->
+
+<style>
+    html {
+        font-size: 16px;
+        /*Define o tamanho da fonte base para todo o documento*/
+    }
+
+    body {
+        font-size: 1rem;
+        /* Igual a 16px */
+        margin: 0.5rem;
+        /* 8px */
+    }
+
+    h1 {
+        font-size: 2rem;
+        /* 32px */
+    }
+</style>
+
+<!-- 
+Percentual (%): Define o tamanho da fonte como uma porcentagem do tamanho da fonte do elemento pai. Isso é similar ao em, mas especificado como uma porcentagem. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    p {
+        font-size: 150%;
+        /* 150% do tamanho da fonte do elemento pai */
+    }
+</style>
+
+<!-- 
+Viewport units: O termo "viewport" refere-se à área visível utilizada para exibir o conteúdo web em um dispositivo. No contexto do CSS, o viewport representa a parte da janela do navegador onde o conteúdo da página é exibido. Assim, as viewport units vinculam o tamanho da fonte às dimensões da viewport. 
+
+1vw é igual a 1% da largura da viewport. 
+1vh é igual a 1% da altura da viewport.
+
+Veja um exemplo no quadro abaixo: 
+-->
+<style>
+    h1 {
+        font-size: 5vw;
+        /* O tamanho da fonte é 5% da largura da viewport */
+    }
+</style>
+

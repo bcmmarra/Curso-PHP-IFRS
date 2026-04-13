@@ -1,0 +1,37 @@
+/* 
+2.1.1 Cor do texto
+A propriedade color é usada para definir a cor do texto de um elemento HTML (MDN Web Docs, 2024; W3C Schools, 2024). Ela define a cor do texto usando:
+
+Nomes de Cores: CSS3 suporta um conjunto estendido de nomes de cores, incluindo cores básicas como red, blue, green, etc., e um espectro mais amplo de nomes detalhados como salmon, deepskyblue, lightseagreen, etc. Veja um exemplo no quadro abaixo:
+*/
+p {
+  color: blue;
+  color: lightseagreen;
+}
+
+/* 
+Hexadecimal: Um formato comum que especifica cores usando valores hexadecimais (base 16). Começa com um # seguido por 3 ou 6 dígitos. As versões de 6 dígitos definem o vermelho, o verde e o azul (#RRGGBB), enquanto as de 3 dígitos são uma forma abreviada (#RGB), onde cada dígito é duplicado. Veja um exemplo no quadro abaixo:
+*/
+p {
+  color: #ff0000; /* vermelho */
+  color: #00ff00; /* verde */
+  color: #0000ff; /* azul */
+  color: #f00; /* vermelho abreviado */
+}
+
+/* 
+RGB e RGBA: O rgb() define cores com valores de vermelho, verde e azul, cada um variando de 0 a 255. Já o rgba() adiciona um canal alfa que especifica a opacidade da cor, com 0 sendo totalmente transparente e 1 totalmente opaco. Veja um exemplo no quadro abaixo:
+*/
+p {
+  color: rgb(255, 0, 0); /* vermelho */
+  color: rgba(255, 0, 0, 0.5); /* vermelho com 50% de opacidade */
+}
+
+/* 
+HSL e HSLA: O hsl() representa matiz (hue), saturação (saturation) e luminosidade (lightness). Logo, matiz (hue) se refere à cor pura no círculo de cor. O matiz é representado como um grau no círculo de cor (de 0 a 360), onde 0 (ou 360) é vermelho, 120 é verde, 240 é azul, e assim por diante. Essencialmente, o matiz determina a cor visível. Saturação (saturation) representa a intensidade da cor, onde 0% é completamente desaturado (cinza) e 100% é totalmente saturado (cor pura). Já a luminosidade ( lightness) se refere à quantidade de luz na cor, onde 0% é completamente escuro (preto), 50% é a cor pura, e 100% é completamente claro (branco). O hsla() adiciona opacidade. Veja um exemplo no quadro abaixo:
+*/
+
+p {
+  color: hsl(120, 100%, 50%); /* verde puro */
+  color: hsla(120, 100%, 50%, 0.3); /* verde puro com 30% de opacidade */
+}

@@ -1,0 +1,49 @@
+<!-- 
+2.1.7 Espaçamento entre linhas
+A propriedade line-height é crucial para controlar o espaçamento vertical entre linhas de texto, impactando diretamente a legibilidade e a estética de um documento web. Ela define a altura de uma linha de texto e é uma das propriedades mais importantes para a tipografia em design web.
+
+O valor de line-height pode ser especificado de várias maneiras:
+
+Número unitário: O mais comum e recomendado, pois é relativo ao tamanho da fonte atual do elemento. Por exemplo, line-height: 1.5; significa que a altura da linha é 1,5 vezes o tamanho da fonte do elemento.
+Valor com unidades (como px, em, rem): Especifica a altura da linha com uma unidade fixa ou relativa. Por exemplo, line-height: 20px; define a altura da linha para 20 pixels.
+Porcentagem: Relativa ao tamanho da fonte atual do elemento. Por exemplo, line-height: 150%; também resulta em uma altura de linha que é 1,5 vezes o tamanho da fonte.
+Veja no quadro abaixo um exemplo de uso desta propriedade CSS: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Line-Height</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            /* Espaçamento entre linhas é 1.6 vezes o tamanho da fonte */
+        }
+        .tight {
+            line-height: 1.2;
+            /* Menor espaçamento entre linhas */
+        }
+        .loose {
+            line-height: 2;
+            /* Maior espaçamento entre linhas */
+        }
+    </style>
+</head>
+<body>
+    <p>Este é um exemplo de parágrafo com um espaçamento entre linhas padrão. Observe como o texto flui de maneira agradável e legível.</p>
+    <p class="tight">Este parágrafo tem um espaçamento entre linhas mais apertado. Pode ser útil para economizar espaço ou criar um estilo visual específico.</p>
+    <p class="loose">Este parágrafo tem um espaçamento entre linhas mais solto. Isso pode melhorar a legibilidade em alguns contextos ou ser usado para um efeito estilístico.</p>
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/dFCeeDb_2xGIGlEMboPM9yy5lwMhv2cssAH4BjeJxiKOv5Z6cB0nOq1_lXTXDNtIyJig2VDvIu31TOHJ-mGUjyNctbqkYfLqvlStNCAxvy6t1UscBbgXu2_fkoVfRBRTxs0H1cMCCt9uzZPlknjQ2Q
+
+Descrição da imagem: No corpo do documento, há três parágrafos. O primeiro parágrafo tem um espaçamento entre linhas padrão, definido como 1.6 vezes o tamanho da fonte de 18 pixels. O segundo parágrafo, com a classe "tight", tem um espaçamento entre linhas mais apertado, definido como 1.2 vezes o tamanho da fonte. Isso reduz o espaço entre as linhas, economizando espaço vertical. O terceiro parágrafo, com a classe "loose", tem um espaçamento entre linhas mais solto, definido como 2 vezes o tamanho da fonte. 
+-->

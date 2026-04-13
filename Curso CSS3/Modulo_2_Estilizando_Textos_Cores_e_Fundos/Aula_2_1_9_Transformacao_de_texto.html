@@ -1,0 +1,54 @@
+<!-- 
+2.1.9 Transformação de texto
+A propriedade text-transform é usada para alterar a capitalização do texto de um elemento HTML (W3C Schools, 2024). Ela permite controlar se o texto aparece em letras maiúsculas, minúsculas ou com a primeira letra de cada palavra em maiúscula, entre outras opções. 
+
+A propriedade text-transform aceita os seguintes valores:
+
+none: Não aplica nenhuma transformação ao texto. Este é o valor padrão, onde o texto é exibido como está no HTML.
+capitalize: Transforma a primeira letra de cada palavra em maiúscula.
+uppercase: Transforma todas as letras do texto em maiúsculas.
+lowercase: Transforma todas as letras do texto em minúsculas.
+
+Veja abaixo um exemplo demonstrando os efeitos de text-transform: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Text-Transform</title>
+    <style>
+        .none {
+            text-transform: none;
+        }
+
+        .capitalize {
+            text-transform: capitalize;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .lowercase {
+            text-transform: lowercase;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="none">Não há transformação aqui.</p>
+    <p class="capitalize">Este é um exemplo de texto com capitalize.</p>
+    <p class="uppercase">Este é um exemplo de texto com uppercase.</p>
+    <p class="lowercase">Este é um exemplo de texto com lowercase.</p>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://moodle.ifrs.edu.br/pluginfile.php/9479470/mod_page/content/5/image.png
+
+Descrição da imagem: No corpo do documento, há quatro parágrafos, cada um com uma classe CSS que aplica um estilo específico. O primeiro parágrafo, com a classe "none", não tem nenhuma transformação de texto aplicada, então o texto é exibido como foi escrito: "não há transformação aqui." O segundo parágrafo, com a classe "capitalize", transforma a primeira letra de cada palavra em maiúscula: "Este É Um Exemplo De Texto Com Capitalize." O terceiro parágrafo, com a classe "uppercase", transforma todo o texto em maiúsculas: "ESTE É UM EXEMPLO DE TEXTO COM UPPERCASE." O quarto parágrafo, com a classe "lowercase", transforma todo o texto em minúsculas: "este é um exemplo de texto com lowercase."
+-->

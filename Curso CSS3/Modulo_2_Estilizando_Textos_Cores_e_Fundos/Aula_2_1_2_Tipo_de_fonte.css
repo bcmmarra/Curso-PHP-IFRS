@@ -1,0 +1,21 @@
+/* 
+2.1.2 Tipo de fonte
+A propriedade font-family é utilizada para especificar a família tipográfica para o texto de um elemento. Essa propriedade é fundamental para o design de texto, pois determina a aparência geral da tipografia em uma página web.
+No exemplo ilustrado no quadro abaixo, todos os parágrafos usarão a fonte "Georgia". Se essa fonte não estiver disponível, o navegador usará a fonte padrão.
+*/
+p {
+    font-family: "Georgia";
+}
+
+/* 
+Porém, a propriedade font-family permite que você especifique uma lista de nomes de famílias de fontes e/ou nomes genéricos de família. Os navegadores tentarão usar as fontes na ordem em que aparecem na lista. Se o navegador não puder encontrar a primeira fonte, ele tentará a próxima e assim por diante. Isso proporciona um mecanismo de fallback para garantir que algo semelhante à escolha ideal seja usado, melhorando a compatibilidade entre diferentes sistemas e dispositivos.
+*/
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 
+Neste exemplo, especificamos várias fontes para o corpo do documento. O navegador tentará usar "Helvetica Neue" primeiro. Se não estiver disponível, ele tentará "Helvetica", depois "Arial", e finalmente cairá na categoria genérica sans-serif se nenhuma das anteriores estiver disponível.
+
+OBS: As categorias genéricas são essenciais porque oferecem um plano de contingência para a apresentação de texto, garantindo que sempre haverá uma fonte disponível que se aproxime da intenção estilística original, mesmo que a fonte específica não possa ser carregada. 
+*/

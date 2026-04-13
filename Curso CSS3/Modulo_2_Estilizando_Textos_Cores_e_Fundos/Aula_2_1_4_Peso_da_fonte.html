@@ -1,0 +1,74 @@
+<!-- 
+2.1.4 Peso da fonte
+A propriedade font-weight é usada para definir a espessura, ou o peso, do texto de um elemento. Isso afeta o quão grosso ou fino os caracteres aparecem em uma tela ou impressão. Logo, propriedade font-weight pode ser especificada usando valores que vão de 100 a 900, em incrementos de 100.
+A propriedade font-weight pode aceitar vários tipos de valores:
+
+Palavras-chave Normais: 
+normal: O peso normal do texto, geralmente equivalente a 400.
+bold: Texto em negrito, geralmente equivalente a 700.
+
+Valores Numéricos:
+100, 200, 300: Pesos de fonte mais finos.
+500, 600: Pesos de fonte um pouco mais grossos que o normal.
+800, 900: Pesos de fonte muito grossos, mais do que bold.
+
+Valores Relativos:
+bolder e lighter: Estes valores ajustam o peso da fonte para ser mais pesado ou mais leve, respectivamente, em relação ao peso herdado do elemento pai.
+
+Vejamos no quadro abaixo um exemplo: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Font-Weight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-weight: bold;
+            /* Negrito */
+        }
+
+        p.light {
+            font-weight: 300;
+            /* Peso de fonte leve */
+        }
+
+        p.normal {
+            font-weight: normal;
+            /* Peso de fonte normal */
+        }
+
+        p.bold {
+            font-weight: 800;
+            /* Peso de fonte muito grosso */
+        }
+
+        strong {
+            font-weight: bolder;
+            /* Mais grosso que o elemento pai */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cabeçalho com Texto em Negrito</h1>
+    <p class="light">Este parágrafo é renderizado com um peso de fonte leve.</p>
+    <p class="normal">Este parágrafo tem o peso de fonte normal.</p>
+    <p class="bold">Este parágrafo tem um peso de fonte muito grosso, mais do que negrito padrão.</p>
+    <p>Texto <strong>muito</strong> importante!</p>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/4Gguel8_SD16QH50vS3_GmyFj8njiZkubDAGpeZkSENHG89ZEi0CvWpFGojDE8vanCD9dU1qWri268jbYUgGLUxnipds2VkQK0Z85YGTK8eFiS7JsDkg_ObP1rhhOiqncga4MLnyllu_ehD3ZgVCzg
+
+Descrição da imagem: No navegador, o resultado do código CSS definiu diferentes estilos de peso de fonte para diferentes elementos HTML da página. No CSS,  h1 tem o texto como negrito, a classe "light" define o texto com um peso de fonte de 300, a classe "normal" define o texto com o peso de fonte padrão do navegador, a classe "bold" define o texto com um peso de fonte de 800 e strong define o texto forte (marcado como importante) como mais grosso que o elemento pai (usando o valor "bolder").
+-->

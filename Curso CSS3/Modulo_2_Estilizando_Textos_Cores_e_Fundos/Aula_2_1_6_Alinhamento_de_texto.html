@@ -1,0 +1,57 @@
+<!-- 
+2.1.6 Alinhamento de texto
+A propriedade text-align é usada para definir o alinhamento horizontal do texto dentro de um elemento. É uma das propriedades mais básicas e frequentemente usadas para controlar o layout do texto em páginas web. 
+
+A propriedade text-align pode assumir vários valores:
+
+> left: Alinha o texto à esquerda do contêiner. Este é o valor padrão para a maioria dos idiomas que são escritos da esquerda para a direita.
+> right: Alinha o texto à direita do contêiner. Comumente usado em idiomas que são escritos da direita para a esquerda, mas também pode ser usado para estilização em idiomas da esquerda para a direita.
+> center: Centraliza o texto dentro do contêiner. Frequentemente usado para cabeçalhos, títulos ou qualquer elemento textual que você deseja destacar no meio da página.
+> justify: Estica as linhas de texto de modo que ambas as extremidades do texto se encaixem exatamente nas bordas esquerda e direita do contêiner. Isso cria um bloco visual uniforme de texto, semelhante ao que é visto em colunas de jornais.
+> start e end: Alinha o texto ao início ou ao fim da linha base, respectivamente. 
+
+Veja no quadro abaixo um exemplo:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Text-Align</title>
+    <style>
+        .left {
+            text-align: left;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .justify {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="left">Este texto está alinhado à esquerda.</p>
+    <p class="right">Este texto está alinhado à direita.</p>
+    <p class="center">Este texto está centralizado.</p>
+    <p class="justify">Este texto é justificado, o que significa que ambas as bordas, esquerda e direita, são alinhadas
+        uniformemente, estendendo cada linha de texto para alcançar as extremidades do contêiner.</p>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/jd4e9VtvLY0eocc8RRJk16S6v36kCXbyvHVCaPo2NmLnM0PoIjjacTDfwom7cslNK7YCWGxDkDw1c3zM7SQGmp_qD70uyeG_xVJBMssR1_anWgXIiNY7MldsPmxELAlTRvtyzIsxQEX8j0i8Y4MU8Q
+
+Descrição da imagem: No corpo do documento, há quatro parágrafos, cada um com uma classe CSS específica que define o alinhamento do texto. O primeiro parágrafo, com a classe "left", alinha o texto à esquerda. O segundo parágrafo, com a classe "right", alinha o texto à direita. O terceiro parágrafo, com a classe "center", centraliza o texto horizontalmente. O quarto parágrafo, com a classe "justify", justifica o texto, alinhando uniformemente ambas as margens, esquerda e direita, estendendo cada linha de texto para alcançar as extremidades do contêiner. 
+-->

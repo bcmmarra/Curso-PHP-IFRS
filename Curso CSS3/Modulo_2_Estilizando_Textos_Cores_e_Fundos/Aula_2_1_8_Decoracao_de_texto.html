@@ -1,0 +1,43 @@
+<!-- 
+2.1.8 Decoração de texto
+A propriedade text-decoration é usada principalmente para adicionar decoração ao texto de um elemento. Ela é bastante versátil e pode ser usada para criar vários efeitos visuais, incluindo sublinhados, sobrescritos (overlines), tachados (line-throughs) e até mesmo efeitos de decoração mais complexos com a adição de estilos e cores. 
+
+Veja um exemplo desta propriedade no quadro abaixo:
+p {
+    text-decoration: underline red wavy;
+}
+    
+Vejamos no quadro abaixo um exemplo mais completo:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Text-Decoration</title>
+    <style>
+        .underline {
+            text-decoration: underline;
+        }
+        .overline {
+            text-decoration: overline green;
+        }
+        .line-through {
+            text-decoration: line-through blue double;
+        }        
+    </style>
+</head>
+
+<body>
+    <p class="underline">Este texto é sublinhado.</p>
+    <p class="overline">Este texto tem uma linha sobrescrita verde.</p>
+    <p class="line-through">Este texto é tachado com linha dupla azul.</p>    
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://moodle.ifrs.edu.br/pluginfile.php/9479469/mod_page/content/4/image.png
+
+Descrição da imagem: No corpo do documento, há três parágrafos, cada um com uma classe CSS que aplica um estilo específico. O primeiro parágrafo, com a classe "underline", tem o texto sublinhado. O segundo parágrafo, com a classe "overline", tem uma linha verde acima do texto. O terceiro parágrafo, com a classe "line-through", tem uma linha dupla azul através do meio do texto, como se estivesse tachado.
+-->

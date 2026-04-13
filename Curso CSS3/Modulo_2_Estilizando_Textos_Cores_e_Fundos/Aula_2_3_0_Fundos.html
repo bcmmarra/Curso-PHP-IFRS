@@ -1,0 +1,73 @@
+<!-- 
+2.3 Fundos
+A propriedade background é uma das mais poderosas ferramentas de estilização disponíveis para designers e desenvolvedores, permitindo uma ampla gama de efeitos visuais. É possível configurar cores, imagens, gradientes e repetições para criar layouts atrativos e dinâmicos. 
+
+O CSS permite especificar vários aspectos do fundo de um elemento utilizando propriedades específicas:
+
+background-color: Define a cor de fundo do elemento. Pode ser um nome de cor, valor hexadecimal, RGB, RGBA, HSL ou HSLA. Veja um exemplo no quadro abaixo:
+
+background-color: #f8f8f8;
+
+background-image: Especifica uma ou mais imagens para usar como fundo. As imagens são colocadas na ordem especificada, e a primeira imagem é colocada na frente. Veja um exemplo no quadro abaixo:
+
+background-image: url('image.jpg');
+
+background-repeat: Define como uma imagem de fundo deve ser repetida. Valores comuns incluem repeat, repeat-x, repeat-y, e no-repeat. Veja um exemplo no quadro abaixo:
+
+background-repeat: repeat-x;  /* Repete horizontalmente */
+
+background-position: Especifica a posição inicial da imagem de fundo. Pode ser definida em valores como top, bottom, left, right, centímetros, porcentagens, etc. Veja um exemplo no quadro abaixo:
+
+background-position: top right;
+
+background-size: Controla o tamanho da imagem de fundo; os valores podem ser cover (a imagem de fundo cobre completamente o conteúdo), contain (a imagem é redimensionada para caber), ou um valor específico (largura e altura). Veja um exemplo no quadro abaixo:
+
+background-size: cover;
+
+background-attachment: Determina se a imagem de fundo é fixa com relação à viewport ou se rola junto com o elemento contendo. Veja um exemplo no quadro abaixo:
+
+background-attachment: fixed;
+
+O CSS também suporta gradientes lineares e radiais como valores de background-image:
+
+Gradiente Linear: A cor transita ao longo de uma linha entre dois ou mais pontos. Veja um exemplo no quadro abaixo:
+
+background-image: linear-gradient(to right, red, orange, yellow);
+
+Gradiente Radial: A cor transita radialmente de um ponto central. Veja um exemplo no quadro abaixo:
+
+background-image: radial-gradient(circle, red, yellow, green);
+
+Vejamos no quadro abaixo um exemplo mais completo:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fundos no CSS</title>
+    <style>
+        body {
+            background-color: #fff;
+            background-image: url('imagem.png'), linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 0, 0, 0.5));
+            background-repeat: no-repeat, repeat;
+            background-position: center top, left top;
+            background-size: contain, auto;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Veja como podemos combinar múltiplos fundos e efeitos!</p>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/pnrqKj3-8O09IrKQu6fdswpkyPfpP5tgzF4V8WbUSjUYs9LWZCGWjFMUhrb_1WBAHAog8PAyi3R90HVcxnRhzKXdo1ZC6rG606IX27KJ4CwLQkaJkz0F1WQMFERTyEdTW755DtyNkfRKgCKCO84BDQ
+
+Descrição da imagem: No corpo do documento, são aplicados diferentes estilos. A cor de fundo do corpo é branca. A imagem de fundo "imagem.png" é combinada com um gradiente linear que vai da esquerda para a direita, começando transparente e ficando progressivamente mais vermelho. A imagem de fundo não se repete, enquanto o gradiente se repete. A imagem de fundo é posicionada no centro e no topo da página, enquanto o gradiente é posicionado à esquerda e no topo. A imagem de fundo é dimensionada para caber no contêiner (usando "contain"), enquanto o gradiente mantém seu tamanho automático. O fundo está fixo, o que significa que não se moverá quando a página for rolada. No navegador, o texto "Veja como podemos combinar múltiplos fundos e efeitos!" é exibido sobreposto a esses estilos de fundo.
+-->

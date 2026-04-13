@@ -1,0 +1,13 @@
+/* 
+2.2 Cores
+Estilizar cores no CSS é uma parte essencial do design de uma página web, pois as cores influenciam não apenas a estética, mas também a usabilidade e a experiência do usuário (SILVA, 2012; MDN Web Docs, 2024). No CSS, as cores podem ser definidas para quase todas as propriedades visuais, incluindo texto, fundos, bordas e sombras.
+
+As cores podem ser especificadas de várias maneiras:
+
+Nomes de Cores: CSS suporta nomes de cores como red, green, blue, etc.
+Hexadecimais: Representa cores usando valores hexadecimais, como #ff0000 para vermelho.
+RGB: Utiliza o modelo RGB (Red, Green, Blue), como em rgb(255, 0, 0) para vermelho.
+RGBA: Similar ao RGB, mas adiciona um canal alfa para transparência, por exemplo, rgba(255, 0, 0, 0.5) para vermelho com 50% de transparência.
+HSL: Baseia-se em matiz (Hue), saturação (Saturation) e luminosidade (Lightness), como em hsl(0, 100%, 50%) para vermelho.
+HSLA: Adiciona um canal alfa à formatação HSL, como em hsla(0, 100%, 50%, 0.5).
+*/
