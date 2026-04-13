@@ -1,0 +1,295 @@
+<!--
+1.2.2 Seletores CSS avançados
+Seletores CSS avançados oferecem uma capacidade mais refinada e poderosa de apontar para elementos específicos dentro de uma página HTML em comparação aos seletores básicos. Eles permitem que os desenvolvedores criem regras de estilo mais precisas e condicionais, baseadas não apenas na estrutura do documento, mas também no estado, na posição, e na relação entre os elementos. Isso aumenta significativamente a flexibilidade e eficiência do CSS ao construir layouts complexos e interativos. 
+
+Seletores de atributo
+Os seletores de atributo são uma ferramenta poderosa que permite estilizar elementos HTML com base nos atributos e seus valores (W3C Schools, 2024; MDN Web Docs, 2024). Esses seletores oferecem uma maneira flexível de aplicar estilos a elementos sem a necessidade de adicionar classes ou IDs adicionais, aproveitando os atributos existentes nos elementos. 
+
+Vejamos abaixo alguns dos diferentes tipos de seletores de atributo e como eles são utilizados:
+
+[attr]: Seleciona todos os elementos que possuem o atributo especificado, independentemente do seu valor. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    /* Aplica estilo a todos os elementos com um atributo 'data-info' */
+    [data-info] {
+        background-color: yellow;
+    }
+</style>
+
+<!-- 
+[attr=value]: Seleciona todos os elementos que têm o atributo especificado com um valor exatamente igual ao especificado. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    /* Seleciona todos os inputs do tipo 'text' */
+    input[type="text"] {
+        border: 1px solid gray;
+    }
+</style>
+
+<!-- 
+[attr~=value]: Seleciona todos os elementos que têm o atributo especificado contendo um valor de lista de palavras específico, onde as palavras são delimitadas por espaços. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    /* Seleciona elementos com a classe que inclui 'example' entre outras */
+    div[class~="example"] {
+        color: red;
+    }
+</style>
+
+<!-- 
+[attr^=value]: Seleciona todos os elementos com um atributo cujo valor começa com a string especificada. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    /* Seleciona links que começam com 'https' */
+    a[href^="https"] {
+        color: green;
+    }
+</style>
+
+<!-- 
+[attr$=value]: Seleciona todos os elementos com um atributo cujo valor termina com a string especificada. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    /* Seleciona imagens cujo src termina com '.jpg' */
+    img[src$=".jpg"] {
+        border: 2px solid black;
+    }
+</style>
+
+<!-- 
+Vejamos um exemplo prático da utilização dos seletores de atributo em CSS. Considere que você tenha o código HTML ilustrado no quadro abaixo:
+-->
+
+<div data-info="temp">Temperatura</div>
+<input type="text" placeholder="Digite seu nome">
+<div class="user-profile example">Perfil do Usuário</div>
+<a href="https://www.example.com">Visite nosso site</a><br>
+<img src="images/photo.jpg">
+
+<!-- 
+E o seguinte código CSS, conforme ilustrado no quadro abaixo:
+-->
+
+<style>
+    [data-info] {
+        background-color: yellow;
+    }
+
+    input[type="text"] {
+        border: 1px solid gray;
+    }
+
+    div[class~="example"] {
+        color: red;
+    }
+
+    a[href^="https"] {
+        color: green;
+    }
+
+    img[src$=".jpg"] {
+        border: 2px solid black;
+    }
+</style>
+
+<!-- 
+Conforme ilustrado na figura abaixo, o resultado no navegador seria o seguinte:
+
+Link da imagem: https://lh7-us.googleusercontent.com/i2rqdhCiCT-KUJ60rbAE8YFPSGgCvBzSaysL6CbPL1UYq3OXPJgl6445nrnHJ3_wAGpQiqBP4wa974B3OzFAQUHVdOB0tA482-I-zzUwvfgMfNF2VyJC3EdS_fpvT_vsMqmzJlpdSTa35qJaJAPoBw
+
+Descrição da imagem: No navegador, você observa um elemento <div> com fundo amarelo, um campo de entrada (elemento <input>com borda cinza, um texto vermelho para as <div> com a classe "example", links com texto verde que começam com "https" e uma imagem com borda preta quando o src termina em ".jpg".
+
+Seletores de pseudo-classes 
+Os seletores de pseudo-classes são utilizados para definir estilos especiais para estados específicos de elementos em uma página da web. Eles permitem que você aplique estilos a um elemento não apenas com base em sua informação no documento, mas também com base em seu estado, como hover, focus, entre outros. 
+
+A seguir estão alguns dos seletores de pseudo-classes mais comuns:
+
+:hover - Aplica estilo quando o usuário passa o mouse sobre o elemento. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    a:hover {
+        color: red;
+    }
+</style>
+
+<!-- 
+:focus - Utilizado para estilizar um elemento quando ele está focado, como um campo de entrada de texto. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    input:focus {
+        border: 2px solid blue;
+    }
+</style>
+
+<!-- 
+:active - Aplica estilo quando o elemento está sendo ativado pelo usuário, geralmente através de um clique. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    button:active {
+        position: relative;
+        top: 2px;
+    }
+</style>
+
+<!-- 
+:first-child e :last-child - Selecionam o primeiro e o último filho de seu elemento pai, respectivamente. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    li:first-child {
+        font-weight: bold;
+    }
+</style>
+
+<!-- 
+:nth-child(n) - Permite estilizar um elemento que é o enésimo filho de seu elemento pai. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    li:nth-child(2) {
+        color: green;
+    }
+</style>
+
+<!-- 
+Vejamos um exemplo prático que mostra como usar várias pseudo-classes em CSS para estilizar uma lista simples em HTML. Considere o seguinte código HTML, conforme quadro abaixo:
+-->
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul>
+
+<!-- 
+Agora, considere os seguintes estilos em  CSS, conforme quadro abaixo:
+-->
+
+<style>
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background-color: lightgray;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    li:hover {
+        background-color: lightblue;
+        /* Muda a cor de fundo ao passar o mouse */
+    }
+
+    li:nth-child(odd) {
+        color: red;
+        /* Cor vermelha para itens ímpares */
+    }
+
+    li:last-child {
+        font-weight: bold;
+        /* Negrito para o último item */
+    }
+</style>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/zF-PKUqjxNoTyleoklKRZMRms2HpuQQZ3GNmBYTX9klXX_J16LfCVTOFzDfCgqnB-hPksOvcyXjf6ybjHR77eV-bf4em_WVPOt70nfYdjg1QczmHqbADwiPrXYBCZuY_Xgih8KzClH0US5T8lUBhIg
+
+Descrição da imagem: No navegador, você observa uma lista sem marcadores, com itens cinza claro, onde o fundo muda para azul claro ao passar o mouse sobre eles. Os itens ímpares são em vermelho, e o último item está em negrito.
+
+
+Observe que:
+:hover: Aplica um fundo azul claro aos itens da lista quando o usuário passa o mouse sobre eles.
+:nth-child(odd): Seleciona todos os itens ímpares da lista (1, 3, etc.) e os colore de vermelho.
+:last-child: Aplica um estilo de fonte em negrito ao último item da lista.
+
+Seletores de pseudo-elementos
+Ao contrário das pseudo-classes que representam estados de um elemento, os pseudo-elementos são usados para aplicar estilos a uma parte específica do documento. 
+
+Os seletores de pseudo-elementos  mais comuns incluem:
+
+::before - Insere conteúdo antes do conteúdo de um elemento. É frequentemente utilizado para adicionar elementos decorativos ou conteúdo que não precisa estar no HTML. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    p::before {
+        content: "Nota: ";
+        font-weight: bold;
+    }
+</style>
+
+<!-- 
+::after - Insere conteúdo depois do conteúdo de um elemento. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    p::after {
+        content: ";";
+        color: red;
+    }
+</style>
+
+<!-- 
+::first-letter - Permite estilizar a primeira letra de um bloco de texto. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    p::first-letter {
+        font-size: 200%;
+        font-weight: bold;
+    }
+</style>
+
+<!-- 
+::first-line - Estiliza a primeira linha do texto de um elemento. Isso pode ser útil para definir estilos de linhas de abertura. Veja um exemplo no quadro abaixo:
+-->
+<style>
+    p::first-line {
+        font-variant: small-caps;
+    }
+</style>
+
+<!-- 
+Vejamos um exemplo usando os seletores de pseudo-elementos ::before e ::after para adicionar conteúdo antes e depois de um elemento, e ::first-letter para estilizar a primeira letra de um parágrafo. Veja como seria o código HTML, conforme quadro abaixo:
+-->
+
+<p>Este é um exemplo simples que usa pseudo-elementos para adicionar conteúdo e estilizar a primeira letra.</p>
+
+<!-- 
+Agora, veja no quadro abaixo o código em CSS:
+-->
+
+<style>
+    p::before {
+        content: "Nota: ";
+        color: red;
+        font-weight: bold;
+    }
+
+    p::after {
+        content: " (leia com atenção)";
+        color: blue;
+        font-style: italic;
+    }
+
+    p::first-letter {
+        font-size: 200%;
+        color: green;
+    }
+</style>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/wb0QoT-f8UbmLQU5g7ZSzrMCKyL8sLKYfpgUf9XqO9HhAVVYIey5jlr1ezisLo4Q7x3WkBmo332dBNzhqeML_pLxRS-rXxX0oZUPnsvU7_grbJE89FFwqUw836MCklDx6nSSSkicdkv8BKbOO44nvw
+
+Descrição da imagem: No navegador, você observa o parágrafo com o texto "Nota:" antes, seguido pelo conteúdo original do parágrafo, e "(leia com atenção)" depois. A primeira letra do parágrafo seria maior e em verde.
+
+Observe que:
+
+::before: Este pseudo-elemento adiciona "Nota: " antes do conteúdo do parágrafo. Ele é estilizado para ser vermelho e em negrito, chamando atenção para o texto como uma nota prévia.
+
+::after: Adiciona " (leia com atenção)" após o conteúdo do parágrafo. O texto é azul e em itálico, fornecendo uma nota secundária de maneira mais sutil.
+
+::first-letter: Estiliza a primeira letra do parágrafo, tornando-a 200% maior do que o texto padrão e colorindo-a de verde para um destaque visual.
+
+Este exemplo ilustra como os pseudo-elementos podem ser utilizados para adicionar conteúdo e estilização de maneira eficaz, permitindo enriquecer visualmente o texto sem alterar o conteúdo HTML.
+-->

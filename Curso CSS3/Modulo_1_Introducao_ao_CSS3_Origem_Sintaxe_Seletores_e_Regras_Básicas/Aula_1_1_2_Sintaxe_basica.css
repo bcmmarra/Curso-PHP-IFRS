@@ -1,0 +1,36 @@
+/* 
+1.1.2 Sintaxe básica
+A sintaxe do CSS é um conjunto de regras que definem como os estilos são aplicados aos elementos de um documento HTML. Cada regra de estilo em CSS é composta por seletores e um bloco de declaração de propriedades (W3C Schools, 2024; MDN Web Docs, 2024). 
+
+O seletor determina a quais elementos da página HTML a regra de estilo será aplicada. Seletores podem ser simples, como nomes de tags, classes ou IDs, ou mais complexos, como seletores combinados e pseudo-classes que visam elementos específicos com base em seus atributos, estado ou posição no documento.
+
+O bloco de declaração contém uma ou mais declarações de estilo, que são pares de propriedades e valores separados por dois pontos e terminados com um ponto e vírgula. Cada declaração define uma propriedade específica do elemento selecionado, como sua cor, tamanho, borda, entre outros aspectos visuais. O bloco de declarações é encapsulado por chaves { }.
+
+Veja no quadro abaixo um exemplo da sintaxe para a definição de uma regra CSS:
+
+seletor {
+    propriedade1: valor1;
+    propriedade2: valor2;
+    propriedade3: valor3;
+}
+
+Considerando a sintaxe do CSS, vejamos no quadro abaixo um exemplo prático:
+*/
+p {
+    color: blue;
+    font-size: 14px;
+}
+
+/* 
+Neste exemplo, o seletor é p, e as declarações são color: blue; e font-size: 14px;. Isso significa que todos os elementos <p> na página web terão a cor do texto azul e um tamanho de fonte de 14 pixels.
+
+Se você deseja aplicar o mesmo estilo a vários tipos diferentes de elementos, pode agrupar os seletores usando uma vírgula. Isso é útil quando vários elementos devem compartilhar as mesmas propriedades de estilo. Veja um exemplo no quadro abaixo:
+*/
+h1, h2, h3 {
+    color: red;
+    font-family: Arial, sans-serif;
+}
+
+/* 
+Neste exemplo acima, todos os cabeçalhos (h1, h2, h3) receberão a cor vermelha e a fonte Arial.
+*/

@@ -1,0 +1,172 @@
+<!-- 
+1.2.1 Seletores CSS básicos
+Seletores CSS são essenciais para especificar quais elementos HTML serão estilizados. Eles atuam como padrões que identificam os componentes de uma página ou aplicação que receberão estilos específicos. Essa funcionalidade é crucial para tornar o design mais atraente e adaptável a várias telas de visualização, garantindo uma experiência consistente em diversos dispositivos, como tablets, smartphones e computadores.
+
+Veremos neste documentos os seletores CSS básicos, a saber:
+
+Seletor de tipo;
+Seletor de classe;
+Seletor de ID;
+Seletor universal.
+
+Seletor de tipo
+Um seletor de tipo seleciona todos os elementos de um tipo específico na página (W3C Schools, 2024; MDN Web Docs, 2024). O tipo refere-se ao nome da tag HTML. Usar um seletor de tipo é uma forma direta de aplicar um estilo universal a todos os elementos desse tipo no documento.
+
+A sintaxe de um seletor de tipo é simplesmente o nome da tag. Por exemplo, para estilizar todos os elementos <p> (parágrafos), você usaria p como seu seletor. Vejamos alguns exemplos comuns de seletores de tipo e como eles são aplicados:
+
+Parágrafos: neste exemplo (vide quadro abaixo), o seletor de tipo aplica uma fonte de 16 pixels e a cor vermelha a todos os elementos <p> no documento HTML. Veja abaixo o código CSS para esta funcionalidade.
+-->
+<style>
+    p {
+        font-size: 16px;
+        color: red;
+    }
+</style>
+
+<!--
+E, agora, veja no quadro abaixo um exemplo de código HTML onde será aplicado este estilo.]
+-->
+
+<p>Exemplo de um parágrafo</p>
+<p>Exemplo de outro parágrafo</p>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/IU33TL1eAVFQR__5aZz7ea9FIULWDeXVjj0TAteoCPTCfc2Jvd6l52vtqj37s_eaAAEPSoE41c8a39TEdR7kGfl3-D5F7gpKBqOEe1ArrTexHgnfZv7Q2ypKSJQbXz53LFR9ucyKGzPtssJYJqJ51w
+
+Descrição da imagem: No navegador, os dois parágrafos terão um tamanho de fonte de 16 pixels e o texto será vermelho.
+
+Divisões (div): Neste outro exemplo (vide quadro abaixo), todos os elementos <div> receberão um fundo cinza claro e um preenchimento (padding) de 20 pixels.
+-->
+
+<style>
+    div {
+        background-color: lightgray;
+        padding: 20px;
+    }
+</style>
+
+<!-- 
+Títulos: Neste exemplo (vide quadro abaixo), todos os elementos <h1> serão centralizados e coloridos de azul.
+-->
+
+<style>
+    h1 {
+        color: blue;
+        text-align: center;
+    }
+</style>
+
+<!-- 
+Links: Neste exemplo, todos os elementos de link (<a>) terão a decoração de texto (sublinhado) removida e a cor alterada para azul.
+-->
+
+<style>
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+</style>
+
+<!-- 
+Os seletores de tipo são fundamentais na folha de estilos porque permitem um controle rápido e abrangente sobre elementos comuns, facilitando a manutenção de um estilo consistente e coeso em toda a aplicação ou website.
+
+Seletor de classe
+Um seletor de classe no CSS é usado para selecionar todos os elementos que têm um atributo de classe específico (W3C Schools, 2024; MDN Web Docs, 2024). Classes são atributos HTML que podem ser adicionados a qualquer elemento. Diferentemente dos IDs, que são únicos e só podem ser usados uma vez por página, uma classe pode ser usada em múltiplos elementos e um único elemento pode ter várias classes.
+
+Neste contexto, os seletores de classe em CSS são uma ferramenta essencial para aplicar estilos específicos a grupos de elementos dentro de um documento HTML, sem afetar outros elementos que não compartilham a mesma classe. Eles são incrivelmente úteis para o design de páginas web, pois permitem uma segmentação granular e a reutilização de estilos específicos em diferentes partes do documento. 
+
+A sintaxe de um seletor de classe começa com um ponto (.) seguido pelo nome da classe. Para ilustrar o uso deste seletor, observe o exemplo no quadro abaixo. Neste exemplo, todos os elementos com a classe botao serão estilizados como botões com fundo azul, texto branco, e um cursor que indica que são clicáveis. 
+-->
+
+<style>
+    .botao {
+        background-color: blue;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<!-- 
+E, agora, veja um exemplo de código HTML onde será aplicado este estilo.
+-->
+
+<button class="botao">Botão 1 com Estilo</button>
+<button class="botao">Botão 2 com Estilo</button>
+<button>Botão 3 sem Estilo</button>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/05uCbDp9sYiaVq8nBmuSi-7-ZoUOVa4DAk_fWFljmxy41mybsLbwE8WSjn5j8WOHA79vGYpEMj69AZ5DKkDUwhwXtq7qbW8J9NQcWRRtq_BJ2J966q2Ar2__xvvNJm-BCVjQUjS1mkBaExJof8jvqQ
+
+Descrição da imagem: No navegador, teremos 3 botões. Os botões com a classe "botao" terão fundo azul, texto branco e o cursor do mouse mudará para o formato de mão quando passar sobre eles. O terceiro botão não terá esses estilos, pois não possui a classe "botao".
+
+Os seletores de classe oferecem uma flexibilidade significativa:
+
+Reutilização: Uma classe pode ser reaplicada a diversos elementos em diferentes partes do documento, permitindo um design consistente e a reutilização de estilos.
+Combinabilidade: Classes podem ser combinadas no mesmo elemento para aplicar diferentes estilos em camadas, permitindo uma personalização detalhada sem criar classes excessivamente específicas.
+
+Um seletor de ID seleciona um elemento com base no seu atributo id. Cada ID deve ser único dentro de uma página HTML, o que significa que cada seletor de ID apontará para no máximo um elemento dentro de qualquer documento.
+
+Seletor de ID
+Um seletor de ID seleciona um elemento com base no seu atributo id (W3C Schools, 2024; MDN Web Docs, 2024). Cada ID deve ser único dentro de uma página HTML, o que significa que cada seletor de ID apontará para no máximo um elemento dentro de qualquer documento.
+
+A sintaxe para um seletor de ID é um símbolo de cerquilha (#) seguido pelo valor do ID do elemento. Por exemplo, #header seleciona o elemento que tem id="header". 
+
+Vejamos no quadro abaixo um exemplo prático de como os seletores de ID podem ser usados em CSS. Neste exemplo, o seletor de ID aplica um fundo cinza escuro, texto branco, preenchimento e alinhamento de texto ao centro para o elemento com o ID header. 
+-->
+
+<style>
+    #main-header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+<!-- 
+E, agora, veja um exemplo de código HTML onde será aplicado este estilo.
+-->
+
+<header id="main-header">
+    <h1>Bem-vindo ao Nosso Site!</h1>
+</header>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/W5zDbcrZy4-IvsUJs28IhuwqHCz07-twFge4AyfWD18-nSdTA0kcIAW-1UOYprpV0FhrRoH60ot7LMHHnL9N6k2kIU_Z-EgxYZ4jG9cx1Sny2YMbDfSrogbeTacaNB5iYab-B5MsemMBwZKjTQH-Pg
+
+Descrição da imagem: No navegador, o cabeçalho terá um fundo preto escuro, texto branco, espaçamento interno de 20 pixels em todas as direções e o texto estará centralizado dentro do cabeçalho.
+
+Os seletores de ID oferecem um conjunto vantagens:
+
+Unicidade: Como cada ID deve ser único por página, o seletor de ID é uma ferramenta poderosa para modificar estilos de elementos específicos sem o risco de afetar outros elementos inadvertidamente.
+Especificidade: Seletores de ID têm uma especificidade muito alta, o que significa que eles podem facilmente sobrescrever estilos definidos por seletores de tipo ou de classe. Isso pode ser tanto uma vantagem quanto uma desvantagem, dependendo de como a folha de estilo é organizada.
+Uso no JavaScript: IDs são frequentemente usados no JavaScript para acessar e manipular elementos. Manter o mesmo ID para CSS e JavaScript pode facilitar a interação entre estilização e funcionalidades.
+Embora poderosos, os seletores de ID devem ser usados com moderação no CSS devido à sua alta especificidade. Abusar dos seletores de ID pode tornar a manutenção da folha de estilo difícil, especialmente em projetos grandes. É recomendável usar seletores de ID para estilos que são absolutamente exclusivos para um elemento e usar seletores de classe sempre que possível para promover a reutilização e a modularidade dos estilos.
+
+OBS: Devido à sua alta especificidade, os estilos definidos por um seletor de ID têm prioridade sobre os estilos aplicados por seletores de classe e de tipo, a menos que a declaração de estilo do ID seja marcada como !important.
+
+Seletor universal
+O seletor universal em CSS é representado pelo símbolo asterisco (*). Ele tem a capacidade de selecionar todos os elementos de uma página HTML, o que o torna uma ferramenta poderosa para aplicar estilos de maneira global ou para redefinir certos padrões de estilo.
+
+O uso do seletor universal pode ter implicações no desempenho, especialmente em documentos HTML muito grandes, porque ele afeta todos os elementos na árvore DOM (Document Object Model). Por exemplo, se você quiser remover as margens e o preenchimento padrão de todos os elementos para garantir um ponto de partida consistente para o estilo da página, você poderia escrever o seguinte código ilustrado no quadro abaixo:
+-->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        /* Aplica a mesma família de fontes a todos os elementos */
+    }
+</style>
+
+<!-- 
+Neste exemplo, todos os elementos HTML herdarão a família de fontes Arial e terão suas margens e preenchimentos zerados, garantindo consistência visual por toda a página.
+
+OBS: Muitos desenvolvedores usam o seletor universal no início de suas folhas de estilo para criar uma "redefinição CSS" ou "normalização", assegurando que todos os elementos comecem com as mesmas configurações de estilo, o que pode ajudar a evitar inconsistências entre diferentes navegadores.
+-->

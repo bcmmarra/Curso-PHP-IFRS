@@ -1,0 +1,42 @@
+<!--
+1.3 Palavra-chave !important
+No CSS, a palavra-chave !important é uma forma de aumentar a prioridade de uma regra de estilo, tornando-a mais prioritária do que outras regras que se aplicam ao mesmo elemento. Isso pode ser útil em situações onde você precisa garantir que uma declaração específica seja aplicada, independentemente de outras regras definidas em outros lugares.
+
+Para usá-la, basta adicionar !important imediatamente após o valor da propriedade na declaração, antes do ponto e vírgula. Veremos como isso funciona na prática. Primeiro, considere o seguinte código HTML, conforme quadro abaixo:
+-->
+
+<p class="texto-padrao">Este é um parágrafo importante que precisa de destaque especial.</p>
+
+<!-- 
+Agora, vamos aplicar o seguinte estilo em CSS, conforme quadro abaixo:
+-->
+
+<style>
+    .texto-padrao {
+        color: blue;
+        /* Cor padrão para todos os parágrafos com classe "texto-padrao" */
+    }
+
+    .texto-padrao {
+        color: red !important;
+        /* Esta cor tem prioridade sobre a azul, mesmo sendo definida depois */
+    }
+
+    .texto-padrao {
+        color: yellow;
+        /* Outra cor padrão para todos os parágrafos com classe "texto-padrao" */
+    }
+</style>
+
+<!-- 
+Neste exemplo, embora a classe .texto-padrao seja inicialmente definida para tornar o texto azul, a regra !important aplicada depois garante que o texto seja vermelho. Mesmo que a última regra tente mais tarde alterar a cor do texto desse parágrafo para amarelo, a regra com !important ainda prevalecerá.
+
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/jz1mr90RaU-ntpXnTkEmSP8VG7GN7NyYUpWmdO9wczABQc7-kqpPTMAxPqaX7QR8VNfXTc1q8rKByONS550L_v1M5WpoF5j7fC0PhS7S4ZktTzhoBsUq5j8SyJBJ8zq1iYktKMT5aknf
+
+Descrição da imagem: No navegador, o texto do parágrafo será exibido em vermelho, pois a segunda definição de cor tem prioridade devido ao uso de !important.
+
+
+-->
+

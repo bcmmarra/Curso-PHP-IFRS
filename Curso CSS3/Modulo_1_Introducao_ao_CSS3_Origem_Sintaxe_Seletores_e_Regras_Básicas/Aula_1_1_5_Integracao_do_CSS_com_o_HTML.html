@@ -1,0 +1,173 @@
+<!-- 
+1.1.5 Integração do CSS com o HTML
+A relação entre CSS (Cascading Style Sheets) e HTML (HyperText Markup Language) é fundamental para a construção de páginas web. Enquanto HTML é usado para estruturar e dar significado ao conteúdo web, como texto, imagens e vídeos, CSS é usado para definir a apresentação visual desses elementos. Essa separação de estrutura de conteúdo e design visual é crucial para a manutenção, acessibilidade e eficiência dos websites.
+
+Como benefícios desta separação de responsabilidades entre o CSS e o HTML, pode-se citar os seguintes:
+
+Manutenção: Mudanças no design do site podem ser feitas simplesmente alterando folhas de estilo, sem necessidade de ajustar os arquivos HTML.
+Consistência: Aplicar estilos consistentes em várias páginas de um site é mais fácil com folhas de estilo externas.
+Desempenho: Separar o conteúdo do design permite que páginas web sejam carregadas mais rapidamente, pois os arquivos CSS podem ser baixados uma única vez e armazenados em cache pelo navegador.
+Acessibilidade: Usuários ou dispositivos com necessidades especiais podem precisar de folhas de estilo diferentes, o que é mais facilmente gerenciável com CSS separado do HTML.
+Neste contexto, a combinação de HTML e CSS permite que os desenvolvedores criem páginas web que não apenas contêm informações ricas, mas também apresentam essas informações de maneira esteticamente agradável e funcional. Juntos, eles formam a base para a maioria dos sites na internet hoje, proporcionando uma experiência de usuário rica e envolvente.
+
+Integrar o código CSS no HTML pode ser feito de três maneiras principais: 
+
+inline;
+internal (embutido); ou 
+external (externo). 
+Cada método tem suas próprias vantagens e aplicações dependendo do projeto e das necessidades de estilo.
+
+CSS Inline
+O CSS inline é aplicado diretamente nos elementos HTML através do atributo style nas tags do HTML. Este método é útil para estilos rápidos e específicos, mas não é recomendado para estilizar muitos elementos devido à sua falta de reutilização e dificuldade de manutenção. 
+
+Vamos modificar o arquivo index.html em nosso projeto de testes (meu-projeto-css) para demonstrar esta funcionalidade. Veja no quadro abaixo um exemplo de CSS Inline:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de CSS Inline</title>
+</head>
+<body>
+    <h1 style="color: navy; font-size: 24px;">Título com Estilo Inline</h1>
+    <p style="color: green; font-weight: bold;">Este parágrafo é estilizado diretamente no elemento.</p>
+    <div style="padding: 20px; border: 1px solid black;">
+        Esta div possui um padding e uma borda definidos inline.
+    </div>
+</body>
+</html>
+
+<!-- 
+Observe que:
+
+<h1>: O título tem uma cor de fonte navy e um tamanho de fonte de 24px.
+<p>: O parágrafo tem a cor de texto green e o peso da fonte bold, tornando o texto verde e em negrito.
+<div>: Esta div tem um preenchimento (padding) de 20px e uma borda simples de 1px solid black.
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/Rn_cf0f49EXTAbPFSl5tTILeziC-ExgjqN4CmH8D2aDv_73G0ZPho1wMTxxkgg1o0NbUSNvKWjENM5p-nQXIYCidvF4G2KzZU5arjYZO932uzvcn5WQJ-8EZOxb5C0tRd00qsUFyVmku-2YFlini6g
+
+Descrição da imagem: Este código HTML contém estilos CSS inline, que são aplicados diretamente aos elementos HTML. O título <h1> tem cor azul-marinho e tamanho de fonte de 24 pixels. O parágrafo <p> tem cor verde e negrito. Além disso, uma <div> tem um padding de 20 pixels e uma borda de 1 pixel sólido preta.
+
+Vejamos agora algumas vantagens e desvantagens do CSS Inline:
+
+Vantagens:
+Útil para correções rápidas e testes de estilos específicos.
+Prioridade mais alta nas regras de estilo, o que significa que geralmente sobrescreve o CSS interno e externo.
+Desvantagens:
+Difícil manutenção e atualização, especialmente em projetos grandes, porque os estilos não são reutilizáveis.
+O HTML torna-se mais difícil de ler e gerenciar devido à mistura de conteúdo e apresentação.
+Limita a capacidade de cache do navegador apenas para o HTML, enquanto os estilos não são cacheados separadamente.
+OBS: O CSS definido inline em um elemento tem uma especificidade maior do que os estilos definidos externamente, o que significa que em caso de conflito, o estilo inline prevalecerá.
+
+CSS Internal (Embutido)
+O CSS interno é colocado dentro de uma tag <style> no cabeçalho do documento HTML. Isso permite que os estilos sejam aplicados a toda a página, mantendo ainda tudo em um único arquivo HTML. É uma boa opção para páginas pequenas ou quando a simplicidade e a portabilidade são importantes.
+Vejamos no quadro abaixo um exemplo de CSS Internal:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de CSS Interno</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            /* Define a cor de fundo do corpo do documento */
+        }
+        h1 {
+            color: darkblue;
+            /* Define a cor do texto para o título */
+            text-align: center;
+            /* Centraliza o texto do título */
+        }
+        p {
+            color: darkgreen;
+            /* Define a cor do texto para os parágrafos */
+            font-size: 16px;
+            /* Define o tamanho da fonte para os parágrafos */
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Este é um exemplo de CSS interno. Os estilos são definidos dentro da tag "style" no cabeçalho da página.</p>
+    <p>O CSS interno é prático para estilizações rápidas e específicas de uma página, mas não é recomendado para projetos maiores ou que requerem reutilização de estilos.</p>
+</body>
+</html>
+
+<!-- 
+Observe que:
+
+
+Tag <style>: Os estilos são definidos dentro desta tag no cabeçalho do documento. Isso significa que todos os estilos aplicados aqui são especificamente para esta página.
+body: Aplica uma cor de fundo (#f0f0f0) a todo o corpo do documento.
+h1: Estiliza todos os elementos <h1> para terem texto azul escuro (darkblue), e centraliza o texto horizontalmente (text-align: center).
+p: Define a cor dos parágrafos para verde escuro (darkgreen) e ajusta o tamanho da fonte (font-size: 16px).
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/fak5WBU3yGIM1SnJAxwfCihrLmVlKZ1JNIOohgbJdErJ_rhkeiGdrShuhyzUWefaeBptjFXOdduN2QKgaSew9wScAwPpcAXyyclSw82t8ijgZSHmABZrErcW-nVTm1srfHnIEW0SjsnqgjxlZWZd9Q
+
+Descrição da imagem: O corpo da página web tem um fundo cinza claro (#f0f0f0). O título <h1> tem cor azul escuro e é centralizado. Os parágrafos <p> têm cor verde escuro e tamanho de fonte de 16 pixels. 
+
+Vejamos abaixo as principais vantagens e desvantagens do uso do CSS Interno:
+
+Vantagens:
+Todos os estilos necessários para a página estão contidos em um único arquivo HTML, facilitando a visualização e edição.
+Útil para prototipagem rápida ou quando os estilos não precisam ser reutilizados em outras páginas.
+Desvantagens:
+A manutenção pode ser mais difícil se o documento crescer muito, pois mistura conteúdo com apresentação.
+Os estilos não são cacheados pelo navegador como aconteceria com arquivos CSS externos, o que pode afetar o desempenho em páginas maiores ou em sites que exigem muitos estilos repetidos em várias páginas.
+
+CSS External (Externo)
+O CSS externo é a prática recomendada para a maioria dos sites, especialmente aqueles que são maiores ou requerem um design consistente em várias páginas. Os estilos são colocados em um arquivo .css separado e vinculados ao HTML através da tag <link> no cabeçalho do documento.
+
+Para o exemplo de uso de CSS Externo, considere o uso de dois arquivos de nosso projeto exemplo, o styles.css e o index.html. Neste exemplo, o aquivo styles.css pode ter o seguinte código, conforme quadro abaixo:
+
+body {
+    background-color: #f4f4f4;
+}
+p {
+    color: red;
+    font-size: 16px;
+}
+
+Agora, vamos vincular este CSS Externo no código HTML. Veja no quadro abaixo como fica o arquivo index.html:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo de CSS Externo</title>
+    <link rel="stylesheet" href="estilos/styles.css">
+</head>
+<body>
+    <p>Este é um parágrafo com estilo externo.</p>
+</body>
+</html>
+
+<!-- 
+Observe que o arquivo CSS é vinculado ao código HTML através da linha de código mostrada no quadro abaixo:
+
+<link rel="stylesheet" href="estilos/styles.css">
+
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/UdvyJKJAxm0ruPQxM_u4nPiVygw7p_IdgONegL4ivXj_YyqBwa1HLpQJcTNCGns8D_DEIH0KDgpjfRrMWlglKwGOntPoRPjeAY0WFHutcor_eMqh9U3igqgzIiYT9f1nzfKitXq-iLm08ulqpiQXpw
+
+Descrição da imagem:  O corpo da página web tem um fundo cinza claro (#f4f4f4)O parágrafo <p> no corpo da página está estilizado com o texto na cor vermelha (color: red) e o tamanho da fonte de 16 pixels (font-size: 16px).
+
+
+O uso de CSS externo é amplamente considerado uma prática padrão no desenvolvimento web devido a suas muitas vantagens, especialmente em projetos de maior escala. No entanto, como qualquer método, ele também apresenta algumas desvantagens que podem impactar em casos específicos. 
+
+Veja abaixo as principais vantagens e desvantagens do uso de CSS externo.
+
+Vantagens:
+Separar os estilos do HTML simplifica a manutenção e permite a reutilização de estilos em várias páginas.
+Os navegadores podem cachear o arquivo CSS, o que pode acelerar o carregamento de páginas subsequentes.
+Mantém o HTML limpo e focado na estrutura, enquanto o CSS lida com a apresentação.
+Desvantagens:
+Se o arquivo CSS não carregar por algum motivo (como um erro de servidor ou problemas de conexão), o conteúdo HTML será exibido sem formatação, o que pode prejudicar a usabilidade e a aparência do site.
+Na primeira visita a um site, o navegador precisa baixar o CSS antes de poder renderizar a página corretamente, o que pode levar a um carregamento mais lento se o arquivo CSS for muito grande ou se a conexão for lenta.
+-->

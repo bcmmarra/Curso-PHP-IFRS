@@ -1,0 +1,16 @@
+/* 
+1.1.1 Origem do CSS
+No início da web, o HTML era usado tanto para estruturar conteúdo quanto para definir a aparência das páginas. Isso muitas vezes resultava em um código HTML excessivamente complicado e difícil de manter, pois estilos tinham que ser definidos repetidamente em toda a página e em múltiplas páginas (SILVA, 2012).
+
+Neste contexto, várias propostas para folhas de estilo foram apresentadas no início dos anos 90. Essas propostas buscavam separar o conteúdo da apresentação no desenvolvimento web. Em 1993, Pei Wei, da O'Reilly Media, propôs o 'Stylosheets' para o navegador ViolaWWW. Já em 1994, Bert Bos, criador do navegador Argo, desenvolveu sua própria linguagem de folhas de estilo chamada Simple Style Sheets (SSP).
+
+Em 1994, Håkon Wium Lie, então trabalhando com Tim Berners-Lee no CERN (Organização Europeia para a Pesquisa Nuclear), um dos maiores e mais respeitados centros de pesquisa científica do mundo, propôs uma nova maneira de estilizar páginas da web que ele chamou de Cascading HTML Style Sheets. A ideia era permitir que os estilos fossem definidos separadamente do HTML, simplificando assim a manutenção do site e permitindo uma maior flexibilidade no design.
+
+Em 1995, Håkon Wium Lie e Bert Bos se uniram para combinar suas ideias em um único modelo, o que levou ao desenvolvimento do Cascading Style Sheets (CSS). Ambos contribuíram com suas experiências e ideias, formulando um sistema que podia controlar a aparência de múltiplas páginas web de maneira eficiente.
+
+Em 1996, o W3C (World Wide Web Consortium), o principal órgão de padronização da internet, reconheceu a importância das folhas de estilo para o futuro da web. Eles lançaram o CSS como uma recomendação oficial, marcando o início do uso generalizado do CSS para estilizar e layout de páginas web. Esta primeira versão oficial do CSS (CSS level 1) simples e projetada para ser fácil de implementar. Ela permitia aos desenvolvedores controlar layout de texto, cores, fontes e espaçamentos em páginas web.
+
+Lançado em 1998, o CSS 2 expandiu significativamente as capacidades da versão original, introduzindo suporte para posicionamento absoluto, relativo e fixo de elementos, visibilidade e z-index. Também incluiu melhorias em áreas como seletores e pseudo-elementos. 
+
+Ao contrário das versões anteriores, o CSS3 foi dividido em módulos, cada um tratando de diferentes aspectos da estilização de documentos. Os primeiros módulos de CSS3 começaram a ser publicados em forma de rascunhos de trabalho no início dos anos 2000, e o processo de padronização foi mais incremental e modular. Isso permitiu que novas funcionalidades fossem especificadas, implementadas e adotadas de maneira mais ágil do que se tivesse sido feito um grande lançamento único. Portanto, não há uma data única de lançamento para o CSS3 como um todo, pois cada módulo tem seu próprio cronograma de desenvolvimento e lançamento.
+*/

@@ -1,0 +1,54 @@
+/* 
+1.1.4 Estrutura dos arquivos para projetos web locais
+Quando você está desenvolvendo um site localmente em seu computador, é importante organizar todos os arquivos do projeto de forma consistente e acessível. Abaixo, veremos algumas diretrizes para manter a estrutura de arquivos organizada.
+
+Localização da pasta do projeto: Um site é composto por diversos tipos de arquivos, incluindo conteúdo em texto, código, folhas de estilo, e mídias como imagens e vídeos. Para criar um site de maneira eficiente, é essencial organizar esses arquivos em uma estrutura bem definida em seu computador local. Você pode escolher qualquer lugar conveniente em seu computador para armazenar seus projetos de sites, como o Desktop, sua pasta Home ou a raiz do seu disco rígido.
+Criação da pasta principal: Escolha um local e crie uma pasta principal para todos os seus projetos de sites. Um nome sugestivo pode ser projetos-web ou algo semelhante.
+Organização de projetos individuais: Dentro da pasta projetos-web, crie uma subpasta específica para cada projeto de site. Por exemplo, para seu primeiro site, você pode criar uma pasta chamada meu-projeto-css ou um nome mais criativo que reflita o propósito do site.
+Estrutura interna do projeto: Dentro de cada pasta de projeto, organize os arquivos de maneira que reflita a estrutura do site que será publicado em um servidor. Isso pode incluir subpastas para imagens, css, js, entre outras.
+Vamos explorar, agora, a estrutura essencial que seu site de teste deve ter. Nos projetos de sites, geralmente precisamos de um arquivo HTML principal e pastas específicas para imagens, estilos e scripts. Vamos criar essa estrutura passo a passo, considerando o uso do editor de texto Visual Studio Code:
+
+Utilizando seu software gerenciador de arquivos (tal como o Windows Explorer), escolha um local acessível em seu computador (por exemplo, Desktop ou pasta Home).
+Crie uma nova pasta com um nome descritivo, como projetos-web. Esta será a pasta onde vamos adicionar todos os projetos que vamos utilizar no decorrer do curso.
+Agora, abra o editor de texto Visual Studio Code. A figura abaixo ilustra a tela inicial do Visual Studio Code.
+
+Veja na figura abaixo um exemplo desta estrutura básica do nosso projeto web no Visual Studio Code:
+
+Link da imagem: https://lh7-us.googleusercontent.com/Goho1NNn5XMitfwLuVohRCcIG2ESt1TIdWtQn1CnB3eN85tP_ITSwgssRLl6TvCy4u3YDHyloKzEIKn6IG6QT5xVZ5i9KsCzg0Y7ybDBGgtDmA-LLe_i2fJewNEeSr7h-NrTmm6Sejir
+
+Descrição da imagem: A tela inicial inclui um painel de boas-vindas, oferecendo atalhos para criar novos arquivos, abrir pastas e acessar documentos recentes, além de opções para personalizar o layout e explorar mais funcionalidades do VS Code.
+
+Em seguida, vamos abrir a pasta geral dos nossos projetos no Visual Studio Code. Assim, clique em File (Arquivo) na barra de menu e selecione Open Folder... (Abrir Pasta...). Navegue até a pasta projetos-web e clique em Select Folder (Selecionar Pasta). Pronto, abaixo vamos criar as pastas para cada projeto que formos testar neste curso.
+Neste primeiro exemplo, vamos criar uma nova subpasta chamada de meu-projeto-css. No Explorer (Explorador) do  Visual Studio Code, clique com o botão direito na pasta projetos-web e selecione  New Folder (Nova Pasta). Digite meu-projeto-css e pressione Enter. 
+Agora, com a pasta do projeto meu-projeto-css criado, vamos adicionar um arquivo para testar um código HTML. No Explorer (Explorador) do Visual Studio Code, clique com o botão direito na pasta meu-projeto-css e selecione  New File (Novo Arquivo). Agora, digite index.html e pressione Enter.
+Veja na figura abaixo um exemplo desta estrutura básica do nosso projeto web no Visual Studio Code:
+
+Link da imagem: https://moodle.ifrs.edu.br/pluginfile.php/9479453/mod_page/content/7/image.png
+
+Descrição da imagem: A pasta "projetos-web" contém a subpasta "meu-projeto-html", que, por sua vez, abriga o arquivo "index.html".
+
+OBS: Recomendamos que você nomeie suas pastas e arquivos usando apenas letras minúsculas e sem espaços. O motivo é que muitos servidores web são case-sensitive, ou seja, diferenciam maiúsculas de minúsculas. Esses servidores web também podem ter dificuldade em lidar com espaços nos nomes dos arquivos. Assim, substitua espaços por traços para garantir a compatibilidade com todos os sistemas. Neste contexto, sugerimos que você nomeie seus arquivos como sendo "meu-arquivo.css" em vez de "Meu Arquivo.css" e nomeie suas pastas como sendo "site-teste/imagens" em vez de "site-teste/Imagens do Site".
+
+Com o desenvolvimento de seus estudos, você perceberá a necessidade de separar seu código HTML dos códigos CSS, Javascript e das imagens. Assim, você já pode começar a pensar nesta organização de arquivo. Segue abaixo uma sugestão de estrutura mais complexa de projeto:
+
+Dentro da pasta meu-projeto-css, crie uma nova pasta chamada imagens. Esta pasta armazena todas as imagens que serão usadas no site.
+Em seguida, dentro da pasta meu-projeto-css, crie uma nova pasta chamada estilos. Esta pasta contém os arquivos CSS que definem a aparência e o estilo do seu site, como cores de texto e de fundo. Dentro dele, crie um arquivo chamado styles.css.
+Após, dentro da pasta meu-projeto-css, crie uma nova pasta chamada scripts. Esta pasta armazena todos os arquivos JavaScript, que adicionam funcionalidades interativas ao seu site, como botões que carregam dados quando clicados.
+Veja na figura abaixo um exemplo desta estrutura mais completa do nosso projeto web no Visual Studio Code:
+
+
+projetos-web/
+├── meu-projeto-html/
+│   ├── estilos/
+|   |   ├── style.css
+│   ├── imagens/
+│   ├── scripts/
+│   └── index.html
+
+
+Link da imagem: https://moodle.ifrs.edu.br/pluginfile.php/9479453/mod_page/content/7/image%20%281%29.png
+
+Descrição da imagem: Foram adicionadas à pasta "meu-projeto-html" as subpastas "estilos", "imagens" e "scripts".
+
+Neste momento, é importante que você crie esta estrutura de diretórios e arquivos em seu computador. Precisaremos desta configuração para que você possa fazer os testes com os códigos que iremos aprender no decorrer do curso.
+*/
