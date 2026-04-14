@@ -1,0 +1,104 @@
+<!-- 
+4.4 Adição de Efeitos Visuais: Sombras
+As propriedades box-shadow e text-shadow são utilizadas para adicionar sombras a elementos e textos, respectivamente (SILVA, 2012). Elas podem ser usadas para criar profundidade, destacar elementos interativos ou simplesmente para efeitos estéticos.
+
+Propriedade box-shadow
+A propriedade box-shadow é usada para adicionar sombras em volta de um elemento HTML, criando a impressão de que o elemento está elevado acima do resto do conteúdo. 
+
+A sintaxe da box-shadow é a seguinte, conforme quadro abaixo:
+
+box-shadow: offsetX offsetY blurRadius spreadRadius color inset;
+Onde:
+
+offsetX: Deslocamento horizontal da sombra em relação ao elemento. Valores positivos deslocam a sombra para a direita, enquanto valores negativos a deslocam para a esquerda.
+offsetY: Deslocamento vertical da sombra. Valores positivos deslocam a sombra para baixo, enquanto valores negativos a deslocam para cima.
+blurRadius: Um valor opcional que determina o quão "borrada" é a sombra, sendo 0 um contorno nítido.
+spreadRadius: Um valor opcional que aumenta ou diminui o tamanho da sombra.
+color: Cor da sombra.
+inset: Se especificado, torna a sombra interna ao elemento.
+No exemplo ilustrado no quadro abaixo, vamos adicionar uma sombra a uma div:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombra com CSS</title>
+    <style>
+        .shadow-box {
+            width: 300px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid #ccc;
+            margin: 50px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="shadow-box"></div>
+</body>
+</html>
+
+<!-- 
+Observe que aplicamos uma sombra com 10 pixels de deslocamento tanto na horizontal quanto na vertical, um raio de desfoque de 20 pixels para suavizar a sombra e uma cor preta com 30% de transparência.
+
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/8rpVm-wP9-G32IWe5eiMhWzkgfIlb5CWyDc2zs9OHI1R-1gxkRCRUtvl4QlSFqcfx7-qz9530CzTcGRqTYe5p7B033NCD3U09h7m6m2l_wH3MwlFDnz08Mf3zlTXq4QHJZaxMdzUZ2UxmU4llnEU0g
+
+Descrição: No navegador, há uma caixa retangular (div) com largura de 300 pixels e altura de 200 pixels. A caixa tem um fundo azul claro (skyblue), uma borda cinza clara de 1 pixel, e uma margem de 50 pixels ao redor, separando-a de outros elementos na página. A caixa também possui uma sombra, que se estende 10 pixels para a direita e 10 pixels para baixo, com uma difusão de 20 pixels. A sombra é semitransparente, com uma opacidade de 30%, dando um efeito de profundidade e destacando a caixa do fundo da página.
+
+
+Propriedade text-shadow
+A propriedade text-shadow é usada para adicionar sombras ao texto, o que pode ajudar a melhorar a legibilidade ou adicionar um estilo visual atraente ao design de uma página. 
+
+A sintaxe básica de text-shadow está demonstrada no quadro abaixo:
+
+text-shadow: offsetX offsetY blurRadius color;
+
+Onde:
+offsetX: Deslocamento horizontal da sombra em relação ao texto. Valores positivos deslocam a sombra para a direita, e valores negativos para a esquerda.
+offsetY: Deslocamento vertical da sombra. Valores positivos deslocam a sombra para baixo, e valores negativos para cima.
+blurRadius: Um valor opcional que define o quanto a sombra é suavizada ou borrada. Um valor de 0px resulta em uma sombra nítida e definida.
+color: A cor da sombra. Pode ser especificada em formatos como nome de cor, hexadecimal, RGB, RGBA, etc.
+Essa propriedade pode aceitar múltiplos valores para criar sombras múltiplas ou mais complexas, tal como ilustrado no quadro abaixo:
+
+text-shadow: 1px 1px 2px black, 3px 3px 5px blue;
+
+Vejamos no quadro abaixo um exemplo onde text-shadow é aplicado para dar um efeito de profundidade a um texto:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombra com CSS</title>
+    <style>
+        h1 {
+            text-shadow: 2px 2px 4px rgba(243, 224, 53, 0.5);
+        }
+        p {
+            text-shadow: 1px 1px 2px red, 3px 3px 2px blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de título h1</h1>
+    <p>Este é um texto qualquer com sombras duplas.</p>
+</body>
+</html>
+
+<!-- 
+Onde:
+
+Para o elemento h1, o código text-shadow: 2px 2px 4px rgba(243, 224, 53, 0.5);  aplica uma sombra preta com transparência de 50%, deslocada 2 pixels para a direita e 2 pixels para baixo, com um desfoque de 4 pixels. 
+Para o elemento p, o código text-shadow: 1px 1px 2px red, 3px 3px 2px blue; aplica duas sombras: uma vermelha que se desloca 1 pixel para a direita e para baixo, e uma azul que se desloca 3 pixel para a esquerda e para cima, ambas com um desfoque de 2 pixels. 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/jqiPFgkw6nokBVLu3WW6lBi6y-hyWQmlP9iyP3YocdKnyNmB-_gcUqzzIuQs6Ra6tuU0wlmLZIF44OWjhO6VMlJMyGWOUinTgG0lfQsKs0nQkUJB3t4DQ-0LoEoTPidPbRjMp8sPT7_3_Z1GnoxGdg
+
+
+Descrição: No navegador, observamos sombras ao texto de um título e de um parágrafo na página. O texto do título "Exemplo de título h1" tem uma sombra com um deslocamento de 2 pixels à direita e 2 pixels para baixo, com uma difusão de 4 pixels. A sombra é semitransparente, com uma cor amarela clara [rgba (243, 224, 53, 0.5)], dando um efeito suave e destacado ao texto. O texto do parágrafo "Este é um texto qualquer com sombras duplas." tem duas sombras aplicadas. A primeira sombra é vermelha, com um deslocamento de 1 pixel à direita e 1 pixel para baixo, com uma difusão de 2 pixels. A segunda sombra é azul, com um deslocamento de 3 pixels à direita e 3 pixels para baixo, com uma difusão de 2 pixels.
+-->

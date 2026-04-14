@@ -1,0 +1,59 @@
+<!-- 
+4.5 Adição de Efeitos Visuais: Bordas
+A propriedade border é usada para definir a borda de um elemento HTML. Ela permite especificar a largura, estilo e cor da borda em uma única declaração, tornando-a uma ferramenta versátil para o design de páginas web. 
+
+A sintaxe da propriedade border é demonstrada no quadro abaixo:
+
+
+border: border-width border-style border-color;
+Onde:
+
+border-width: Define a espessura da borda. Pode ser especificada em pixels (px), pontos (pt), ems (em), ou qualquer outra unidade de medida CSS.
+border-style: Define o estilo da borda. Alguns estilos comuns incluem solid, dotted, dashed, double, groove, ridge, inset, e outset.
+border-color: Define a cor da borda. Pode ser qualquer valor de cor válido em CSS, como nomes de cores, valores hexadecimais, RGB, RGBA, etc.
+Você também pode definir bordas específicas com border-top, border-right, border-bottom, e border-left, tal como mostrado no quadro abaixo:
+
+
+div {
+     border: 1px solid black;
+}
+No quadro a seguir, vejamos um exemplo prático de como usar a propriedade border para adicionar bordas a um elemento div.  
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas com CSS</title>
+    <style>
+        .solid-border {
+          border: 4px solid #0000FF; /* Borda sólida azul */
+          padding: 10px;
+          margin: 20px;
+        }
+        .dotted-border {
+          border: 3px dotted red; /* borda pontilhada vermelha */
+          padding: 10px;
+          margin: 20px;
+        }
+        .double-border {
+          border: 5px double green; /* borda dupla verde */
+          padding: 10px;
+          margin: 20px;
+        }
+      </style>
+</head>
+<body>
+    <div class="solid-border">Esta div tem uma borda sólida azul.</div>
+    <div class="dotted-border">Esta div tem uma borda pontilhada vermelha.</div>
+    <div class="double-border">Esta div tem uma borda dupla verde.</div>
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/xBm27ohRxGYOEdrTn1zbS8-CeTl9b6WycV53-gBTEUhS4RhfPu_Zr9MldCB05xisY-3F4YxEmLKv7nRkT_m2AG_vA2PKDHjkpuB1nRRVi0La7lByaH3i9p5WLG0iFbFp_HKycbTQxtQLmQgrpxaIpA
+
+Descrição: No navegador, observamos  a aplicação de diferentes estilos de borda a três divs na página. A primeira div possui uma borda sólida azul de 4 pixels de espessura. Tem um preenchimento interno de 10 pixels e uma margem externa de 20 pixels. Seu texto diz "Esta div tem uma borda sólida azul.". A segunda div possui uma borda pontilhada vermelha de 3 pixels de espessura. Tem um preenchimento interno de 10 pixels e uma margem externa de 20 pixels. Seu diz "Esta div tem uma borda pontilhada vermelha.". A terceira div possui uma borda dupla verde de 5 pixels de espessura. Tem um preenchimento interno de 10 pixels e uma margem externa de 20 pixels. Seu diz "Esta div tem uma borda dupla verde."
+-->

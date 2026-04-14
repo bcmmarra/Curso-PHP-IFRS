@@ -1,0 +1,92 @@
+<!-- 
+3.2 Margens
+As margens em CSS são espaços ao redor dos elementos que servem para separar um elemento de seus vizinhos ou das bordas do contêiner pai (MDN Web Docs, 2024; W3C Schools, 2024). Usar as margens corretamente é fundamental para criar layouts claros e bem estruturados. 
+
+A propriedade margin controla o espaço ao redor de um elemento. Existem quatro subpropriedades de margem que podem ser ajustadas individualmente ou todas de uma só vez (através de um shorthand - abreviação):
+
+margin-top: Define a margem acima do elemento.
+margin-right: Define a margem à direita do elemento.
+margin-bottom: Define a margem abaixo do elemento.
+margin-left: Define a margem à esquerda do elemento.
+Veja no quadro abaixo a sintaxe para definirmos individualmente as margens específicas para cada lado de um elemento:
+
+.element {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+Agora, veja no quadro abaixo, como podemos definir estas margens usando uma abreviação (shorthand) da propriedade margin:
+
+.element {
+    margin: 5px 10px 15px 20px; /* top, right, bottom, left */
+}
+
+Usando a abreviação (shorthand) da propriedade margin, também podemos definir que todas as margens tenham o mesmo valor. Veja no quadro abaixo um exemplo:
+
+.element {
+    margin: 20px;  /* aplica 20px a todas as margens */
+}
+
+Usando a abreviação (shorthand) da propriedade margin, também podemos definir que as margens verticais e horizontais. Veja no quadro abaixo um exemplo:
+
+.element {
+    margin: 10px 20px;  /* aplica 10px a top/bottom e 20px a left/right */
+}
+
+Usando a abreviação (shorthand) da propriedade margin, também podemos definir que as margens de topo,  horizontal e inferior. Veja no quadro abaixo um exemplo:
+
+.element {
+    margin: 10px auto 20px;   /* top | left/right| bottom */
+}
+
+As margens podem ser definidas em várias unidades, incluindo pixels (px), porcentagem (%), em, rem, entre outras. A escolha da unidade pode afetar a adaptabilidade do layout:
+
+Pixels (px): são fixos e não se ajustam com base em outro elemento.
+Percentagens (%): são relativas ao elemento contêiner mais próximo.
+Ems (em) e rems (rem): são baseadas no tamanho da fonte.
+Um uso comum da margem é centralizar elementos horizontalmente dentro de um contêiner. Veja no quadro abaixo um exemplo:
+
+.element {
+    width: 50%;
+    margin: 0 auto; /* auto aplica margens automáticas à esquerda e à direita */
+}
+
+Veja no quadro abaixo um exemplo prático sobre o uso da propriedade margin do CSS:
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Margens no CSS</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto; /* Centraliza o contêiner na página horizontalmente */
+        }
+        .box {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Conteúdo 1</div>
+        <div class="box">Conteúdo 2</div>
+    </div>
+</body>
+</html>
+
+<!-- 
+Neste exemplo, a classe .container é centralizada horizontalmente usando margens automáticas (margin: 0 auto;), e cada .box tem uma margem de 15px em todos os lados, garantindo que haja espaço entre eles e em relação ao contêiner.
+
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/R5CdjejHq6IZ9K2MZL9fkGIZh_YXKrgML-7vnxy7HXV5tIEN5LkUZ07_7Co7JAMDOsdVRtOBLc43_e0dppt0G8QjFehL5qmlKO4O8x-PUYaTi9Sui3UquTZ6JxJ1KUnpbVlUGySWlcMI5G5BTk5hDA
+
+Descrição: No navegador, o contêiner (.container) tem uma largura de 80% da página e é centralizado horizontalmente na página usando margens automáticas. Dentro do contêiner, há dois blocos (.box) com fundo azul claro. Cada bloco tem um preenchimento interno de 20 pixels, criando espaço ao redor do conteúdo dentro dos blocos, e uma margem externa de 15 pixels, criando espaço entre os blocos e o contêiner. Os blocos de conteúdo exibem "Conteúdo 1" e "Conteúdo 2" em uma disposição vertical dentro do contêiner centralizado.
+-->

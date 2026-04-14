@@ -1,0 +1,207 @@
+<!-- 
+4.1 Estilização de links
+Estilizar links com CSS é fundamental para garantir que eles sejam visualmente atraentes e funcionais dentro do contexto de uma página web. Os links, também chamados de âncoras, costumam ser destacados para que os usuários possam facilmente identificar pontos clicáveis que os levarão a novas páginas ou seções do site (ALVES, 2021; SILVA, 2012). 
+
+Veremos, no decorrer deste texto, algumas dicas e exemplos de como você pode estilizar links usando CSS.
+
+4.1.1 Cores e decoração de texto
+
+O estilo visual básico de um link inclui sua cor e a decoração de texto (geralmente sublinhado). Você pode definir estilos diferentes para os estados do link: normal, hover (quando o mouse está sobre o link), active (no momento do clique) e visited (após o link ter sido visitado). 
+
+Neste contexto, você geralmente trabalha com as pseudo-classes do CSS, tal como no exemplo demonstrado no quadro abaixo: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Links</title>
+    <style>
+        a:link {
+            color: blue;
+            /* Cor dos links não visitados */
+            text-decoration: none;
+            /* Remove o sublinhado */
+        }
+
+        a:visited {
+            color: purple;
+            /* Cor dos links visitados */
+        }
+
+        a:hover {
+            color: red;
+            /* Cor ao passar o mouse */
+            text-decoration: underline;
+            /* Sublinhado ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://example1.com">Site já visitado</a><br>
+    <a href="http://example2.com">Site não visitado</a><br>
+    <a href="http://example3.com">Site com foco</a>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/VltKQaucGTQgIScdkygrQxL6_YQoxjQTarkJEZwt2OASlrnJBZ224GZQ7GVzDCsVoQp0vpbMOD-xuIOvjDKhhCYmz5llL1qOVI3grQrvWJctW_RFMndjT9vayRVxRj8uLdmwON_-6Z6olK1QHzCl0A
+
+Descrição: No corpo da página, há três links. No link "Site já visitado",  se você já visitou este link anteriormente, ele será exibido em roxo. No link "Site não visitado", se você não visitou este link anteriormente, ele será exibido em azul. No link "Site com foco", ao passar o mouse sobre este link (por exemplo, clicando ou navegando até ele com o teclado), ele terá um fundo cinza claro.
+
+Observe que:
+Clicamos anteriormente no link “Site já visitado", de maneira que agora ele está com a cor roxa e sem sublinhado;
+Ainda não clicamos no link "Site não visitado", de maneira que ele permanece com a cor azul e sem sublinhado;
+Estamos passando o mouse em cima do link "Site com foco", de maneira que ele está vermelho e com sublinhado.
+
+Fundo e Preenchimento
+Adicionar um fundo (background) e preenchimento (padding) pode fazer o link se destacar mais, especialmente quando se trata de links dentro de um menu de navegação ou botões (NETO; SANTOS; AGUIAR, 2013). Vejamos um exemplo, conforme quadro abaixo, que mostra como aplicar essas propriedades para melhorar o design de links na sua página web.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Fundo e Preenchimento</title>
+    <style>
+        body {
+            margin-top: 20px;
+            /* Define margem superior para o documento*/
+            padding: 0;
+            /* Reseta o padding para o documento*/
+        }
+
+        /* Estilização “normal” dos links de navegação */
+        a {
+            padding: 10px 20px;
+            /* Preenchimento vertical e horizontal */
+            background-color: #0077cc;
+            /* Cor de fundo azul */
+            color: white;
+            /* Cor do texto branco */
+            text-decoration: none;
+            /* Remove o sublinhado dos links */
+            margin: 5px;
+            /* Margem entre os links */
+            border-radius: 5px;
+            /* Bordas arredondadas */
+        }
+
+        /* Efeito hover para os links de navegação */
+        a:hover {
+            background-color: #005fa3;
+            /* Cor de fundo mais escura ao passar o mouse */
+            color: #f3d00b;
+            /* Muda a cor do texto ao passar o mouse */
+        }
+
+        /* Efeito focus para os links de navegação */
+        a:focus {
+            background-color: #a5d3f3;
+            /* Cor de fundo mais clara  ao focar com o mouse */
+            color: #f7571d;
+            /* Muda a cor do texto ao focar com o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="http://example1.com">Início</a>
+        <a href="http://example2.com">Sobre</a>
+        <a href="http://example3.com">Serviços</a>
+        <a href="http://example4.com">Contato</a>
+    </nav>
+</body>
+
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/ajgtF1z-mNH-ryy8F0hb-AI5RsQaW2yjvBcYV5PpHBakBejqN97XoPKWLTgjvu0z2lUTbyVcCp7JPyg85-eDMS8PmDsccQkuoLCAAwIV1vQcfKyIt58jBfifOyH5Qvq33WP8IARqk3LG3BQZSY0Exw
+
+Descrição: No corpo da página, há uma barra de navegação (<nav>) com quatro links: "Início", "Sobre", "Serviços" e "Contato". O código define três estilos para os links. o estilo normal dos links define que estes tem um preenchimento de 10 pixels verticalmente e 20 pixels horizontalmente, criando um espaço ao redor do texto. A cor de fundo dos links é azul (#0077cc) e a cor do texto é branca. Estes links não têm sublinhado e há uma margem de 5 pixels entre cada link.. As bordas dos links são arredondadas com um raio de 5 pixels. Porém, quando o usuário passa o mouse sobre um link, a cor de fundo muda para um azul mais escuro (#005fa3) e a cor do texto muda para amarelo (#f3d00b). Já, quando um link é focado (por exemplo, ao usar o teclado para navegar), a cor de fundo muda para um azul mais claro (#a5d3f3) e a cor do texto muda para laranja (#f7571d). 
+
+Observe que:
+O links "Início" e "Serviços" permanecem com a estilização “normal” dos links de navegação;
+O link "Sobre" foi clicado anteriormente, esteve em foco, de maneira que está com o estilo definido pela pseudo-classe :focus;
+Estamos com o mouse em cima do link "Contato", de maneira que está com o estilo definido pela pseudo-classe :hover;
+
+Transições e animações
+Transições e animações podem elevar a interatividade de um site, melhorando a experiência do usuário ao tornar as mudanças visuais mais suaves e agradáveis.  
+
+As transições permitem que você altere os valores das propriedades de forma gradual ao longo de um determinado período de tempo (MDN Web Docs, 2024; W3C Schools, 2024). Por exemplo, você pode suavizar a mudança de cor de um link quando o usuário passa o mouse sobre ele. A propriedade transition é usada para isso, especificando a propriedade CSS a ser alterada, a duração da transição e o tipo de temporização.
+
+As animações, por outro lado, são mais complexas e permitem maior controle sobre a sequência de estilos que um elemento passa (MDN Web Docs, 2024; W3C Schools, 2024). Usando @keyframes, você define os estilos em diferentes pontos durante a animação. Você pode controlar a duração, o delay, o número de vezes que a animação se repete, entre outros parâmetros com a propriedade animation.
+
+Vejamos no quadro abaixo um exemplo de como implementar transições e animações em links com CSS.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transições e Animações em Links</title>
+    <style>
+        /* Estilo básico do link */
+        a {
+            display: inline-block;
+            background-color: #0077cc;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.5s ease;
+            /* Transição suave para a cor de fundo */
+        }
+        /* Efeito hover que desencadeia a transição */
+        a:hover {
+            background-color: #f03b35;
+        }
+        /* Animação que ocorre uma única vez ao passar o mouse */
+        a:hover {
+            animation: rotate-link 0.5s ease;
+        }
+        /* Definição da animação para girar o texto do link */
+        @keyframes rotate-link {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Links com Transições e Animações CSS</h1>
+    <a href="http://example1.com">Passe o mouse sobre mim!</a>    
+</body>
+</html>
+
+<!-- 
+Observe que:
+
+A transição é aplicada à propriedade background-color do link, fazendo com que a cor de fundo mude quando o usuário passa o mouse sobre ele.
+A animação rotate-link é ativada quando o usuário passa o mouse sobre o link. Ela faz o texto do link girar 360 graus em 0.5 segundos.
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/ceex-jpPMQ3y6Wzau_ubn-s6TCvvcKkPKBsizrHQng5qD1z8P7e5mVcWIFRhxnCXgYnJthNd-K7jNcxmdeiTrDDndfEaRNE-WcWzAysNLIz9j5Phv7pq2lPURiuxPGiI8FOI8K5IOLbq-eZ6TH1Nbw
+
+Descrição: Na página, há um título "Links com Transições e Animações CSS" e um link com o texto "Passe o mouse sobre mim!". O link tem um fundo azul (#0077cc) e um texto branco sem sublinhado. Este link possui um preenchimento de 10 pixels verticalmente e 20 pixels horizontalmente. Suas bordas são arredondadas com um raio de 5 pixels.  
+
+
+Vimos, assim, que ao passar o mouse em cima do link “Passe o mouse sobre mim!”, tivemos a aplicação dos efeitos de transição e animação do CSS, conforme imagem abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/32l8jzVHsVgzP6EG4-AORsCNDmWvoMa9H9ng4HsMFVYSBgZE4DzcHMVf-dLWeHmlasdAflaP3L3apzi6h6xaTkGKbYlhQPFqdtPe_pzSwURZBH-oEb9xeu6krr31X3sp7C_a8wN3mbvmwOjED2EqLQ
+
+Descrição: Na página, há um título "Links com Transições e Animações CSS" e um link com o texto "Passe o mouse sobre mim!". O link usa uma transição suave para a cor de fundo, com duração de 0.5 segundos. Assim, quando o usuário passa o mouse sobre o link, a cor de fundo muda para vermelho (#f03b35) de forma suave, devido à transição definida. Além da mudança de cor, ao passar o mouse sobre o link, o texto do link gira 360 graus uma única vez, em 0.5 segundos, criando um efeito visual dinâmico.
+-->

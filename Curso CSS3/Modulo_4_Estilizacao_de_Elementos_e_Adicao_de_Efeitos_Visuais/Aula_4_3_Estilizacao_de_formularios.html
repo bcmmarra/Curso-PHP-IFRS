@@ -1,0 +1,89 @@
+<!-- 
+4.3 Estilização de formulários
+Estilizar formulários com CSS é uma parte fundamental do design de interfaces de usuário, pois melhora a usabilidade e a estética do site (MDN Web Docs, 2024; W3C Schools, 2024). Formulários são componentes interativos usados para capturar informações do usuário, e uma boa estilização pode fazer uma grande diferença na experiência do usuário. 
+
+Um formulário típico inclui elementos como:ss
+
+Campos de Entrada (<input>): Usados para capturar dados do usuário. Incluem tipos como texto, senha, número, etc.
+Áreas de Texto (<textarea>): Usadas para entrada de texto de várias linhas.
+Botões (<button>, <input[type="submit"]>): Usados para enviar os dados do formulário.
+Labels (<label>): Texto descritivo associado a cada campo de entrada.
+Cada um desses elementos pode ser estilizado individualmente com CSS.Veja no quadro abaixo um exemplo de formulário que inclui vários tipos de campos de entrada e um botão para submissão. Este exemplo ilustra como ajustar o layout, as cores, as bordas e o alinhamento dos elementos do formulário. 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Listas</title>
+    <style>
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f3f3f3;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 100px;            
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message"></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
+
+<!-- 
+Observe que:
+
+O formulário tem uma largura máxima de 500px e é centralizado com margin: 0 auto. Tem um fundo cinza claro (#f3f3f3) e bordas arredondadas.
+Os labels são exibidos como blocos para garantir que cada label apareça acima de seu respectivo campo de entrada. A margem superior separa visualmente cada campo.
+Os campos de entrada de dados estendem-se ao longo da largura completa do formulário com width: 100%. Eles têm uma borda sólida e arredondada para melhorar a estética e o padding interno para melhor legibilidade.
+O botão foi estilizado para ocupar a largura total do formulário, com uma cor de fundo verde que muda para um verde mais escuro no hover, melhorando a interatividade.
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/i4VNNUqVJ0Tbbp6JFvT7vtg2O8PN6NeEn2JyZS2kklQjO8_ik4kk7yYcFfI1oi1CwXcjrO5EIeT8bcaWOyUfxcPTmNFKgDei_QlA1wUEEWhJvtCf6Hk2nd-6nexX2ZM1A4s39NIroatipGsekbDgjA
+
+Descrição: No navegador, o formulário está centralizado na página com uma largura máxima de 500 pixels. Ele tem um preenchimento de 20 pixels e um fundo cinza claro (#f3f3f3) com bordas arredondadas de 8 pixels. Dentro do formulário, há três campos (nome, email e mensagem) e um botão "Send". Temos um campo de texto para o usuário digitar seu nome, que ocupa 100% da largura disponível, tem 8 pixels de preenchimento interno, 2 pixels de borda cinza claro, e bordas arredondadas de 4 pixels. Temos um campo de e-mail para o usuário digitar seu endereço de e-mail, com os mesmos estilos que o campo de texto. E, finalmente, temos Uma área de texto para o usuário digitar sua mensagem, com os mesmos estilos que os campos de texto, mas com uma altura de 100 pixels. O botão "Send" ocupa 100% da largura disponível, tem 10 pixels de preenchimento, um fundo verde (#4CAF50), texto branco, bordas arredondadas de 4 pixels e nenhum contorno de borda.
+-->

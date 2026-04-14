@@ -1,0 +1,81 @@
+<!-- 
+4.6 Adição de Efeitos Visuais: Gradientes
+Gradientes são transições suaves entre duas ou mais cores. Eles podem ser usados em vários tipos de propriedades, como background ou border-image. O CSS suporta dois tipos principais de gradientes: lineares e radiais.
+
+Gradiente linear
+Um gradiente linear cria uma progressão de cores ao longo de uma linha reta, e é definido usando a função linear-gradient(). A direção do gradiente pode ser especificada como um ângulo ou direção relativa (como 'to left' ou 'to bottom'). 
+
+Veja no quadro abaixo sua sintaxe básica:
+
+background: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+Onde:
+direction: A direção pode ser um ângulo (como 45deg) ou uma direção (como to bottom).
+color-stop: Cada "parada de cor” especifica uma cor que vamos incluir no gradiente.
+Vejamos no quadro abaixo um exemplo de uso de gradiente linear: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradientes com CSS</title>
+    <style>
+        .linear-gradient-box {
+            height: 200px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+    </style>
+</head>
+<body>
+    <div class="linear-gradient-box"></div>
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem:https://lh7-us.googleusercontent.com/Ipn0u60sAM8HtGmtQsHhTuLaVfI3m0pfUO4Bk35NYLkwbNPu3Xom0xpL1gSs5rIM1XVhbbFuZg_qYP51isRVs_qO8RVDcWWonRhG3xPqPuOnbYDz1Uy_B1bB0YV3XwinoTm8vSLa_3vXKccfDWmiAQ
+
+Descrição: No navegador, uma div com altura de 200 pixels preenche a largura disponível da página. O fundo dessa div exibe um gradiente linear que se estende da esquerda para a direita. O gradiente começa com vermelho, seguido por laranja, amarelo, verde, azul, índigo e violeta, criando um efeito de arco-íris.
+
+Gradiente radial
+Um gradiente radial é definido com a função radial-gradient(), onde as cores emanam de um ponto central e se espalham para fora em círculos concêntricos. A forma padrão é um círculo, mas pode ser ajustada para ser uma elipse também. 
+
+Veja no quadro abaixo sua sintaxe:
+
+
+background: radial-gradient(shape size at position, start-color, ..., last-color);
+
+Onde:
+shape e size: Definem a forma do gradiente (círculo ou elipse) e o tamanho (como closest-side, farthest-corner, etc.).
+position: O ponto central do gradiente, como at center ou at top left.
+start-color, last-color: Cores usadas no gradiente.
+
+Vejamos no quadro abaixo um exemplo de gradiente radial:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradientes com CSS</title>
+    <style>
+        .radial-gradient-box {
+            height: 200px;
+            background: radial-gradient(circle at center, red, yellow, green);
+        }
+    </style>
+</head>
+<body>
+    <div class="radial-gradient-box"></div>
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/Dnlub68mYa7iGZMf_wjygwKT8lEvrdKp6R9ZGfxn6VZKWjY9pDOzwT31cr0RUnQLcDS55UxyJLvKYcVnri8YG93IzT8BoRCWThsDprx9f_dsXUkfXiBI2MOI3UPMGOJIRoYLvfnHbfOwQBb6EyfNdA
+
+Descrição: No navegador, uma div com altura de 200 pixels preenche a largura disponível da página. O fundo dessa div exibe um gradiente radial que se expande a partir do centro da caixa. O gradiente começa com a cor vermelha no centro, transita para amarelo e depois para verde nas bordas.
+-->

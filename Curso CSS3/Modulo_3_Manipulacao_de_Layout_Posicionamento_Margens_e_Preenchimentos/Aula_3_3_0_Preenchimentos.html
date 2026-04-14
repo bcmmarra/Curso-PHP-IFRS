@@ -1,0 +1,71 @@
+<!-- 
+3.3 Preenchimentos
+O preenchimento, ou padding, é usado para criar espaço dentro do elemento, o que pode melhorar a legibilidade e a estética de um layout de página web (ALVES, 2021).
+
+O padding pode ser especificado para cada lado do elemento (superior, direito, inferior, esquerdo) usando propriedades específicas:
+
+padding-top: controla o espaço de preenchimento na parte superior de um elemento.
+padding-right: controla o espaço de preenchimento na parte direita de um elemento.
+padding-bottom: controla o espaço de preenchimento na parte inferior de um elemento.
+padding-left: controla o espaço de preenchimento na parte esquerda de um elemento.
+Além disso, a propriedade padding em CSS pode ser usada como um atalho para definir todos os quatro valores de padding de uma vez. A sintaxe pode variar dependendo de quantos valores são especificados:
+
+
+Um valor: Aplica o mesmo padding a todos os quatro lados. Veja um exemplo no quadro abaixo:
+.element {
+    padding: 10px;
+}
+
+Dois valores: O primeiro valor aplica-se ao padding superior e inferior, e o segundo ao padding direito e esquerdo. Veja um exemplo no quadro abaixo:
+.element {
+    padding: 5px 10px;
+}
+
+Três valores: O primeiro valor aplica-se ao topo, o segundo aos lados direito e esquerdo, e o terceiro ao fundo. Veja um exemplo no quadro abaixo:
+.element {
+    padding: 5px 10px 15px;
+}
+
+Quatro valores: Aplica-se padding específico a cada lado, na ordem: superior, direito, inferior, esquerdo. Veja um exemplo no quadro abaixo:
+.element {
+    padding: 5px 10px 15px 20px;
+}
+
+As unidades de medida para o padding podem ser absolutas (como pixels px) ou relativas (como percentual %, ems em, e rems rem):
+
+Pixels (px): Uma unidade de medida fixa que não se altera com mudanças no tamanho da fonte ou dimensão da janela.
+Percentual (%): Calculado em relação à largura do elemento contêiner. Usar percentuais pode ajudar a criar layouts mais responsivos.
+Ems (em) e Rems (rem): Ems são baseadas no tamanho da fonte do elemento atual, enquanto rems são baseadas no tamanho da fonte do elemento raiz (<html>).
+
+Veja no quadro abaixo um exemplo de uso da propriedade padding: 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <style>
+        .article-card {
+            background-color: #f4f4f4;   /* Cor de fundo */
+            border: 1px solid #ddd;     /* Borda simples */
+            padding: 20px;              /* Padding generoso */
+            margin-top: 20px;           /* Margem superior para separação */
+            width: 80%;                 /* Largura relativa */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para profundidade */
+        }
+    </style>
+</head>
+<body>
+    <div class="article-card">
+        <h2>Título do Artigo</h2>
+        <p>Este é um exemplo de um card de artigo que utiliza padding para garantir que o texto não fique muito próximo das bordas, melhorando a legibilidade e a estética geral.</p>
+    </div>
+</body>
+</html>
+
+<!-- 
+Observe o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/e9mdSePqLHYOh0A1D-Whbs3oaONNF3-wqC3gIU9N1Aik5-ADsAkq3w2z5nVe4MVR785Uq-2KiVVDND7WgkDeom0xnmxlKXVHhYnG0CqmLD18wbf3l8HGvA7E4RvDLg_wwefHHVYtlMMutMlU_jWj5g
+
+Descrição: No navegador, O "card" de artigo (.article-card) é uma caixa com um fundo cinza claro e uma borda simples de cor cinza. Ele possui um preenchimento interno de 20 pixels, garantindo que o texto não fique muito próximo das bordas. A margem superior de 20 pixels separa este card de qualquer conteúdo acima dele. A largura do card é de 80% da área disponível, o que significa que ele se ajusta proporcionalmente ao tamanho da janela do navegador. Além disso, o card possui uma sombra leve, adicionando uma sensação de profundidade e destacando-o do plano de fundo. Dentro do card, há um título ("Título do Artigo") e um parágrafo de texto que explica a utilidade do padding para melhorar a legibilidade e a estética geral.
+-->

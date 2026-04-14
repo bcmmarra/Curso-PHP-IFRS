@@ -1,0 +1,165 @@
+<!-- 
+4.2 Estilização de listas
+Estilizar listas em CSS permite que você melhore visualmente a apresentação de listas ordenadas (<ol>) e não ordenadas (<ul>) em seu site. Isso pode incluir mudanças nos marcadores ou números, ajustes no espaçamento, adição de bordas, entre outras personalizações (MDN Web Docs, 2024; W3C Schools, 2024). O CSS fornece diversas propriedades que facilitam a adaptação desses elementos para melhor se integrarem ao design geral da página.
+
+
+Tipos de listas
+Você pode alterar o estilo dos marcadores em listas não ordenadas usando a propriedade list-style-type. Logo, para listas não ordenadas (<ul>), os valores comuns incluem:
+
+
+disc: O valor padrão, mostra um círculo sólido como marcador.
+circle: Mostra um círculo vazio.
+square: Mostra um quadrado sólido.
+none: Remove os marcadores, deixando apenas o texto da lista.
+Para listas ordenadas (<ol>), a propriedade list-style-type altera os tipos de numeração, cujos valores incluem:
+
+
+decimal: O padrão para listas ordenadas mostra números (1, 2, 3, etc.).
+decimal-leading-zero: Mostra números com um zero à frente (01, 02, 03, etc.), útil para listas com mais de dez itens para manter o alinhamento.
+lower-roman: Mostra números em algarismos romanos em minúsculas (i, ii, iii, etc.).
+upper-roman: Mostra números em algarismos romanos em maiúsculas (I, II, III, etc.).
+lower-alpha: Mostra letras em minúsculas (a, b, c, etc.).
+upper-alpha: Mostra letras em maiúsculas (A, B, C, etc.).
+Vejamos no quadro abaixo um exemplo que mostra como aplicar diferentes estilos de marcadores à listas não ordenadas e ordenadas: 
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Listas</title>
+    <style>
+        .square-bullets {
+            list-style-type: square;     /* Marcadores quadrados para a lista não ordenada */
+        }
+        .roman-numbers {
+            list-style-type: upper-roman;     /* Números romanos maiúsculos para a lista ordenada */
+        }
+    </style>
+</head>
+<body>
+    <ul class="square-bullets">
+        <li>Item Um</li>
+        <li>Item Dois</li>
+        <li>Item Três</li>
+    </ul>
+    <ol class="roman-numbers">
+        <li>Primeiro</li>
+        <li>Segundo</li>
+        <li>Terceiro</li>
+    </ol>
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/ToIpiuNbx8-YIZLnF2HjkQQ-BAd_RWnD_HHn3gSyyjwFmZ86wjvX2yCTJ5AW_WjqITirDoPLy7GDk7HQ8mwRXjDzP-iO-MRNLyB0zJUdsUjzUBMoVBj_PPm5JTTz_wOaZOUdctDsNKn4Z2kJFh2_Sg
+
+Descrição: No navegador, podemos observar duas listas na página: uma lista não ordenada e uma lista ordenada. A lista não ordenada (<ul>) tem marcadores em formato quadrado para cada item. Os itens da lista são "Item Um", "Item Dois" e "Item Três". A lista ordenada (<ol>) usa números romanos maiúsculos para numerar cada item. Os itens da lista são "Primeiro", "Segundo" e "Terceiro".
+
+Imagens como marcadores
+A propriedade list-style-image é utilizada para definir uma imagem como marcador de itens em listas ordenadas (<ol>) e não ordenadas (<ul>). Essa propriedade oferece uma forma de personalizar ainda mais o design das listas, substituindo os tradicionais marcadores disc, circle, square, entre outros, por uma imagem específica, o que pode contribuir para o estilo visual de um site ou aplicação web.
+
+Veja no quadro abaixo sua sintaxe básica:
+
+list-style-image: url('caminho_da_imagem');
+
+Veja um exemplo de sua utilização no quadro abaixo:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Listas</title>
+    <style>
+        ul {
+            list-style-type: circle;    /* Fallback para círculos caso a imagem não carregue */
+            list-style-image: url('images/star.png');   /* Imagem personalizada como marcador */
+            padding-left: 40px;     /* Ajuste conforme necessário para alinhar o texto com a imagem */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+Veja o resultado no navegador, conforme figura abaixo:
+
+Link da imagem: https://lh7-us.googleusercontent.com/_jWbKyqjdTn5-XIYbjRqDiXOfphUsg9qD1_38E6PHJ3ZtxKVmYF1K1IQHMFnIH8t4H6iNO-0UDcGLAOI_5CkWHz8wA_B2KY0Vt3Zc7SHITAu0RFuaE8inrbjCGL3hhweV4SjD10f4Z6Q9lkUWwxJlA
+
+Descrição: No navegador, observamos uma lista não ordenada. Os itens da lista são "Item 1", "Item 2" e "Item 3". Cada item da lista usa uma imagem personalizada (star.png) como marcador. 
+
+Este exemplo ilustra como você pode utilizar uma imagem personalizada como marcador em listas, proporcionando uma maneira criativa de reforçar a identidade visual do seu site. 
+
+Observe que uma boa prática é definir um list-style-type como fallback caso a imagem não carregue por algum motivo. Por exemplo, vamos alterar o nome do arquivo da imagem personalizada como marcador para uma imagem que não existe. Veja o exemplo conforme figura abaixo:
+
+list-style-image: url('images/star-nao-existe.png');   /* Imagem  */
+
+Agora, veja o resultado no navegador (vide figura abaixo):
+
+link da imagem: https://lh7-us.googleusercontent.com/spPWjus7vpMnOPFGJNJh-qkB0v0-D4to-L4prF6MqOP7fMMF62q3rasHcql2zyp7A5SVy-r4V4Xc5BNDfKGmAmoufvL9J4iupjQ5Y2PDRZWbduT0GPmkvmuw6U7uTuGc75pG8H7VTG5bpwLe-ZJEXQ
+
+Descrição: No navegador, observamos uma lista não ordenada. Os itens da lista são "Item 1", "Item 2" e "Item 3". Se o marcador de imagem não carregar, como neste exemplo, os marcadores mostrados serão círculos.
+
+
+OBS: A imagem usada como marcador será exibida no tamanho original. Se necessário, ajuste o tamanho da imagem antes de usá-la como marcador, pois o CSS não oferece uma propriedade direta para redimensionar a imagem de list-style-image.
+
+Espaçamento, preenchimento e alinhamento
+Estilizar listas em CSS utilizando margens (margin), preenchimentos (padding) e alinhamento de texto (text-align) é essencial para criar uma apresentação visual clara e atraente de listas ordenadas e não ordenadas (MDN Web Docs, 2024; W3C Schools, 2024). Essas propriedades ajudam a controlar o espaço em torno e dentro dos itens da lista, bem como a maneira como o texto é alinhado dentro dos itens, onde:
+
+A propriedade margin é usada para criar espaço ao redor dos elementos, fora das bordas definidas. No contexto de listas, você pode usar margens para separar a lista de outros conteúdos ou para separar os itens individuais dentro da lista.
+O padding é o espaço entre o conteúdo do elemento e sua borda. No caso de listas, ajustar o preenchimento pode ajudar a posicionar melhor o texto dentro dos itens da lista ou alterar a posição dos marcadores em relação ao texto.
+A propriedade text-align controla o alinhamento horizontal do texto dentro de um elemento. Embora geralmente usado em parágrafos e cabeçalhos, também é útil para alinhar o texto dentro dos itens da lista.
+
+Vejamos no exemplo demonstrado no quadro abaixo como aplicar essas propriedades e ver como elas afetam o layout de uma lista não ordenada:
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização de Listas</title>
+    <style>
+        .styled-list {
+            margin: 20px;                   /* Espaço em torno da lista */
+            padding: 0;             /* Remove o preenchimento padrão para usar o personalizado nos itens */
+            list-style-type: none;       /* Remove os marcadores padrão */
+        }
+        .styled-list li {
+            background-color: #f4f4f4;    /* Cor de fundo para cada item */
+            margin-bottom: 10px;       /* Espaço entre os itens da lista */
+            padding: 10px;          /* Preenchimento dentro de cada item */
+            text-align: center;     /* Centraliza o texto dentro do item */
+            border-radius: 5px;                   /* Bordas arredondadas */
+        }
+    </style>
+</head>
+<body>
+    <ul class="styled-list">
+        <li>Primeiro Item</li>
+        <li>Segundo Item</li>
+        <li>Terceiro Item</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+Observe que:
+
+Margin: Define um espaço de 20px ao redor da lista completa, separando-a de outros conteúdos na página.
+Padding: Aplica um preenchimento de 10px em todos os lados dentro de cada item da lista, o que aumenta a legibilidade ao afastar o texto das bordas.
+Text-align: Centraliza o texto dentro de cada item da lista, oferecendo uma apresentação mais harmoniosa, especialmente útil em design de interfaces centradas ou minimalistas.
+Veja o resultado no navegador, conforme figura abaixo:
+
+link da imagem: https://lh7-us.googleusercontent.com/P4XICEoUBa9dUu_Wral5t-s43IiHGXuDmFZ0uRJNZ46SHA7NxBG54wBoNRrTJYj4twdcgYam7wacLzVXjyFE0LLmUkZQIv7aWl657dlCMAdvqp31cgmmhXB0o29RxVqkhUG38zkrpqjKQ0sif4wxew
+
+Descrição: No navegador, observamos uma lista não ordenada. Os itens da lista são "Primeiro Item", "Segundo Item" e "Terceiro Item".  Cada item (<li>) tem um fundo cinza claro (#f4f4f4). Há um espaço de 10 pixels entre cada item, criando uma separação visual clara. Cada item tem um preenchimento de 10 pixels, garantindo que o texto não fique colado nas bordas. Além disso, o texto dentro de cada item é centralizado.
+-->
