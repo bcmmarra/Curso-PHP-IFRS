@@ -1,0 +1,48 @@
+1.1.3 Principais características
+Ao longo dos anos, o JavaScript evoluiu através de várias edições, incorporando novos recursos e melhorias para atender às crescentes demandas dos desenvolvedores modernos. A seguir, neste documento, veremos estão algumas das principais características do JavaScript:
+
+Interpretação e execução dinâmica
+O JavaScript é uma linguagem interpretada, o que significa que o código é executado sequencialmente, de cima para baixo, e os resultados da execução são imediatamente produzidos. Isso elimina a necessidade de converter o código em uma forma diferente antes que o navegador o execute. Por outro lado, as linguagens compiladas passam por um processo de transformação (compilação) em uma forma diferente antes de serem executadas pelo computador. Por exemplo, linguagens como C/C++ são compiladas em linguagem Assembly e, em seguida, executadas pelo computador.
+
+Neste contexto, o JavaScript é conhecido por ser uma linguagem de programação leve e interpretada. Quando o navegador recebe o código JavaScript em sua forma original de texto, ele o executa diretamente. Do ponto de vista técnico, muitos interpretadores modernos de JavaScript utilizam uma técnica chamada compilação just-in-time (JIT) para melhorar o desempenho. Essa técnica compila o código-fonte JavaScript em um formato binário mais rápido enquanto o script está em uso, permitindo uma execução mais rápida. Em vez de interpretar o código fonte linha por linha a cada vez que é executado, o JIT compila partes do código em tempo de execução em código de máquina nativo, que é executado diretamente pelo processador.
+
+A ideia por trás da compilação JIT é identificar trechos de código que são executados com frequência (conhecidos como hot spots) e compilá-los em código de máquina otimizado para a arquitetura do processador. Isso melhora significativamente o desempenho, pois o código compilado pode ser executado mais rapidamente do que o código interpretado. Cabe ressaltar que, no entanto, o JavaScript ainda é considerado uma linguagem interpretada, pois a compilação é realizada em tempo de execução, e não antes.
+
+Tipagem dinâmica
+JavaScript é uma linguagem de tipagem dinâmica, o que significa que as variáveis não precisam ter um tipo definido previamente; o tipo pode mudar dinamicamente conforme o valor que é atribuído a elas. Essa característica oferece uma flexibilidade significativa, permitindo que as variáveis se adaptem aos diferentes tipos de dados necessários durante a execução do programa. No entanto, essa flexibilidade também requer atenção por parte do programador para evitar erros de tipo que podem surgir caso o tipo de uma variável seja inadvertidamente alterado de maneira inesperada.
+
+Funções de primeira classe
+Em JavaScript, as funções são consideradas objetos de primeira classe, o que significa que elas podem ser tratadas da mesma forma que outros tipos de dados, como números e strings. Essa característica permite que as funções sejam passadas como argumentos para outras funções, retornadas por outras funções e até mesmo atribuídas a variáveis. Essa flexibilidade facilita a implementação de padrões de projeto como callbacks. Em JavaScript, callback é uma função que é passada como argumento para outra função e é executada após a conclusão de uma determinada operação ou evento assíncrono. Essencialmente, um callback é uma forma de "chamar de volta" uma função após a conclusão de uma tarefa específica.
+
+Essa capacidade de tratar funções como objetos de primeira classe amplia significativamente as possibilidades de design e expressividade do código em JavaScript, permitindo que os desenvolvedores criem soluções mais elegantes e flexíveis para uma variedade de problemas de programação.
+
+Programação orientada a eventos
+JavaScript é uma linguagem que suporta programação orientada a eventos, um conceito crucial para o desenvolvimento de interfaces de usuário interativas. Nesse paradigma, os scripts são capazes de responder a uma variedade de eventos, como cliques do mouse, entradas do teclado ou alterações nos dados, desencadeando a execução de código em resposta às ações do usuário. 
+
+Essa abordagem permite que os desenvolvedores criem aplicações web dinâmicas e responsivas, onde as ações do usuário desencadeiam respostas imediatas e adaptativas na interface. Por exemplo, ao clicar em um botão, um evento é acionado e um determinado trecho de código pode ser executado para atualizar a página, enviar dados para o servidor ou realizar qualquer outra ação desejada.
+
+Orientação a objetos baseada em protótipos
+Ao contrário de linguagens que empregam o conceito de classes para herança, JavaScript utiliza protótipos. Nesse modelo, objetos podem herdar propriedades e métodos diretamente de outros objetos, proporcionando uma maneira flexível e poderosa de reutilizar e estender código.
+
+Isso significa que, em JavaScript, não há uma distinção rígida entre classes e instâncias como em outras linguagens orientadas a objetos. Em vez disso, cada objeto em JavaScript possui um protótipo, que é outro objeto de onde ele pode herdar propriedades e métodos.
+
+Execução do lado do cliente e do servidor
+Originalmente concebido para ser executado no lado do cliente, ou seja, no navegador, JavaScript também encontrou seu espaço no servidor, por exemplo, através do Node.js. Essa expansão de seu domínio de aplicação permite que o JavaScript seja utilizado tanto no desenvolvimento do front-end quanto do back-end de aplicações web.
+
+Manipulação assíncrona e promessas
+O JavaScript oferece recursos poderosos para manipulação assíncrona de operações, como requisições de rede, por meio de callbacks, promessas (Promises) e async/await. Essas abstrações facilitam o tratamento de operações que podem levar tempo para serem concluídas, sem interromper a execução do programa.
+
+Por exemplo, callbacks são funções passadas como argumentos para outras funções e são executadas quando uma operação assíncrona é concluída. Promessas (Promises) fornecem uma maneira mais estruturada de lidar com operações assíncronas, permitindo que o código seja mais legível. E o async/await é uma sintaxe mais moderna e concisa para escrever código assíncrono, tornando-o mais fácil de entender e manter.
+
+Esses recursos são essenciais para lidar com tarefas assíncronas de forma eficiente em JavaScript, permitindo que o programa continue executando outras operações enquanto aguarda a conclusão das tarefas assíncronas. Isso resulta em uma experiência de usuário mais responsiva e em um código mais limpo e organizado.
+
+Closures
+JavaScript suporta closures, um recurso poderoso que permite que uma função acesse e lembre-se das variáveis de seu escopo externo, mesmo após esse escopo ter sido encerrado. Essa característica é útil para encapsular dados e lógica, permitindo a criação de fábricas de funções e módulos.
+
+Em essência, uma closure é uma função que "captura" o ambiente no qual foi criada, incluindo as variáveis locais e os parâmetros da função externa. Isso significa que, mesmo depois que a função externa é concluída e seu escopo é destruído, a closure ainda tem acesso a essas variáveis.
+
+Suporte a JSON
+O JavaScript oferece suporte nativo para JSON (JavaScript Object Notation), um formato de troca de dados leve, fácil de compreender e analisar. JSON é amplamente adotado na web para facilitar a comunicação de dados entre clientes e servidores. Ele é uma representação textual de dados estruturados, baseada em pares de chave-valor e listas ordenadas de valores. Assim, ele é facilmente legível tanto para humanos quanto para máquinas, o que o torna ideal para transmitir dados em ambientes web.
+
+Frameworjs e bibliotecas
+Há uma ampla variedade de bibliotecas e frameworks JavaScript disponíveis, cada um com suas próprias características e objetivos. Entre eles, destacam-se o React, Angular, Vue.js e jQuery, os quais oferecem funcionalidades estendidas e simplificam a criação de aplicações web complexas e altamente interativas.

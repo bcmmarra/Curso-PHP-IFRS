@@ -1,0 +1,4 @@
+1.1 Iniciando com JavaScript
+JavaScript é uma linguagem de programação amplamente utilizada para desenvolvimento web. Ela permite adicionar interatividade a páginas web, como responder a eventos de usuário (cliques, movimentos do mouse, teclas pressionadas), atualizar conteúdos de forma dinâmica, validar formulários, entre outras funcionalidades (MDN Web Docs, 2024; FLANAGAN, 2014). Desde a sua criação nos anos 90 até hoje, JavaScript teve uma evolução significativa e desempenha um papel central no desenvolvimento de aplicativos interativos e dinâmicos na internet (GRONER, 2018; OLIVEIRA et al., 2020). 
+
+Este módulo explica o que é JavaScript, fala de sua origem, mostra sua sintaxe e, também, trata alguns conceitos-chaves sobre a linguagem. 

@@ -1,0 +1,66 @@
+<!-- 
+1.1.4 Configuração do ambiente de desenvolvimento
+Configurar um ambiente de desenvolvimento para trabalhar com JavaScript é um processo relativamente simples, mas essencial para eficiência e produtividade. Embora JavaScript possa ser escrito em qualquer editor de texto básico, como Bloco de Notas ou TextEdit, a utilização de ferramentas apropriadas pode significativamente melhorar sua experiência de desenvolvimento. 
+
+Neste documento estão os passos e ferramentas recomendadas para configurar um ambiente de desenvolvimento otimizado para JavaScript.
+
+Instalando um editor de texto ou IDE
+Embora o seu sistema operacional provavelmente já inclua um editor de texto básico como o Bloco de Notas no Windows, o TextEdit no macOS ou o gedit no Linux Ubuntu, para o desenvolvimento web com JavaScript você precisará de algo mais avançado. Recomendamos o Visual Studio Code, um editor de texto gratuito que é amplamente utilizado por desenvolvedores devido às suas funcionalidades avançadas. Ele oferece recursos como visualizações ao vivo, que permitem ver em tempo real as mudanças no código, e dicas de código inteligentes, que ajudam a aumentar a produtividade e reduzir erros, tornando o processo de desenvolvimento mais eficiente e intuitivo.
+
+Os ambientes de desenvolvimento integrado (IDEs) como Visual Studio e WebStorm oferecem uma experiência mais robusta com ferramentas integradas para desenvolvimento web. Entretanto, não são necessários para o conteúdo que vamos abordar neste curso.
+
+Uma outra alternativa, útil para testar pequenas partes de código, seria utilizar algum dos editores de código-fonte online. Estas são ferramentas baseadas na web que permitem aos desenvolvedores escrever, editar e testar código diretamente no navegador. Eles oferecem várias funcionalidades que facilitam o desenvolvimento de software sem a necessidade de instalar um ambiente de desenvolvimento local. Podemos citar os seguintes editores de código-fonte online: CodePen,  JSFiddle, Repl.it, Codeply, HTML-CSS-JS, MDN Playground e JavaScript Online Editor.
+
+Instalando navegadores modernos
+Para testar e visualizar seu trabalho, você precisará de navegadores web modernos. Aqui estão algumas sugestões para diferentes sistemas operacionais:
+
+Linux: Firefox, Chrome, Opera, Brave.
+Windows: Firefox, Chrome, Opera, Microsoft Edge,  Brave. (O Edge já vem instalado por padrão no Windows 10; para versões anteriores, como o Windows 7, recomendamos instalar o Internet Explorer 11 ou outro navegador moderno.)
+Mac: Firefox, Chrome, Opera, Safari,  Brave. (O Safari já vem instalado por padrão no macOS e iOS.)
+
+É recomendável instalar pelo menos dois navegadores diferentes para garantir que seu site funcione bem em ambientes diversos.
+
+Comando console.log()
+O comando console.log() é uma função integrada do JavaScript usada para imprimir mensagens no console do navegador. É uma ferramenta essencial para depuração (debugging) e desenvolvimento, permitindo que os desenvolvedores visualizem valores de variáveis, estados de objetos e mensagens de depuração.
+
+A sintaxe básica do console.log() é a seguinte:
+
+console.log(mensagem);
+
+Onde mensagem pode ser qualquer string, número, objeto ou valor que você deseja imprimir no console.
+
+Para visualizar as mensagens registradas pelo console.log() no console do navegador, siga estes passos:
+
+Abrir o Console do Navegador
+A maneira de abrir o console varia dependendo do navegador que você está usando. Aqui estão os atalhos mais comuns:
+
+Google Chrome: Pressione Ctrl + Shift + J (Windows/Linux) ou Cmd + Option + J (Mac).
+Mozilla Firefox: Pressione Ctrl + Shift + K (Windows/Linux) ou Cmd + Option + K (Mac).
+Microsoft Edge: Pressione F12 e selecione a aba "Console".
+Safari: Ative o menu "Desenvolvedor" em Preferências > Avançado > Mostrar menu Desenvolvedor na barra de menus, e depois selecione "Mostrar Console".
+
+Visualizar Mensagens
+Com o console aberto, qualquer chamada ao console.log() no seu código JavaScript será exibida no console. Por exemplo, veja o código no quadro abaixo: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console.log</title>
+</head>
+<body>
+    <h1>Este é um exemplo de console.log</h1>
+    <script>
+        console.log("Essa é uma mensagem de log")
+    </script>
+</body>
+</html>]
+
+<!-- 
+Isso exibirá no Google Chrome o seguinte:
+
+Link da imagem: https://moodle.ifrs.edu.br/pluginfile.php/9479737/mod_page/content/7/image.png
+
+Descrição da imagem: No navegador Google Chrome, o código console.log("Essa é uma mensagem de log"); resulta na exibição da mensagem "Essa é uma mensagem de log" na aba Console das Ferramentas de Desenvolvedor (que é uma área usada para depuração e monitoramento de atividades do JavaScript e de outros elementos da página). 
+-->
